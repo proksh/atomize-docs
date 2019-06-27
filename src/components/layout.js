@@ -7,43 +7,63 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
+import Header from "./common/header"
+import { StyleReset, DefaultTheme, ThemeProvider } from "react-atomize"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+const theme = {
+  ...DefaultTheme,
+  fontFamily: {
+    ...DefaultTheme.fontFamily,
+    primary: "'SF Pro Display', sans-serif",
+    secondary: '"jubilat", serif',
+    code: "'Fira Mono','Roboto Mono', monospace",
+  },
+  grid: {
+    ...DefaultTheme.grid,
+    containerMaxWidth: {
+      ...DefaultTheme.grid.containerMaxWidth,
+      xl: "1184px",
+    },
+  },
+  textSize: {
+    ...DefaultTheme.textSize,
+    size: {
+      ...DefaultTheme.textSize.size,
+      display3: "50px",
+    },
+    height: {
+      ...DefaultTheme.textSize.height,
+      display3: "56px",
+    },
+  },
+  colors: {
+    ...DefaultTheme.colors,
+    brandgray: "#F7F5F4",
+  },
+}
+
+const Layout = ({ children }) => (
+  <StaticQuery
+    query={graphql`
+      query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
+          }
         }
       }
-    }
-  `)
-
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
-}
+    `}
+    render={data => (
+      <ThemeProvider theme={theme}>
+        <StyleReset />
+        {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+        <main style={{ letterSpacing: "-0.4px" }}>{children}</main>
+      </ThemeProvider>
+    )}
+  />
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <rect id="group-6-copy-a" width="40" height="40" x="0" y="0" rx="7"/>
+    <mask id="group-6-copy-b" width="40" height="40" x="0" y="0" fill="#fff" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox">
+      <use xlink:href="#group-6-copy-a"/>
+    </mask>
+  </defs>
+  <g fill="none" fill-rule="evenodd" stroke="#000">
+    <use stroke-dasharray="5 3" stroke-width="4" mask="url(#group-6-copy-b)" xlink:href="#group-6-copy-a"/>
+    <path fill="#000" stroke-width="2" d="M1,18.2727273 L1,33 C1,36.3137085 3.6862915,39 7,39 L21.7272727,39 L21.7272727,18.2727273 L1,18.2727273 Z"/>
+    <path stroke-linecap="square" stroke-width="2" d="M22.2727273 17.7272727L27.5954921 12.4045079M28.504583 11.495417L28.504583 15.0658903M28.504583 11.495417L24.480092 11.495417"/>
+  </g>
+</svg>
