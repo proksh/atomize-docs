@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { Div, Image, Container, Button, Text } from "react-atomize"
+import { Div, Image, Container, Button, Anchor } from "react-atomize"
 import logo from "../../images/logo.png"
 
 class Header extends React.Component {
@@ -93,23 +93,28 @@ class Header extends React.Component {
             }}
             transition
           >
-            <Text
+            <Anchor
               m={{ r: "2rem", b: { xs: "1rem", md: "0" } }}
               textWeight="500"
               textColor="medium"
+              hoverTextColor="black"
+              transition
             >
               Features
-            </Text>
-            <Text
+            </Anchor>
+            <Anchor
               m={{ r: "2.5rem", b: { xs: "1rem", md: "0" } }}
               textWeight="500"
               textColor="medium"
+              hoverTextColor="black"
+              transition
             >
               Github
-            </Text>
+            </Anchor>
             <Link to="/docs/intro">
               <Button
                 bg="info200"
+                hoverBg="info300"
                 textColor="info800"
                 w={{ xs: "100%", sm: "8.5rem" }}
                 m={{ t: { xs: "1rem", md: "0" } }}

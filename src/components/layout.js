@@ -1,16 +1,8 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import "./font.css"
 
-import Header from "./common/header"
 import { StyleReset, DefaultTheme, ThemeProvider } from "react-atomize"
 
 const theme = {
@@ -58,7 +50,6 @@ const Layout = ({ children }) => (
     render={data => (
       <ThemeProvider theme={theme}>
         <StyleReset />
-        {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
         <main>{children}</main>
       </ThemeProvider>
     )}
