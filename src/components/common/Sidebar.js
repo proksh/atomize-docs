@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-import { Div, Text, scrollTo, Image, Input } from "react-atomize"
+import { Div, Text, scrollTo, Image, Input, Tag } from "react-atomize"
 import { Location } from "@reach/router"
 import logo from "../../images/logo.png"
 
@@ -157,12 +157,22 @@ export default class Sidebar extends Component {
             zIndex="1"
           >
             <Div p={{ x: "2rem", t: "3rem" }}>
-              <Link to="/">
-                <Image src={logo} h="18px" w="auto" m={{ b: "3rem" }} />
-              </Link>
+              <Div
+                d="flex"
+                justify="space-between"
+                align="center"
+                m={{ b: "1rem" }}
+              >
+                <Link to="/">
+                  <Image src={logo} h="18px" w="auto" />
+                </Link>
+                <Tag m={{ t: "-0.25rem" }}>v1.0.0</Tag>
+              </Div>
               <Input
+                bg="white"
                 borderColor="gray400"
                 type="search"
+                rounded="sm"
                 placeholder="Filter..."
                 textSize="caption"
                 h="2rem"
@@ -181,7 +191,9 @@ export default class Sidebar extends Component {
                   <Text
                     key={key}
                     textColor={
-                      locationProps.location.pathname === upperLinks[key].page
+                      locationProps.location.pathname.includes(
+                        upperLinks[key].page
+                      )
                         ? "info700"
                         : "black"
                     }
@@ -210,7 +222,9 @@ export default class Sidebar extends Component {
                   <Link to={lowerLinks[key].page}>
                     <Text
                       textColor={
-                        locationProps.location.pathname === lowerLinks[key].page
+                        locationProps.location.pathname.includes(
+                          lowerLinks[key].page
+                        )
                           ? "info700"
                           : "black"
                       }
@@ -223,11 +237,45 @@ export default class Sidebar extends Component {
                       {lowerLinks[key].text}
                     </Text>
                   </Link>
-                  {locationProps.location.pathname === lowerLinks[key].page && (
-                    <SidebarCollapse links={lowerLinks[key].children} />
-                  )}
+                  {locationProps.location.pathname.includes(
+                    lowerLinks[key].page
+                  ) && <SidebarCollapse links={lowerLinks[key].children} />}
                 </Div>
               ))}
+              <Div>
+                <Link to="/">
+                  <Div
+                    d="flex"
+                    textColor={
+                      locationProps.location.pathname.includes("/")
+                        ? "info700"
+                        : "black"
+                    }
+                    textSize="body"
+                    hoverTextColor="info700"
+                    textWeight="600"
+                    m={{ b: "0.5rem" }}
+                    cursor="pointer"
+                    d="flex"
+                  >
+                    Layout{" "}
+                    <Text
+                      d="flex"
+                      align="center"
+                      tag="span"
+                      m={{ l: "0.5rem" }}
+                      bg="success400"
+                      textSize="tiny"
+                      p={{ x: "0.5rem" }}
+                      h="1.5rem"
+                      rounded="md"
+                      textColor="success800"
+                    >
+                      In Progress
+                    </Text>
+                  </Div>
+                </Link>
+              </Div>
             </Div>
           </Div>
         )}

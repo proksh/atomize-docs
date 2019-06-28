@@ -1,66 +1,51 @@
-import React from "react";
-import { Div, Text, Tag, Row, Col } from "react-atomize";
+import React from "react"
+import { Link } from "gatsby"
+import { Div, Text, Tag, Row, Col } from "react-atomize"
 
-import InfoCodeRow from "../common/InfoCodeRow";
+import InfoCodeRow from "../common/InfoCodeRow"
 
 const borderRadiusCode1 = `// Rounded values
 <Row>
-  <Col>
-    <Div rounded="0" h="3rem" bg="brand700" />
-  </Col>
-  <Col>
-    <Div rounded="xs" h="3rem" bg="brand700" />
-  </Col>
-  <Col>
-    <Div rounded="sm" h="3rem" bg="brand700" />
-  </Col>
-  <Col>
-    <Div rounded="md" h="3rem" bg="brand700" />
-  </Col>
-  <Col>
-    <Div rounded="lg" h="3rem" bg="brand700" />
-  </Col>
-  <Col>
-    <Div rounded="xl" h="3rem" bg="brand700" />
-  </Col>
-  <Col>
-    <Div rounded="circle" h="3rem" bg="brand700" />
-  </Col>
+  {["0", "xs", "sm", "md", "lg", "xl"].map(value => (
+    <Col>
+      <Div h="3rem" bg="warning700" rounded={value} key={value} />
+    </Col>
+  ))}
 </Row>
-`;
+`
 
 const borderRadiusCode2 = `// Directional Border Radius
 <Row>
   <Col>
-    <Div h="3rem" bg="brand700" rounded={{ tl: "circle" }} />
+    <Div h="3rem" bg="warning700" rounded={{ tl: "circle" }} />
   </Col>
   <Col>
     <Div
       h="3rem"
-      bg="brand700"
+      bg="warning700"
       rounded={{ tl: "circle", br: "circle" }}
     />
   </Col>
   <Col>
-    <Div h="3rem" bg="brand700" rounded={{ t: "circle" }} />
+    <Div h="3rem" bg="warning700" rounded={{ t: "circle" }} />
   </Col>
   <Col>
-    <Div h="3rem" bg="brand700" rounded={{ b: "circle" }} />
+    <Div h="3rem" bg="warning700" rounded={{ b: "circle" }} />
   </Col>
   <Col>
-    <Div h="3rem" bg="brand700" rounded={{ r: "circle" }} />
+    <Div h="3rem" bg="warning700" rounded={{ r: "circle" }} />
   </Col>
   <Col>
-    <Div h="3rem" bg="brand700" rounded={{ l: "circle" }} />
+    <Div h="3rem" bg="warning700" rounded={{ l: "circle" }} />
   </Col>
   <Col>
     <Div
       h="3rem"
-      bg="brand700"
+      bg="warning700"
       rounded={{ bl: "circle", tr: "circle" }}
     />
   </Col>
-</Row>`;
+</Row>`
 
 const BorderRadius = () => {
   return (
@@ -76,32 +61,18 @@ const BorderRadius = () => {
         </Text>
         <Text textColor="medium" textSize="body" m={{ b: "3rem" }}>
           Border Radius can be defined by <Tag>{"rounded={value}"}</Tag> where
-          value can be - '0', 'xs', 'sm', 'lg' or 'default'. Default is the
-          default border radius of buttons and other such elements.
+          value can be - '0', 'xs', 'sm', 'md', 'lg' or 'xl'. 'md' is the
+          default border radius of buttons and other such elements. You can{" "}
+          <Link to="/docs/theme#rounded">edit or add more rounded</Link> values
+          by theme.
         </Text>
 
         <Row>
-          <Col>
-            <Div h="3rem" bg="brand700" rounded="0" />
-          </Col>
-          <Col>
-            <Div h="3rem" bg="brand700" rounded="xs" />
-          </Col>
-          <Col>
-            <Div h="3rem" bg="brand700" rounded="sm" />
-          </Col>
-          <Col>
-            <Div h="3rem" bg="brand700" rounded="md" />
-          </Col>
-          <Col>
-            <Div h="3rem" bg="brand700" rounded="lg" />
-          </Col>
-          <Col>
-            <Div h="3rem" bg="brand700" rounded="xl" />
-          </Col>
-          <Col>
-            <Div h="3rem" bg="brand700" rounded="circle" />
-          </Col>
+          {["0", "xs", "sm", "md", "lg", "xl", "circle"].map(value => (
+            <Col>
+              <Div h="3rem" bg="warning700" rounded={value} key={value} />
+            </Col>
+          ))}
         </Row>
       </InfoCodeRow>
       <InfoCodeRow pt="0" code={borderRadiusCode2}>
@@ -114,38 +85,38 @@ const BorderRadius = () => {
 
         <Row>
           <Col>
-            <Div h="3rem" bg="brand700" rounded={{ tl: "circle" }} />
+            <Div h="3rem" bg="warning700" rounded={{ tl: "circle" }} />
           </Col>
           <Col>
             <Div
               h="3rem"
-              bg="brand700"
+              bg="warning700"
               rounded={{ tl: "circle", br: "circle" }}
             />
           </Col>
           <Col>
-            <Div h="3rem" bg="brand700" rounded={{ t: "circle" }} />
+            <Div h="3rem" bg="warning700" rounded={{ t: "circle" }} />
           </Col>
           <Col>
-            <Div h="3rem" bg="brand700" rounded={{ b: "circle" }} />
+            <Div h="3rem" bg="warning700" rounded={{ b: "circle" }} />
           </Col>
           <Col>
-            <Div h="3rem" bg="brand700" rounded={{ r: "circle" }} />
+            <Div h="3rem" bg="warning700" rounded={{ r: "circle" }} />
           </Col>
           <Col>
-            <Div h="3rem" bg="brand700" rounded={{ l: "circle" }} />
+            <Div h="3rem" bg="warning700" rounded={{ l: "circle" }} />
           </Col>
           <Col>
             <Div
               h="3rem"
-              bg="brand700"
+              bg="warning700"
               rounded={{ bl: "circle", tr: "circle" }}
             />
           </Col>
         </Row>
       </InfoCodeRow>
     </>
-  );
-};
+  )
+}
 
-export default BorderRadius;
+export default BorderRadius

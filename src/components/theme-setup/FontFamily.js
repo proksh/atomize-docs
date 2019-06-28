@@ -1,13 +1,5 @@
 import React from "react"
-import {
-  Div,
-  Text,
-  Tag,
-  Row,
-  Col,
-  ThemeProvider,
-  DefaultTheme,
-} from "react-atomize"
+import { Text, Tag, ThemeProvider, DefaultTheme } from "react-atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 
@@ -15,7 +7,7 @@ const theme = {
   ...DefaultTheme,
   fontFamily: {
     ...DefaultTheme.fontFamily,
-    secondary: "equity-text, serif",
+    primary: "equity-text, serif",
   },
 }
 
@@ -26,16 +18,18 @@ const theme = {
   ...DefaultTheme,
   fontFamily: {
     ...DefaultTheme.fontFamily,
-    secondary: "Avenir"
+    primary: "equity-text, serif",
   }
-};
+}
 
-<ThemeProvider theme={theme}>
-  <Text fontFamily="secondary" textSize="heading">
-    This is different font
-  </Text>
-</ThemeProvider>
-`
+ReactDOM.render(
+  <ThemeProvider theme={theme}>
+    <Text fontFamily="secondary" textSize="heading">
+      This is different font
+    </Text>
+  </ThemeProvider>
+  , mountNode
+);`
 
 const FontFamily = () => {
   return (
@@ -73,7 +67,7 @@ const FontFamily = () => {
         </Text>
 
         <ThemeProvider theme={theme}>
-          <Text fontFamily="secondary" textSize="heading">
+          <Text fontFamily="primary" textSize="heading">
             This is different font
           </Text>
         </ThemeProvider>

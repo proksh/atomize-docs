@@ -1,20 +1,22 @@
-import React from "react";
-import { Div, Text, Tag } from "react-atomize";
+import React from "react"
+import { Div, Text, Tag } from "react-atomize"
 
-import InfoCodeRow from "../common/InfoCodeRow";
+import InfoCodeRow from "../common/InfoCodeRow"
 
 const paddingCode1 = `// With height of '48px' & width of '50%'
 <Div
-  h="3rem" w="50%"
-  bg="success400"
+  h="3rem"
+  w="50%"
+  bg="warning700"
 />
 
 // With height of '128px' & width of '100%'
 <Div
-  h="8rem" w="100%"
-  bg="danger300"
+  h="8rem"
+  w="100%"
+  bg="info700"
 />
-`;
+`
 
 const HeightWidth = () => {
   return (
@@ -26,10 +28,10 @@ const HeightWidth = () => {
         The properties related to height & Width are accessabe as shown
       </Text>
 
-      <Div h="3rem" w="50%" bg="success400" m={{ b: "1rem" }} />
-      <Div h="8rem" w="100%" bg="danger300" />
+      <Div h="3rem" w="50%" bg="warning700" m={{ b: "1rem" }} />
+      <Div h="8rem" w="100%" bg="info700" />
     </InfoCodeRow>
-  );
-};
+  )
+}
 
-export default HeightWidth;
+export default HeightWidth

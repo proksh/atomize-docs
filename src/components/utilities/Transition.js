@@ -1,109 +1,52 @@
-import React from "react";
-import { Div, Text, Tag, ThemeProvider, DefaultTheme } from "react-atomize";
+import React from "react"
+import { Link } from "gatsby"
+import { Div, Text, Tag } from "react-atomize"
 
-import InfoCodeRow from "../common/InfoCodeRow";
+import InfoCodeRow from "../common/InfoCodeRow"
 
-const theme = {
-  ...DefaultTheme,
-  transition: "transform 0.8s linear"
-};
-
-const breakpointsCode1 = `// Changing the transition value
-import { Div, Text, Tag, Row, Col, ThemeProvider, DefaultTheme } from "react-atomize";
-
-const theme = {
-  ...DefaultTheme,
-  transition: "transform 0.8s linear"
-};
-
-<ThemeProvider theme={theme}>
-  <Div
-    h="3rem"
-    w="3rem"
-    m={{ b: "4rem" }}
-    rounded="lg"
-    bg="brand200"
-    style={{
-      transform: animate2
-        ? "translateX(20rem)rotate(360deg)"
-        : "translateX(0)rotate(0)"
-    }}
-    transition
-  />
-</ThemeProvider>
-`;
+const transitionCode1 = `// Changing the transition value
+<Div
+  p={{ x: "2rem", y: "1rem" }}
+  rounded="lg"
+  bg="warning700"
+  hoverBg="warning800"
+  textAlign="center"
+  textColor="white"
+  hoverTextColor="warning300"
+  transition
+>
+  Hover Me
+</Div>`
 
 class Transition extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      animate1: false,
-      animate2: false
-    };
-
-    this.toggleState = this.toggleState.bind(this);
-  }
-
-  componentDidMount() {
-    setInterval(this.toggleState, 1000);
-  }
-
-  toggleState() {
-    const { animate1, animate2 } = this.state;
-    this.setState({ animate1: !animate1, animate2: !animate2 });
-  }
-
   render() {
-    const { animate1, animate2 } = this.state;
-
     return (
-      <InfoCodeRow id="transition" code={breakpointsCode1}>
+      <InfoCodeRow id="transition" code={transitionCode1}>
         <Text m={{ b: "0.5rem" }} textSize="heading" textWeight="500">
           Transition
         </Text>
         <Text textColor="medium" textSize="body" m={{ b: "1rem" }}>
-          <Tag>tranition</Tag> props can be passed to any component to include
-          css transition. Default value of transition is{" "}
-          <Tag>all 0.4s ease-in-out</Tag>.
+          You can pass <Tag>transition</Tag> to the element to add a transition
+          effect between its css states and the default transition will be
+          applied. You can <Link to="/docs/theme/theme#transition"></Link>edit
+          this default trasition value by changing the in the theme.
         </Text>
 
         <Div
-          h="3rem"
-          w="3rem"
-          m={{ b: "4rem" }}
+          p={{ x: "2rem", y: "1rem" }}
           rounded="lg"
-          bg="brand200"
-          style={{
-            transform: animate1
-              ? "translateX(20rem)rotate(360deg)"
-              : "translateX(0)rotate(0)"
-          }}
+          bg="warning700"
+          hoverBg="warning800"
+          textAlign="center"
+          textColor="white"
+          hoverTextColor="warning300"
           transition
-        />
-
-        <Text textColor="medium" textSize="body" m={{ b: "1rem" }}>
-          You can edit this value as shown.
-        </Text>
-
-        <ThemeProvider theme={theme}>
-          <Div
-            h="3rem"
-            w="3rem"
-            m={{ b: "4rem" }}
-            rounded="lg"
-            bg="brand200"
-            style={{
-              transform: animate2
-                ? "translateX(20rem)rotate(360deg)"
-                : "translateX(0)rotate(0)"
-            }}
-            transition
-          />
-        </ThemeProvider>
+        >
+          Hover Me
+        </Div>
       </InfoCodeRow>
-    );
+    )
   }
 }
 
-export default Transition;
+export default Transition

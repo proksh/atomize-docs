@@ -4,7 +4,6 @@ import AvailableColors from "../../components/theme-setup/AvailableColors"
 import AddEditColors from "../../components/theme-setup/AddEditColors"
 import ColumnCount from "../../components/theme-setup/ColumnCount"
 import ContainerGutterWidth from "../../components/theme-setup/ContainerGutterWidth"
-import Breakpoints from "../../components/theme-setup/Breakpoints"
 import Shadows from "../../components/theme-setup/Shadows"
 import BorderRadius from "../../components/theme-setup/BorderRadius"
 import FontSize from "../../components/theme-setup/FontSize"
@@ -23,7 +22,6 @@ const Molecules = () => (
       <AddEditColors />
       <ColumnCount />
       <ContainerGutterWidth />
-      {/* <Breakpoints /> */}
       <Shadows />
       <BorderRadius />
       <FontSize />

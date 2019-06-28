@@ -1,20 +1,26 @@
-import React from "react";
-import { Div, Text, Tag, Icon } from "react-atomize";
+import React from "react"
+import { Link } from "gatsby"
+import { Div, Text, Tag } from "react-atomize"
 
-import InfoCodeRow from "../common/InfoCodeRow";
+import InfoCodeRow from "../common/InfoCodeRow"
 
 const backgroundCode1 = `// With some background Color
-<Div bg="warning700" h="3rem" m={{ b: "4rem" }} />
-`;
+<Div
+  bg="warning700"
+  hoverBg="warning800"
+  h="3rem"
+  m={{ b: "4rem" }}
+/>
+`
 
 const backgroundCode2 = `// With background Image
 <Div
-  bgImg="//images.ctfassets.net/g4teg9603zq4/6cg0T1KtyYCcgDQHoltkBO/fb75f7feea61868d9ab7a4b00c126d3f/home-hero.png"
+  bgImg="https://images.unsplash.com/photo-1561212024-cb9ad0c33195?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&dpr=1&auto=format&fit=crop&w=2199&h=594&q=80"
   bgSize="cover"
   bgPos="center"
-  h="5rem"
+  h="10rem"
 />
-`;
+`
 
 const Background = () => {
   return (
@@ -25,11 +31,13 @@ const Background = () => {
         </Text>
         <Text textColor="medium" textSize="body" m={{ b: "1rem" }}>
           Background and Hover Background can be given by{" "}
-          <Tag>{"bg={value}"}</Tag> and <Tag>{"hoverBg={value}"}</Tag>{" "}
-          respectively.
+          <Tag>{"bg={value}"}</Tag> and <Tag>{"hoverBg={value}"}</Tag>
+          respectively where value can be any color from the theme. You can{" "}
+          <Link to="/docs/theme#addEditColors">edit or add color</Link> using
+          theme.
         </Text>
 
-        <Div bg="warning700" h="3rem" m={{ b: "4rem" }} />
+        <Div bg="warning700" hoverBg="warning800" h="3rem" m={{ b: "4rem" }} />
       </InfoCodeRow>
 
       <InfoCodeRow code={backgroundCode2} pt="0">
@@ -40,14 +48,14 @@ const Background = () => {
         </Text>
 
         <Div
-          bgImg="//images.ctfassets.net/g4teg9603zq4/6cg0T1KtyYCcgDQHoltkBO/fb75f7feea61868d9ab7a4b00c126d3f/home-hero.png"
+          bgImg="https://images.unsplash.com/photo-1561212024-cb9ad0c33195?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&dpr=1&auto=format&fit=crop&w=2199&h=594&q=80"
           bgSize="cover"
           bgPos="center"
-          h="5rem"
+          h="10rem"
         />
       </InfoCodeRow>
     </>
-  );
-};
+  )
+}
 
-export default Background;
+export default Background

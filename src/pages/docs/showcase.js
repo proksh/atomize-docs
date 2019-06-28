@@ -1,12 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../../components/layout"
-import Image from "../../components/image"
 import SEO from "../../components/seo"
-import { Text, Button, Div, Anchor, Icon, Row, Col } from "react-atomize"
+import { Text, Div, Row, Col, Anchor } from "react-atomize"
 import DocsWrapper from "../../components/common/DocsWrapper"
-import Intro from "../../components/introduction/Intro"
+import italic from "../../images/showcase/italic.png"
+import anteelo from "../../images/showcase/anteelo.png"
 
 const IntroDocs = () => (
   <Layout>
@@ -16,25 +15,43 @@ const IntroDocs = () => (
         <Text textSize="display2" m={{ b: "1rem" }}>
           Who's using Atomize?
         </Text>
-
-        {/* <Text textSize="heading" textWeight="500" m={{ b: "0.5rem" }}>
-          Installation
-        </Text> */}
         <Text m={{ b: "4rem" }} textColor="medium">
-          Check out these apps built using Paper. Send us a pull request to add
+          Check out these apps built using Atomize. Send us a{" "}
+          <Anchor href="mailto:prokshh@gmail.com">pull request</Anchor> to add
           your app to this list.
         </Text>
         <Row>
           <Col size={6}>
-            <Div
-              p={{ b: "113%" }}
-              bg="gray400"
-              bgImg="https://images.ctfassets.net/g4teg9603zq4/6cg0T1KtyYCcgDQHoltkBO/4eccd174c3af2a3d1f5ddb23d3d9334d/Italic_On-Figure_894.jpg"
-              bgSize="cover"
-            ></Div>
+            <Anchor href="https://italic.com/" target="_blanc">
+              <Div
+                p={{ b: "70%" }}
+                rounded="lg"
+                shadow="2"
+                hoverShadow="4"
+                cursor="pointer"
+                bgImg={italic}
+                bgSize="cover"
+                border="1px solid"
+                borderColor="gray200"
+                transition
+              ></Div>
+            </Anchor>
           </Col>
           <Col size={6}>
-            <Div p={{ b: "113%" }} bg="gray400"></Div>
+            <Anchor href="https://anteelo.com/" target="_blanc">
+              <Div
+                p={{ b: "70%" }}
+                rounded="lg"
+                shadow="2"
+                hoverShadow="4"
+                cursor="pointer"
+                bgImg={anteelo}
+                bgSize="cover"
+                border="1px solid"
+                borderColor="gray200"
+                transition
+              ></Div>
+            </Anchor>
           </Col>
         </Row>
       </Div>

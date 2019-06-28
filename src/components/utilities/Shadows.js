@@ -1,7 +1,8 @@
-import React from "react";
-import { Div, Text, Tag, Row, Col, Icon } from "react-atomize";
+import React from "react"
+import { Link } from "gatsby"
+import { Div, Text, Tag, Row, Col } from "react-atomize"
 
-import InfoCodeRow from "../common/InfoCodeRow";
+import InfoCodeRow from "../common/InfoCodeRow"
 
 const shadowCode1 = `// Shadow values 1,2,3,4,5
 <Row>
@@ -22,7 +23,7 @@ const shadowCode1 = `// Shadow values 1,2,3,4,5
     </Col>
   ))}
 </Row>
-`;
+`
 
 const Shadows = () => {
   return (
@@ -32,7 +33,9 @@ const Shadows = () => {
       </Text>
       <Text textColor="medium" textSize="body" m={{ b: "3rem" }}>
         5 shadows are available through <Tag>{"shadow={value}"}</Tag>.Hover
-        Shadow can be changed through <Tag>{"hoverShadow={value}"}</Tag>
+        Shadow can be changed through <Tag>{"hoverShadow={value}"}</Tag>. You
+        can <Link to="/docs/theme#shadows">edit or add shadows</Link> by using
+        theme.
       </Text>
       <Div m={{ b: "2.5rem" }}>
         <Row>
@@ -54,15 +57,15 @@ const Shadows = () => {
           ))}
         </Row>
       </Div>
-      <Div d="flex" bg="info700" p="1rem" rounded="md">
+      {/* <Div d="flex" bg="info700" p="1rem" rounded="md">
         <Icon name="InfoSolid" size="16px" color="white" m={{ r: "0.75rem" }} />
         <Text textColor="white" textWeight="500">
           More Shadows can be added or existing one can be modified from the
           themeVars in theme.
         </Text>
-      </Div>
+      </Div> */}
     </InfoCodeRow>
-  );
-};
+  )
+}
 
-export default Shadows;
+export default Shadows

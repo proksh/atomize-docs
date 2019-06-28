@@ -108,14 +108,14 @@ const ContainerGutterWidth = () => {
             </Row>
           </Div>
         </Div>
-        <Div bg="gray200">
+        <Div bg="gray300">
           <Div p={{ x: "2rem" }}>
             <Row>
               <Col size={8}>
-                <Div h="3rem" bg="warning400" />
+                <Div h="3rem" bg="warning700" />
               </Col>
               <Col size={4}>
-                <Div h="3rem" bg="warning400" />
+                <Div h="3rem" bg="warning700" />
               </Col>
             </Row>
           </Div>

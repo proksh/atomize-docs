@@ -6,6 +6,28 @@ import { Div, Button } from "react-atomize"
 import codeTheme from "../../components/common/codeTheme"
 
 class InfoCodeRow extends React.Component {
+  copyUrlToClipboard = code => {
+    const el = document.createElement("textarea")
+    el.value = code
+    el.setAttribute("readonly", "")
+    el.style.position = "absolute"
+    el.style.left = "-9999px"
+    document.body.appendChild(el)
+    const selected =
+      document.getSelection().rangeCount > 0
+        ? document.getSelection().getRangeAt(0)
+        : false
+    el.select()
+    document.execCommand("copy")
+    document.body.removeChild(el)
+    if (selected) {
+      document.getSelection().removeAllRanges()
+      document.getSelection().addRange(selected)
+    }
+
+    window.alert("Url Copied")
+  }
+
   render() {
     const { children, code, pt, pb, border, id } = this.props
 
@@ -57,6 +79,7 @@ class InfoCodeRow extends React.Component {
                 textColor="medium"
                 textSize="caption"
                 m={{ l: "1rem", b: "0.5rem" }}
+                onClick={() => this.copyUrlToClipboard(code)}
               >
                 Copy Code
               </Button>

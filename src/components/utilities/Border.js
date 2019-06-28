@@ -1,7 +1,8 @@
-import React from "react";
-import { Div, Text, Tag } from "react-atomize";
+import React from "react"
+import { Link } from "gatsby"
+import { Div, Text, Tag } from "react-atomize"
 
-import InfoCodeRow from "../common/InfoCodeRow";
+import InfoCodeRow from "../common/InfoCodeRow"
 
 const borderCode1 = `// With solid and dashed borders
 <Div
@@ -16,7 +17,7 @@ const borderCode1 = `// With solid and dashed borders
   borderColor="brand700"
   m={{ b: "4rem" }}
 />
-`;
+`
 
 const borderCode2 = `// Changing Border Color on hover
 <Div
@@ -26,7 +27,7 @@ const borderCode2 = `// Changing Border Color on hover
   hoverBorderColor="black"
   transition
 />
-`;
+`
 
 const Border = () => {
   return (
@@ -38,7 +39,10 @@ const Border = () => {
         <Text textColor="medium" textSize="body" m={{ b: "1rem" }}>
           Border can be defined by using 2 properties - i.e.,{" "}
           <Tag>{"border={value}"}</Tag> & <Tag>{"borderColor={value}"}</Tag>.
-          Both of them can are responsive separately.
+          Both of them can are responsive separately. Color can be any value of
+          color from the theme. You can{" "}
+          <Link to="/docs/theme#addEditColors">edit or add more colors</Link>{" "}
+          values by theme.
         </Text>
 
         <Div
@@ -69,7 +73,7 @@ const Border = () => {
         />
       </InfoCodeRow>
     </>
-  );
-};
+  )
+}
 
-export default Border;
+export default Border

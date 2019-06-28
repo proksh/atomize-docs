@@ -12,12 +12,12 @@ import DocsWrapper from "../../components/common/DocsWrapper"
 const Molecules = () => (
   <Layout>
     <SEO title="Home" />
-    <DocsWrapper>
+    {/* <DocsWrapper>
       <DropdownDocs />
       <ModalDocs />
       <SideDrawerDocs />
       <NotificationDocs />
-    </DocsWrapper>
+    </DocsWrapper> */}
   </Layout>
 )
 

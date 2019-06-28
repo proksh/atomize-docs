@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import "./font.css"
 
 import Header from "./common/header"
 import { StyleReset, DefaultTheme, ThemeProvider } from "react-atomize"
@@ -16,7 +17,6 @@ const theme = {
   ...DefaultTheme,
   fontFamily: {
     ...DefaultTheme.fontFamily,
-    primary: "'SF Pro Display', sans-serif",
     secondary: '"jubilat", serif',
     code: "'Fira Mono','Roboto Mono', monospace",
   },
@@ -59,7 +59,7 @@ const Layout = ({ children }) => (
       <ThemeProvider theme={theme}>
         <StyleReset />
         {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-        <main style={{ letterSpacing: "-0.4px" }}>{children}</main>
+        <main>{children}</main>
       </ThemeProvider>
     )}
   />

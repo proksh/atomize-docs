@@ -9077,10 +9077,10 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-atomize@^1.0.14:
-  version "1.0.14"
-  resolved "https://registry.yarnpkg.com/react-atomize/-/react-atomize-1.0.14.tgz#b2132aa10e0d5041438a9221ac8e9f22cd0a3586"
-  integrity sha512-QDWrJUlFGHvpgdoT1hbcK6QJEZ0llfRkY1e+Y5Mm03Wy/eejVLDVvl3UEwyEUeIW4elCYSheMOIdnKFgXwA/lw==
+react-atomize@^1.0.15:
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/react-atomize/-/react-atomize-1.0.15.tgz#f61c319a3caabbd0a385661d691eb82823d8553e"
+  integrity sha512-YGIoVIpRZmujm5tQXymC4UEe17clbUSQPOsy57Ta3zpkzKtMf8jdpQaowSaQvb1ifIUfL37JFPtWD2fyGDRXsA==
 
 react-dev-utils@^4.2.1:
   version "4.2.3"

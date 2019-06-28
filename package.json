@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A simple starter to get up and dicon eveloping quickly with Gatsby",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
@@ -19,7 +19,7 @@
     "prism-react-renderer": "^0.1.6",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-atomize": "^1.0.14",
+    "react-atomize": "^1.0.15",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-transition-group": "^4.1.1",
@@ -34,7 +34,8 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop --host=0.0.0.0",
+    "deploy": "gatsby clean && gatsby build && firebase deploy",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",

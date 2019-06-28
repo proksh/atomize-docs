@@ -2,11 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../../components/layout"
-import Image from "../../components/image"
 import SEO from "../../components/seo"
 import { Text, Button, Div, Anchor, Icon } from "react-atomize"
 import DocsWrapper from "../../components/common/DocsWrapper"
-import Intro from "../../components/introduction/Intro"
 
 const IntroDocs = () => (
   <Layout>
@@ -21,8 +19,8 @@ const IntroDocs = () => (
           Installation
         </Text> */}
         <Text m={{ b: "1rem" }} textColor="medium">
-          Paper is a collection of customizable and production-ready components
-          for React Native, following Google’s Material Design guidelines.
+          Atomize is a collection of customizable and production-ready
+          components for React JS.
         </Text>
         <Anchor
           href="https://codesandbox.io/embed/mystifying-lichterman-bv5to"

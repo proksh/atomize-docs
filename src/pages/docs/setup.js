@@ -75,7 +75,7 @@ const Setup = () => (
           Open a Terminal in your project's folder and run,
         </Text>
         <Div
-          m={{ b: "1rem" }}
+          m={{ b: "4rem" }}
           p={{ x: "0.5rem" }}
           bg="gray200"
           rounded="lg"
@@ -86,8 +86,8 @@ const Setup = () => (
           <Highlight
             {...defaultProps}
             theme={codeTheme}
-            code={`npm install atomize`}
-            language="jsx"
+            code={`npm install atomize styled-components react-transition-group @callstack/react-theme-provider`}
+            language="bash"
           >
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
               <pre className={className} style={style}>
@@ -103,7 +103,7 @@ const Setup = () => (
           </Highlight>
         </Div>
 
-        <Text m={{ b: "1rem" }} textColor="medium">
+        {/* <Text m={{ b: "1rem" }} textColor="medium">
           In additional to this, you'll need to install{" "}
           <Anchor>styled-components</Anchor>,{" "}
           <Anchor>react-transition-group</Anchor> &{" "}
@@ -112,8 +112,8 @@ const Setup = () => (
         </Text>
         <Text m={{ b: "1rem" }} textColor="medium">
           Then add StyleReset from atomize to the root component.
-        </Text>
-        <Div
+        </Text> */}
+        {/* <Div
           m={{ b: "4rem" }}
           p="0.5rem"
           bg="gray200"
@@ -140,7 +140,7 @@ const Setup = () => (
               </pre>
             )}
           </Highlight>
-        </Div>
+        </Div> */}
 
         {/* Usage */}
         <Text textSize="heading" textWeight="500" m={{ b: "0.5rem" }}>
