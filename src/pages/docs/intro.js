@@ -10,7 +10,7 @@ const IntroDocs = () => (
   <Layout>
     <SEO title="Home" />
     <DocsWrapper>
-      <Div p={{ x: { xs: "2rem", md: "4rem" }, t: "5rem", b: "10rem" }}>
+      <Div p={{ x: { xs: "1.5rem", md: "4rem" }, t: "5rem", b: "10rem" }}>
         <Text textSize="display2" m={{ b: "1rem" }}>
           Advance Design System for React JS.
         </Text>

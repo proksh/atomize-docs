@@ -25,7 +25,6 @@ class HeroSection extends React.Component {
   }
 
   scrollAnimation = e => {
-    console.log(e)
     const srcollPos = window.scrollY
     document.getElementById(
       "triangles"
@@ -37,7 +36,7 @@ class HeroSection extends React.Component {
   render() {
     return (
       <>
-        <Div p={{ t: "9rem" }}>
+        <Div tag="section" p={{ t: { xs: "6rem", md: "9rem" } }}>
           <Container d="flex" flexDir="column" align="center">
             <Text textAlign="center" textSize="display3" m={{ b: "1rem" }}>
               Design System for React JS
@@ -50,7 +49,7 @@ class HeroSection extends React.Component {
               m={{ b: "1.625rem" }}
             >
               Build on Styled Components, Atomize React helps designers and
-              developers to collablorate and build beautifull and fully
+              developers to collablorate and build beautiful and fully
               customizable UI for web.
             </Text>
             <Div
@@ -65,7 +64,6 @@ class HeroSection extends React.Component {
                 bg="info700"
                 hoverBg="info600"
                 rounded="lg"
-                hoverShadow="4"
                 m={{ r: "1rem", b: { xs: "1rem", sm: "0" } }}
               >
                 Get Started Now
@@ -86,7 +84,12 @@ class HeroSection extends React.Component {
             </Div>
           </Container>
         </Div>
-        <Div w="100vw" p={{ t: "10rem" }} overflow="hidden">
+        <Div
+          tag="section"
+          w="100vw"
+          p={{ t: { xs: "8rem", md: "8rem" } }}
+          overflow="hidden"
+        >
           <Container>
             <Div
               d="flex"

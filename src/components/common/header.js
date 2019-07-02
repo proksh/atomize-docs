@@ -25,6 +25,7 @@ class Header extends React.Component {
 
     return (
       <Div
+        tag="header"
         pos="fixed"
         top="0"
         left="0"
@@ -87,6 +88,10 @@ class Header extends React.Component {
             right="0"
             zIndex={{ xs: "-1", md: "0" }}
             shadow={{ xs: "4", md: "0" }}
+            opacity={{
+              xs: showMobileHeaderMenu ? "1" : "0",
+              md: "1",
+            }}
             transform={{
               xs: `translateY(${showMobileHeaderMenu ? "0" : "-100%"})`,
               md: "none",
@@ -103,7 +108,7 @@ class Header extends React.Component {
               Features
             </Anchor>
             <Anchor
-              m={{ r: "2.5rem", b: { xs: "1rem", md: "0" } }}
+              m={{ r: "2.5rem", b: { xs: "4rem", md: "0" } }}
               textWeight="500"
               textColor="medium"
               hoverTextColor="black"
@@ -117,7 +122,6 @@ class Header extends React.Component {
                 hoverBg="info300"
                 textColor="info800"
                 w={{ xs: "100%", sm: "8.5rem" }}
-                m={{ t: { xs: "1rem", md: "0" } }}
                 rounded="lg"
                 style={{ letterSpacing: "-0.5px" }}
               >

@@ -2,9 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../../components/layout"
-import Image from "../../components/image"
 import SEO from "../../components/seo"
-import { Text, Div, Anchor, Icon } from "react-atomize"
+import { Text, Div } from "react-atomize"
 import DocsWrapper from "../../components/common/DocsWrapper"
 import Highlight, { defaultProps } from "prism-react-renderer"
 
@@ -62,7 +61,7 @@ const Setup = () => (
   <Layout>
     <SEO title="Home" />
     <DocsWrapper>
-      <Div p={{ x: { xs: "2rem", md: "4rem" }, t: "5rem", b: "10rem" }}>
+      <Div p={{ x: { xs: "1.5rem", md: "4rem" }, t: "5rem", b: "10rem" }}>
         <Text textSize="display2" m={{ b: "4rem" }}>
           Getting Started
         </Text>
@@ -103,45 +102,6 @@ const Setup = () => (
           </Highlight>
         </Div>
 
-        {/* <Text m={{ b: "1rem" }} textColor="medium">
-          In additional to this, you'll need to install{" "}
-          <Anchor>styled-components</Anchor>,{" "}
-          <Anchor>react-transition-group</Anchor> &{" "}
-          <Anchor>@callstack/react-theme-provider</Anchor> to complete the
-          installation.
-        </Text>
-        <Text m={{ b: "1rem" }} textColor="medium">
-          Then add StyleReset from atomize to the root component.
-        </Text> */}
-        {/* <Div
-          m={{ b: "4rem" }}
-          p="0.5rem"
-          bg="gray200"
-          rounded="lg"
-          overflow="hidden"
-          textColor="medium"
-          fontFamily="code"
-        >
-          <Highlight
-            {...defaultProps}
-            theme={codeTheme}
-            code={styleResetCode}
-            language="jsx"
-          >
-            {({ className, style, tokens, getLineProps, getTokenProps }) => (
-              <pre className={className} style={style}>
-                {tokens.map((line, i) => (
-                  <div {...getLineProps({ line, key: i })}>
-                    {line.map((token, key) => (
-                      <span {...getTokenProps({ token, key })} />
-                    ))}
-                  </div>
-                ))}
-              </pre>
-            )}
-          </Highlight>
-        </Div> */}
-
         {/* Usage */}
         <Text textSize="heading" textWeight="500" m={{ b: "0.5rem" }}>
           Usage
@@ -156,16 +116,6 @@ const Setup = () => (
         <Text m={{ b: "1rem" }} textColor="medium">
           Example:
         </Text>
-        {/* <Div
-          p="1rem"
-          m={{ b: "4rem" }}
-          rounded="md"
-          bg="gray200"
-          textColor="medium"
-          fontFamily="code"
-        >
-          npm install atomize
-        </Div> */}
         <Div
           m={{ b: "4rem" }}
           p="0.5rem"

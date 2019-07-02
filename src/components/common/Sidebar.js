@@ -1,6 +1,14 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-import { Div, Text, scrollTo, Image, Input, Tag } from "react-atomize"
+import {
+  Div,
+  Text,
+  scrollTo,
+  Image,
+  Input,
+  Tag,
+  Container,
+} from "react-atomize"
 import { Location } from "@reach/router"
 import logo from "../../images/logo.png"
 
@@ -32,28 +40,6 @@ const sidebarLinks = {
         { text: "Border Radius", id: "rounded" },
         { text: "Font Size", id: "fontSize" },
         { text: "Font Family", id: "fontfamily" },
-        { text: "Transition", id: "transition" },
-      ],
-    },
-    utilities: {
-      text: "Utilities",
-      page: "/docs/utilities",
-      children: [
-        { text: "Responsive", id: "responsive" },
-        { text: "Padding", id: "padding" },
-        { text: "Margin", id: "margin" },
-        { text: "Background", id: "background" },
-        { text: "Text Props", id: "textprops" },
-        { text: "Font Family", id: "fontFamily" },
-        { text: "Height & Width", id: "heightWidth" },
-        { text: "Border Radius", id: "borderRadius" },
-        { text: "Border", id: "border" },
-        { text: "Display", id: "display" },
-        { text: "Shadows", id: "shadows" },
-        { text: "Position", id: "position" },
-        { text: "Flex", id: "flex" },
-        { text: "Cursor", id: "cursor" },
-        { text: "Transform", id: "transform" },
         { text: "Transition", id: "transition" },
       ],
     },
@@ -108,10 +94,21 @@ export default class Sidebar extends Component {
   constructor(props) {
     super(props)
 
+    this.state = {
+      showMobileHeaderMenu: false,
+    }
+
     this.animateScrollPositionSidebar = this.animateScrollPositionSidebar.bind(
       this
     )
   }
+
+  toggleHeaderMenu = () => {
+    const { showMobileHeaderMenu } = this.state
+
+    this.setState({ showMobileHeaderMenu: !showMobileHeaderMenu })
+  }
+
   componentDidMount() {
     window.addEventListener("scroll", this.animateScrollPositionSidebar)
   }
@@ -139,91 +136,69 @@ export default class Sidebar extends Component {
   }
 
   render() {
+    const { showMobileHeaderMenu } = this.state
+
     const upperLinks = sidebarLinks.upperLinks
     const lowerLinks = sidebarLinks.lowerLinks
 
     return (
       <Location>
         {locationProps => (
-          <Div
-            bg="gray100"
-            pos="fixed"
-            top="0"
-            left="0"
-            w="16rem"
-            h="100vh"
-            transform={{ xs: "translateX(-100%)", md: "translateX(0)" }}
-            overflow="scroll"
-            zIndex="1"
-          >
-            <Div p={{ x: "2rem", t: "3rem" }}>
-              <Div
-                d="flex"
-                justify="space-between"
-                align="center"
-                m={{ b: "1rem" }}
-              >
-                <Link to="/">
-                  <Image src={logo} h="18px" w="auto" />
-                </Link>
-                <Tag m={{ t: "-0.25rem" }}>v1.0.0</Tag>
-              </Div>
-              <Input
-                bg="white"
-                borderColor="gray400"
-                type="search"
-                rounded="sm"
-                placeholder="Filter..."
-                textSize="caption"
-                h="2rem"
-                m={{ b: "2rem" }}
-              />
-              <Text
-                textColor="light"
-                textSize="tiny"
-                textTransform="uppercase"
-                m={{ b: "1rem" }}
-              >
-                Get Started
-              </Text>
-              {Object.keys(upperLinks).map(key => (
-                <Link to={upperLinks[key].page}>
-                  <Text
-                    key={key}
-                    textColor={
-                      locationProps.location.pathname.includes(
-                        upperLinks[key].page
-                      )
-                        ? "info700"
-                        : "black"
-                    }
-                    textSize="body"
-                    hoverTextColor="info700"
-                    textWeight="600"
-                    m={{ b: "0.5rem" }}
-                    cursor="pointer"
-                  >
-                    {upperLinks[key].text}
-                  </Text>
-                </Link>
-              ))}
-            </Div>
-            <Div p="2rem">
-              <Text
-                textColor="light"
-                textSize="tiny"
-                textTransform="uppercase"
-                m={{ b: "1rem" }}
-              >
-                Library
-              </Text>
-              {Object.keys(lowerLinks).map(key => (
-                <Div key={key}>
-                  <Link to={lowerLinks[key].page}>
+          <>
+            <SidebarMobile
+              showMobileHeaderMenu={showMobileHeaderMenu}
+              toggleHeaderMenu={this.toggleHeaderMenu}
+              upperLinks={upperLinks}
+              lowerLinks={lowerLinks}
+            />
+            <Div
+              bg="gray100"
+              pos="fixed"
+              top="0"
+              left="0"
+              w="16rem"
+              h="100vh"
+              transform={{ xs: "translateX(-100%)", md: "translateX(0)" }}
+              overflow="scroll"
+              zIndex="1"
+            >
+              <Div p={{ x: "2rem", t: "3rem" }}>
+                <Div
+                  d="flex"
+                  justify="space-between"
+                  align="center"
+                  m={{ b: "1rem" }}
+                >
+                  <Link to="/">
+                    <Image src={logo} h="18px" w="auto" />
+                  </Link>
+                  <Tag m={{ t: "-0.25rem" }}>v1.0.0</Tag>
+                </Div>
+                <Input
+                  bg="white"
+                  borderColor="gray400"
+                  type="search"
+                  rounded="sm"
+                  placeholder="Filter..."
+                  textSize="caption"
+                  h="2rem"
+                  m={{ b: "2rem" }}
+                />
+                <Text
+                  textColor="light"
+                  textSize="tiny"
+                  textTransform="uppercase"
+                  m={{ b: "1rem" }}
+                >
+                  Get Started
+                </Text>
+                {Object.keys(upperLinks).map(key => (
+                  <Link to={upperLinks[key].page}>
                     <Text
+                      key={key}
                       textColor={
                         locationProps.location.pathname.includes(
-                          lowerLinks[key].page
+                          upperLinks[key].page
                         )
                           ? "info700"
                           : "black"
@@ -234,50 +209,82 @@ export default class Sidebar extends Component {
                       m={{ b: "0.5rem" }}
                       cursor="pointer"
                     >
-                      {lowerLinks[key].text}
+                      {upperLinks[key].text}
                     </Text>
                   </Link>
-                  {locationProps.location.pathname.includes(
-                    lowerLinks[key].page
-                  ) && <SidebarCollapse links={lowerLinks[key].children} />}
-                </Div>
-              ))}
-              <Div>
-                <Link to="/">
-                  <Div
-                    d="flex"
-                    textColor={
-                      locationProps.location.pathname.includes("/")
-                        ? "info700"
-                        : "black"
-                    }
-                    textSize="body"
-                    hoverTextColor="info700"
-                    textWeight="600"
-                    m={{ b: "0.5rem" }}
-                    cursor="pointer"
-                    d="flex"
-                  >
-                    Layout{" "}
-                    <Text
-                      d="flex"
-                      align="center"
-                      tag="span"
-                      m={{ l: "0.5rem" }}
-                      bg="success400"
-                      textSize="tiny"
-                      p={{ x: "0.5rem" }}
-                      h="1.5rem"
-                      rounded="md"
-                      textColor="success800"
-                    >
-                      In Progress
-                    </Text>
+                ))}
+              </Div>
+              <Div p="2rem">
+                <Text
+                  textColor="light"
+                  textSize="tiny"
+                  textTransform="uppercase"
+                  m={{ b: "1rem" }}
+                >
+                  Library
+                </Text>
+                {Object.keys(lowerLinks).map(key => (
+                  <Div key={key}>
+                    <Link to={lowerLinks[key].page}>
+                      <Text
+                        textColor={
+                          locationProps.location.pathname.includes(
+                            lowerLinks[key].page
+                          )
+                            ? "info700"
+                            : "black"
+                        }
+                        textSize="body"
+                        hoverTextColor="info700"
+                        textWeight="600"
+                        m={{ b: "0.5rem" }}
+                        cursor="pointer"
+                      >
+                        {lowerLinks[key].text}
+                      </Text>
+                    </Link>
+                    {locationProps.location.pathname.includes(
+                      lowerLinks[key].page
+                    ) && <SidebarCollapse links={lowerLinks[key].children} />}
                   </Div>
-                </Link>
+                ))}
+                <Div>
+                  <Link to="/">
+                    <Div
+                      d="flex"
+                      textColor={
+                        locationProps.location.pathname.includes("/")
+                          ? "info700"
+                          : "black"
+                      }
+                      textSize="body"
+                      hoverTextColor="info700"
+                      textWeight="600"
+                      m={{ b: "0.5rem" }}
+                      cursor="pointer"
+                      d="flex"
+                    >
+                      Layout{" "}
+                      <Text
+                        d="flex"
+                        align="center"
+                        tag="span"
+                        m={{ l: "0.5rem" }}
+                        bg="success400"
+                        textSize="tiny"
+                        p={{ x: "0.5rem" }}
+                        h="1.5rem"
+                        rounded="md"
+                        textColor="success800"
+                      >
+                        In Progress
+                      </Text>
+                    </Div>
+                  </Link>
+                </Div>
               </Div>
             </Div>
-          </Div>
+          </>
         )}
       </Location>
     )
@@ -321,3 +328,118 @@ const SidebarCollapse = ({ isOpen, links }) => {
     </Div>
   )
 }
+
+const SidebarMobile = ({
+  showMobileHeaderMenu,
+  toggleHeaderMenu,
+  upperLinks,
+  lowerLinks,
+}) => (
+  <Div
+    d={{ xs: "block", md: "none" }}
+    pos="fixed"
+    top="0"
+    left="0"
+    right="0"
+    zIndex="100"
+    p={{ y: { xs: "1.5rem", md: "1rem" } }}
+    bg="white"
+  >
+    <Container d="flex" align="center" justify="space-between">
+      <Div>
+        <Image src={logo} h="18px" w="auto" />
+      </Div>
+
+      {/* Icon For Mobile */}
+      <Div
+        d={{ xs: "flex", md: "none" }}
+        flexDir="column"
+        onClick={toggleHeaderMenu}
+      >
+        <Div
+          h="2px"
+          w="1rem"
+          bg="black"
+          rounded="lg"
+          style={{
+            transform: `translateY(${
+              showMobileHeaderMenu ? "1" : "-2"
+            }px)rotate(${showMobileHeaderMenu ? "135" : "0"}deg)`,
+          }}
+          transition
+        ></Div>
+        <Div
+          h="2px"
+          w="1rem"
+          bg="black"
+          rounded="lg"
+          style={{
+            transform: `translateY(${
+              showMobileHeaderMenu ? "-1" : "2"
+            }px)rotate(${showMobileHeaderMenu ? "45" : "0"}deg)`,
+          }}
+          transition
+        ></Div>
+      </Div>
+
+      {/* Links for Desktop */}
+      <Div
+        d="flex"
+        bg="white"
+        h="100vh"
+        overflow="auto"
+        align="strech"
+        flexDir="column"
+        pos="absolute"
+        p={{
+          t: "6rem",
+          b: "2rem",
+          x: "1.5rem",
+        }}
+        top="0"
+        left="0"
+        right="0"
+        zIndex="-1"
+        shadow="4"
+        opacity={showMobileHeaderMenu ? "1" : "0"}
+        transform={`translateY(${showMobileHeaderMenu ? "0" : "-100%"})`}
+        transition
+      >
+        <Text m={{ b: "0.5rem" }} textSize="caption" textColor="light">
+          Get Started
+        </Text>
+        {Object.keys(upperLinks).map(key => (
+          <Link to={upperLinks[key].page} key={key}>
+            <Text
+              m={{ b: "0.5rem" }}
+              textWeight="500"
+              textColor="black"
+              transition
+            >
+              {upperLinks[key].text}
+            </Text>
+          </Link>
+        ))}
+        <Text
+          m={{ b: "0.5rem", t: "2rem" }}
+          textSize="caption"
+          textColor="light"
+        >
+          Liberary
+        </Text>
+        {Object.keys(lowerLinks).map(key => (
+          <Link to={lowerLinks[key].page} key={key}>
+            <Text
+              m={{ b: "0.5rem" }}
+              textWeight="500"
+              textColor="black"
+              transition
+            >
+              {lowerLinks[key].text}
+            </Text>
+          </Link>
+        ))}
+      </Div>
+    </Container>
+  </Div>
+)

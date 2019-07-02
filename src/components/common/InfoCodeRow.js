@@ -1,11 +1,18 @@
 import React from "react"
-import styled from "styled-components"
 
 import Highlight, { defaultProps } from "prism-react-renderer"
-import { Div, Button } from "react-atomize"
+import { Div, Button, Notification, Icon } from "react-atomize"
 import codeTheme from "../../components/common/codeTheme"
 
 class InfoCodeRow extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      copied: false,
+    }
+  }
+
   copyUrlToClipboard = code => {
     const el = document.createElement("textarea")
     el.value = code
@@ -25,10 +32,13 @@ class InfoCodeRow extends React.Component {
       document.getSelection().addRange(selected)
     }
 
-    window.alert("Url Copied")
+    // window.alert("Url Copied")
+
+    this.setState({ copied: true })
   }
 
   render() {
+    const { copied } = this.state
     const { children, code, pt, pb, border, id } = this.props
 
     return (
@@ -38,10 +48,27 @@ class InfoCodeRow extends React.Component {
         flexWrap="no-wrap"
         flexDir={{ xs: "column", lg: "row" }}
       >
+        <Notification
+          textColor="success800"
+          isOpen={copied}
+          bg="success300"
+          rounded="xl"
+          prefix={
+            <Icon
+              name="Success"
+              color="success800"
+              m={{ r: "0.5rem" }}
+              size="20px"
+            />
+          }
+          onClose={() => this.setState({ copied: false })}
+        >
+          Copied Successfully
+        </Notification>
         <Div
           minW={{ xs: "100%", md: "37rem" }}
           w={{ xs: "100%", md: "37rem" }}
-          p={{ x: { xs: "2rem", lg: "4rem" } }}
+          p={{ x: { xs: "1.5rem", lg: "4rem" } }}
           overflow="scroll"
         >
           <Div
@@ -64,7 +91,7 @@ class InfoCodeRow extends React.Component {
           <Div
             pos="relative"
             p={{
-              x: { xs: "1rem", lg: "2rem" },
+              x: { xs: "0.5rem", lg: "2rem" },
               t: { xs: "2rem", lg: pt },
               b: { xs: "2rem", lg: "4rem" },
             }}

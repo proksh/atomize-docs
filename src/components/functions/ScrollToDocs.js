@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import {
   Div,
   Text,
@@ -10,15 +10,15 @@ import {
   Icon,
   Container,
   ThemeProvider,
-  DefaultTheme
-} from "react-atomize";
+  DefaultTheme,
+} from "react-atomize"
 
-import InfoCodeRow from "../common/InfoCodeRow";
+import InfoCodeRow from "../common/InfoCodeRow"
 
 const scrollToDocsCode1 = `// scroll to target
 import { Button, scrollTo } from "react-atomize";
 
-cont YellowButton = () => {
+const YellowButton = () => {
     return (
         <Button
             id="blueButton"
@@ -29,12 +29,12 @@ cont YellowButton = () => {
         </Button>
     )
 }
-`;
+`
 
 const scrollToDocsCode2 = `// scroll To with offset and transition
 import { Button, scrollTo } from "react-atomize";
 
-cont YellowButton = () => {
+const YellowButton = () => {
     return (
         <Button
             id="yellowButton"
@@ -45,7 +45,7 @@ cont YellowButton = () => {
         </Button>
     )
 }
-`;
+`
 
 const ScrollToDocs = () => {
   return (
@@ -93,7 +93,7 @@ const ScrollToDocs = () => {
         </Div>
       </InfoCodeRow>
     </>
-  );
-};
+  )
+}
 
-export default ScrollToDocs;
+export default ScrollToDocs

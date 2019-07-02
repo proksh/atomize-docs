@@ -11,7 +11,7 @@ const IntroDocs = () => (
   <Layout>
     <SEO title="Home" />
     <DocsWrapper>
-      <Div p={{ x: { xs: "2rem", md: "4rem" }, t: "5rem", b: "10rem" }}>
+      <Div p={{ x: { xs: "1.5rem", md: "4rem" }, t: "5rem", b: "10rem" }}>
         <Text textSize="display2" m={{ b: "1rem" }}>
           Who's using Atomize?
         </Text>
@@ -21,9 +21,10 @@ const IntroDocs = () => (
           your app to this list.
         </Text>
         <Row>
-          <Col size={6}>
+          <Col size={{ xs: 12, md: 6 }}>
             <Anchor href="https://italic.com/" target="_blanc">
               <Div
+                m={{ b: "2rem" }}
                 p={{ b: "70%" }}
                 rounded="lg"
                 shadow="2"
@@ -37,9 +38,10 @@ const IntroDocs = () => (
               ></Div>
             </Anchor>
           </Col>
-          <Col size={6}>
+          <Col size={{ xs: 12, md: 6 }}>
             <Anchor href="https://anteelo.com/" target="_blanc">
               <Div
+                m={{ b: "2rem" }}
                 p={{ b: "70%" }}
                 rounded="lg"
                 shadow="2"

@@ -3,12 +3,14 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import "./font.css"
 
-import { StyleReset, DefaultTheme, ThemeProvider } from "react-atomize"
+import { StyleReset, DefaultTheme, ThemeProvider, Div } from "react-atomize"
 
 const theme = {
   ...DefaultTheme,
   fontFamily: {
     ...DefaultTheme.fontFamily,
+    primary:
+      '"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
     secondary: '"jubilat", serif',
     code: "'Fira Mono','Roboto Mono', monospace",
   },
@@ -23,7 +25,7 @@ const theme = {
     ...DefaultTheme.textSize,
     size: {
       ...DefaultTheme.textSize.size,
-      display3: "50px",
+      display3: "52px",
     },
     height: {
       ...DefaultTheme.textSize.height,
@@ -50,7 +52,9 @@ const Layout = ({ children }) => (
     render={data => (
       <ThemeProvider theme={theme}>
         <StyleReset />
-        <main>{children}</main>
+        <Div tag="main" w="100vw" overflow="hidden">
+          {children}
+        </Div>
       </ThemeProvider>
     )}
   />

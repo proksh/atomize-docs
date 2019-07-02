@@ -7,6 +7,9 @@ import Header from "../components/common/header"
 import HeroSection from "../components/homepage/HeroSection"
 import Features from "../components/homepage/Features"
 import Craft from "../components/homepage/Craft"
+import DesignDevelopment from "../components/homepage/DesignDevelopment"
+import GetStartedBanner from "../components/homepage/GetStartedBanner"
+import Footer from "../components/homepage/Footer"
 
 const IndexPage = () => (
   <Layout>
@@ -15,6 +18,9 @@ const IndexPage = () => (
     <HeroSection />
     <Features />
     <Craft />
+    <DesignDevelopment />
+    <GetStartedBanner />
+    <Footer />
   </Layout>
 )
 

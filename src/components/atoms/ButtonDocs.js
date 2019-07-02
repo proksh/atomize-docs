@@ -3,10 +3,7 @@ import { Div, Text, Tag, Button, Icon } from "react-atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
-
-const buttonDocsCode0 = `/**
-Click on < > to see the code.
-**/`
+import AvailableProps from "../common/AvailableProps"
 
 const buttonDocsCode1 = `// Icon Buttons
 import { Div, Button } from "react-atomize";
@@ -136,7 +133,7 @@ import { Div, Button } from "react-atomize";
     hoverBorderColor="info900"
     m={{ r: "0.5rem" }}
   >
-    X Small
+    XSmall
   </Button>
   <Button
     h="2.5rem"
@@ -195,7 +192,7 @@ import { Div, Button } from "react-atomize";
     borderColor="info700"
     hoverBorderColor="info900"
   >
-    X Large
+    XLarge
   </Button>
 </Div>
 `
@@ -457,7 +454,7 @@ class ButtonDocs extends React.Component {
               hoverBorderColor="info900"
               m={{ r: "0.5rem" }}
             >
-              X Small
+              XSmall
             </Button>
             <Button
               h="2.5rem"
@@ -516,7 +513,7 @@ class ButtonDocs extends React.Component {
               borderColor="info700"
               hoverBorderColor="info900"
             >
-              X Large
+              XLarge
             </Button>
           </Div>
 
@@ -581,7 +578,7 @@ class ButtonDocs extends React.Component {
             Button Loading
           </Text>
 
-          <Div pos="relative" m={{ b: "1rem" }}>
+          <Div pos="relative" m={{ b: "3rem" }}>
             <ShowCodeButton
               onClick={this.toggleSelectedCode}
               value={buttonDocsCode4}
@@ -612,6 +609,66 @@ class ButtonDocs extends React.Component {
               Loading & Disable on Click
             </Button>
           </Div>
+
+          <AvailableProps
+            defaultProps={{
+              d: "flex",
+              justify: "center",
+              align: "center",
+              p: '{ x: "1rem" }',
+              pos: "relative",
+              rounded: "md",
+              border: "none",
+              h: "2.5rem",
+              cursor: "pointer",
+              bg: "black",
+              textColor: "white",
+              textSize: "body",
+              textWeight: "500",
+              fontFamily: "primary",
+            }}
+            available={[
+              "p",
+              "m",
+              "d",
+              "align",
+              "justify",
+              "flexDir",
+              "flexGrow",
+              "flexWrap",
+              "rounded",
+              "bg",
+              "hoverBg",
+              "h",
+              "minH",
+              "maxH",
+              "w",
+              "minW",
+              "maxW",
+              "border",
+              "borderColor",
+              "hoverBorderColor",
+              "textSize",
+              "textWeight",
+              "textDecor",
+              "textTransform",
+              "textAlign",
+              "textColor",
+              "hoverTextColor",
+              "fontFamily",
+              "shadow",
+              "hoverShadow",
+              "position",
+              "top",
+              "left",
+              "right",
+              "bottom",
+              "transform",
+              "transition",
+              "overflow",
+              "cursor",
+            ]}
+          />
         </InfoCodeRow>
       </>
     )
