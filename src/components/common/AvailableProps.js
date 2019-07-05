@@ -51,6 +51,31 @@ import Transform from "../utilitiesSidebarComponent/Transform"
 import Transition from "../utilitiesSidebarComponent/Transition"
 import Overflow from "../utilitiesSidebarComponent/Overflow"
 import Cursor from "../utilitiesSidebarComponent/Cursor"
+import Prefix from "../utilitiesSidebarComponent/Prefix"
+import Suffix from "../utilitiesSidebarComponent/Suffix"
+import FocusBg from "../utilitiesSidebarComponent/FocusBg"
+import FocusBorderColor from "../utilitiesSidebarComponent/FocusBorderColor"
+import FocusTextColor from "../utilitiesSidebarComponent/FocusTextColor"
+import FocusShadow from "../utilitiesSidebarComponent/FocusShadow"
+import IsOpen from "../utilitiesSidebarComponent/IsOpen"
+import IsLoading from "../utilitiesSidebarComponent/IsLoading"
+import ActiveColor from "../utilitiesSidebarComponent/ActiveColor"
+import InactiveColor from "../utilitiesSidebarComponent/InactiveColor"
+import Disabled from "../utilitiesSidebarComponent/Disabled"
+import Undetermine from "../utilitiesSidebarComponent/Undetermine"
+import ActiveShadow from "../utilitiesSidebarComponent/ActiveShadow"
+import InactiveShadow from "../utilitiesSidebarComponent/InactiveShadow"
+import OpenSuffix from "../utilitiesSidebarComponent/OpenSuffix"
+import CloseSuffix from "../utilitiesSidebarComponent/CloseSuffix"
+import DropdownMenuUtil from "../utilitiesSidebarComponent/DropdownMenuUtil"
+import TargetHover from "../utilitiesSidebarComponent/TargetHover"
+import Direction from "../utilitiesSidebarComponent/Direction"
+import OnClose from "../utilitiesSidebarComponent/OnClose"
+import OnEnter from "../utilitiesSidebarComponent/OnEnter"
+import OnEntering from "../utilitiesSidebarComponent/OnEntering"
+import OnExit from "../utilitiesSidebarComponent/OnExit"
+import OnExiting from "../utilitiesSidebarComponent/OnExiting"
+import OnExited from "../utilitiesSidebarComponent/OnExited"
 
 const allProps = {
   tag: {
@@ -58,7 +83,117 @@ const allProps = {
     tag: "tag",
     component: <TagUtility />,
   },
-  iconName: {
+  menu: {
+    name: "Dropdown Menu",
+    tag: "menu dropdown active",
+    component: <DropdownMenuUtil />,
+  },
+  isOpen: {
+    name: "Is Open",
+    tag: "open show",
+    component: <IsOpen />,
+  },
+  targethover: {
+    name: "Target Hover",
+    tag: "target hover open",
+    component: <TargetHover />,
+  },
+  direction: {
+    name: "Direction",
+    tag: "direction position",
+    component: <Direction />,
+  },
+  onClose: {
+    name: "On Close",
+    tag: "on close function",
+    component: <OnClose />,
+  },
+  onEntering: {
+    name: "On Entering",
+    tag: "on entering function",
+    component: <OnEntering />,
+  },
+  onEnter: {
+    name: "On Enter",
+    tag: "on enter function",
+    component: <OnEnter />,
+  },
+  onExit: {
+    name: "On Exit",
+    tag: "on exit",
+    component: <OnExit />,
+  },
+  onExiting: {
+    name: "On Exiting",
+    tag: "on exit",
+    component: <OnExiting />,
+  },
+  onExited: {
+    name: "On Exited",
+    tag: "on exited",
+    component: <OnExited />,
+  },
+  isLoading: {
+    name: "Loading",
+    tag: "loading",
+    component: <IsLoading />,
+  },
+  isLoading: {
+    name: "Loading",
+    tag: "loading",
+    component: <IsLoading />,
+  },
+  disabled: {
+    name: "Disabled",
+    tag: "disabled",
+    component: <Disabled />,
+  },
+  undetermine: {
+    name: "Undetermine",
+    tag: "undetermine",
+    component: <Undetermine />,
+  },
+  activeColor: {
+    name: "Active Color",
+    tag: "active color",
+    component: <ActiveColor />,
+  },
+  inactiveColor: {
+    name: "Inactive Color",
+    tag: "inactive color",
+    component: <InactiveColor />,
+  },
+  activeShadow: {
+    name: "Active Shadow",
+    tag: "active shadow",
+    component: <ActiveShadow />,
+  },
+  inactiveShadow: {
+    name: "Inactive Shadow",
+    tag: "inactive shadow",
+    component: <InactiveShadow />,
+  },
+  prefix: {
+    name: "Prefix",
+    tag: "prefix icon",
+    component: <Prefix />,
+  },
+  suffix: {
+    name: "Suffix",
+    tag: "suffix icon",
+    component: <Suffix />,
+  },
+  openSuffix: {
+    name: "Open Suffix",
+    tag: "active open suffix icon",
+    component: <OpenSuffix />,
+  },
+  closeSuffix: {
+    name: "Close Suffix",
+    tag: "inactive close suffix icon",
+    component: <CloseSuffix />,
+  },
+  name: {
     name: "Name",
     tag: "icon name",
     component: <IconName />,
@@ -133,6 +268,11 @@ const allProps = {
     tag: "hover background",
     component: <Background />,
   },
+  focusBg: {
+    name: "Focus Background",
+    tag: "focus background",
+    component: <FocusBg />,
+  },
   bgImg: {
     name: "Background Image",
     tag: "background image",
@@ -193,6 +333,11 @@ const allProps = {
     tag: "hover border color",
     component: <BorderColor />,
   },
+  focusBorderColor: {
+    name: "Focus Border Color",
+    tag: "focus border color",
+    component: <FocusBorderColor />,
+  },
   textSize: {
     name: "Text Size",
     tag: "text size font",
@@ -228,6 +373,11 @@ const allProps = {
     tag: "hover text color font",
     component: <HoverTextColor />,
   },
+  focusTextColor: {
+    name: "Focus Text Color",
+    tag: "focus text color font",
+    component: <FocusTextColor />,
+  },
   fontFamily: {
     name: "Font Family",
     tag: "text font family",
@@ -242,6 +392,11 @@ const allProps = {
     name: "Hover Shadow",
     tag: "hover shadow",
     component: <HoverShadow />,
+  },
+  focusShadow: {
+    name: "Focus Shadow",
+    tag: "focus shadow",
+    component: <FocusShadow />,
   },
   position: {
     name: "Position",
@@ -319,12 +474,12 @@ class AvailableProps extends React.Component {
   render() {
     const { showFull, query, showDetail, selectedKey } = this.state
 
-    const { defaultProps } = this.props
+    const { defaultProps, componentName } = this.props
     const filteredProps = this.getFilteredProps()
     const filteredPropsCount = Object.keys(filteredProps).length
 
     return (
-      <Div pos="relative">
+      <Div pos="relative" m={{ b: "2rem" }}>
         <SideDrawer
           p="2rem"
           w={{ xs: "100vw", md: "30vw" }}
@@ -357,12 +512,23 @@ class AvailableProps extends React.Component {
           p={{ y: "0.5rem" }}
         >
           <Row align="center">
-            <Col size={4}>Avail Props</Col>
+            <Col size={4}>{componentName ? componentName : "Avail"} Props</Col>
             <Col size={4}>Default Value</Col>
             <Col size={4} d="flex" justify="flex-end">
               <Input
                 h="2rem"
                 w="100%"
+                prefix={
+                  <Icon
+                    name="Search"
+                    pos="absolute"
+                    size="16px"
+                    left="0.5rem"
+                    top="50%"
+                    transform="translateY(-50%)"
+                  />
+                }
+                p={{ l: "2rem", r: "0.5rem" }}
                 placeholder="Filter (Ex: flex)"
                 textSize="caption"
                 query={query}
@@ -390,6 +556,12 @@ class AvailableProps extends React.Component {
                 borderColor="gray300"
                 p={{ y: "0.5rem" }}
                 textSize="caption"
+                hoverBg="gray100"
+                onClick={() =>
+                  this.setState({ showDetail: true, selectedKey: key })
+                }
+                transition
+                cursor="pointer"
               >
                 <Row>
                   <Col size={4}>{key}</Col>
@@ -397,13 +569,8 @@ class AvailableProps extends React.Component {
                     {(defaultProps && defaultProps[key]) || "-"}
                   </Col>
                   <Col size={3} d="flex" justify="flex-end">
-                    <Anchor
-                      onClick={() =>
-                        this.setState({ showDetail: true, selectedKey: key })
-                      }
-                    >
-                      View Detail
-                    </Anchor>
+                    <Anchor textAlign="right">View Detail</Anchor>
+                    {/* <Icon name="LongRight" color="info700" size="16px" /> */}
                   </Col>
                 </Row>
               </Div>
@@ -416,7 +583,7 @@ class AvailableProps extends React.Component {
             d="flex"
             align="center"
             justify="center"
-            bottom="-2rem"
+            bottom="-2.5rem"
             left="50%"
             transform="translateX(-50%)"
             border="1px solid"

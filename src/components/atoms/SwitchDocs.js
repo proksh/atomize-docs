@@ -3,6 +3,7 @@ import { Div, Text, Tag, Switch, Label } from "react-atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
+import AvailableProps from "../common/AvailableProps"
 
 const SwitchDocs1 = `// Basic Switches
 import { Switch, Label } from "react-atomize";
@@ -193,6 +194,29 @@ class SwitchDocs extends React.Component {
               Styled Switch
             </Label>
           </Div>
+
+          <AvailableProps
+            defaultProps={{
+              isLoading: "false",
+              disabled: "false",
+              cursor: "pointer",
+              m: '{ r: "1rem" }',
+              activeColor: "info700",
+              inactiveColor: "gray500",
+              activeShadow: "4",
+              inactiveShadow: "0",
+            }}
+            available={[
+              "isLoading",
+              "disabled",
+              "activeColor",
+              "inactiveColor",
+              "activeShadow",
+              "inactiveShadow",
+              "m",
+              "cursor",
+            ]}
+          />
         </InfoCodeRow>
       </>
     )

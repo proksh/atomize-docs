@@ -612,6 +612,7 @@ class ButtonDocs extends React.Component {
 
           <AvailableProps
             defaultProps={{
+              isLoading: "false",
               d: "flex",
               justify: "center",
               align: "center",
@@ -628,6 +629,10 @@ class ButtonDocs extends React.Component {
               fontFamily: "primary",
             }}
             available={[
+              "isLoading",
+              "disabled",
+              "prefix",
+              "suffix",
               "p",
               "m",
               "d",

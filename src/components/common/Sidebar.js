@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import {
   Div,
   Text,
@@ -75,8 +75,8 @@ const sidebarLinks = {
       children: [
         { text: "Dropdown", id: "dropdownDocs" },
         { text: "Modal", id: "modalDocs" },
-        { text: "Sidedrawer", id: "sidedrawerDocs" },
-        { text: "Notification", id: "notificationDocs" },
+        { text: "Sidedrawer", id: "sideDrawerDocs" },
+        { text: "Notification", id: "notificationnDocs" },
       ],
     },
     functions: {
@@ -96,11 +96,56 @@ export default class Sidebar extends Component {
 
     this.state = {
       showMobileHeaderMenu: false,
+      query: "",
     }
 
     this.animateScrollPositionSidebar = this.animateScrollPositionSidebar.bind(
       this
     )
+  }
+
+  getFilteredList = () => {
+    const { query } = this.state
+    const filtered = {
+      upperLinks: {},
+      lowerLinks: {},
+    }
+
+    Object.keys(sidebarLinks.upperLinks).forEach(key => {
+      if (
+        key.indexOf(query) > -1 ||
+        sidebarLinks.upperLinks[key].text.toLowerCase().indexOf(query) > -1
+      ) {
+        filtered.upperLinks[key] = sidebarLinks.upperLinks[key]
+      }
+    })
+
+    Object.keys(sidebarLinks.lowerLinks).forEach(key => {
+      if (
+        key.toLowerCase().indexOf(query) > -1 ||
+        sidebarLinks.lowerLinks[key].text.toLowerCase().indexOf(query) > -1
+      ) {
+        filtered.lowerLinks[key] = sidebarLinks.lowerLinks[key]
+      } else {
+        sidebarLinks.lowerLinks[key].children.forEach((item, index) => {
+          if (item.text.toLowerCase().indexOf(query) > -1) {
+            if (!filtered.lowerLinks[key]) {
+              filtered.lowerLinks[key] = {
+                text: sidebarLinks.lowerLinks[key].text,
+                page: sidebarLinks.lowerLinks[key].page,
+                children: [],
+              }
+            }
+
+            filtered.lowerLinks[key].children.push(
+              sidebarLinks.lowerLinks[key].children[index]
+            )
+          }
+        })
+      }
+    })
+
+    return filtered
   }
 
   toggleHeaderMenu = () => {
@@ -136,10 +181,12 @@ export default class Sidebar extends Component {
   }
 
   render() {
-    const { showMobileHeaderMenu } = this.state
+    const filteredList = this.getFilteredList()
 
-    const upperLinks = sidebarLinks.upperLinks
-    const lowerLinks = sidebarLinks.lowerLinks
+    const { showMobileHeaderMenu, query } = this.state
+
+    const upperLinks = filteredList.upperLinks
+    const lowerLinks = filteredList.lowerLinks
 
     return (
       <Location>
@@ -183,15 +230,22 @@ export default class Sidebar extends Component {
                   textSize="caption"
                   h="2rem"
                   m={{ b: "2rem" }}
+                  query={query}
+                  onChange={e =>
+                    this.setState({ query: e.target.value.toLowerCase() })
+                  }
                 />
-                <Text
-                  textColor="light"
-                  textSize="tiny"
-                  textTransform="uppercase"
-                  m={{ b: "1rem" }}
-                >
-                  Get Started
-                </Text>
+                {!(Object.entries(upperLinks).length === 0) && (
+                  <Text
+                    textColor="light"
+                    textSize="tiny"
+                    textTransform="uppercase"
+                    m={{ b: "1rem" }}
+                  >
+                    Get Started
+                  </Text>
+                )}
+
                 {Object.keys(upperLinks).map(key => (
                   <Link to={upperLinks[key].page}>
                     <Text
@@ -214,22 +268,57 @@ export default class Sidebar extends Component {
                   </Link>
                 ))}
               </Div>
-              <Div p="2rem">
-                <Text
-                  textColor="light"
-                  textSize="tiny"
-                  textTransform="uppercase"
-                  m={{ b: "1rem" }}
-                >
-                  Library
-                </Text>
-                {Object.keys(lowerLinks).map(key => (
-                  <Div key={key}>
-                    <Link to={lowerLinks[key].page}>
-                      <Text
+              {!(Object.entries(lowerLinks).length === 0) && (
+                <Div p="2rem">
+                  <Text
+                    textColor="light"
+                    textSize="tiny"
+                    textTransform="uppercase"
+                    m={{ b: "1rem" }}
+                  >
+                    Library
+                  </Text>
+                  {Object.keys(lowerLinks).map(key => (
+                    <Div key={key}>
+                      <Link to={lowerLinks[key].page}>
+                        <Text
+                          textColor={
+                            locationProps.location.pathname.includes(
+                              lowerLinks[key].page
+                            )
+                              ? "info700"
+                              : "black"
+                          }
+                          textSize="body"
+                          hoverTextColor="info700"
+                          textWeight="600"
+                          m={{ b: "0.5rem" }}
+                          cursor="pointer"
+                        >
+                          {lowerLinks[key].text}
+                        </Text>
+                      </Link>
+                      {(query != "" ||
+                        locationProps.location.pathname.includes(
+                          lowerLinks[key].page
+                        )) && (
+                        <SidebarCollapse
+                          currentPage={locationProps.location.pathname.includes(
+                            lowerLinks[key].page
+                          )}
+                          goToPage={lowerLinks[key].page}
+                          links={lowerLinks[key].children}
+                        />
+                      )}
+                    </Div>
+                  ))}
+                  <Div>
+                    <Link to="/coming-soon">
+                      <Div
+                        d="flex"
                         textColor={
                           locationProps.location.pathname.includes(
-                            lowerLinks[key].page
+                            "/coming-soon"
                           )
                             ? "info700"
                             : "black"
@@ -239,50 +328,28 @@ export default class Sidebar extends Component {
                         textWeight="600"
                         m={{ b: "0.5rem" }}
                         cursor="pointer"
-                      >
-                        {lowerLinks[key].text}
-                      </Text>
-                    </Link>
-                    {locationProps.location.pathname.includes(
-                      lowerLinks[key].page
-                    ) && <SidebarCollapse links={lowerLinks[key].children} />}
-                  </Div>
-                ))}
-                <Div>
-                  <Link to="/">
-                    <Div
-                      d="flex"
-                      textColor={
-                        locationProps.location.pathname.includes("/")
-                          ? "info700"
-                          : "black"
-                      }
-                      textSize="body"
-                      hoverTextColor="info700"
-                      textWeight="600"
-                      m={{ b: "0.5rem" }}
-                      cursor="pointer"
-                      d="flex"
-                    >
-                      Layout{" "}
-                      <Text
                         d="flex"
-                        align="center"
-                        tag="span"
-                        m={{ l: "0.5rem" }}
-                        bg="success400"
-                        textSize="tiny"
-                        p={{ x: "0.5rem" }}
-                        h="1.5rem"
-                        rounded="md"
-                        textColor="success800"
                       >
-                        In Progress
-                      </Text>
-                    </Div>
-                  </Link>
+                        Layout{" "}
+                        <Text
+                          d="flex"
+                          align="center"
+                          tag="span"
+                          m={{ l: "0.5rem" }}
+                          bg="success400"
+                          textSize="tiny"
+                          p={{ x: "0.5rem" }}
+                          h="1.5rem"
+                          rounded="md"
+                          textColor="success800"
+                        >
+                          Coming Soon
+                        </Text>
+                      </Div>
+                    </Link>
+                  </Div>
                 </Div>
-              </Div>
+              )}
             </Div>
           </>
         )}
@@ -291,44 +358,56 @@ export default class Sidebar extends Component {
   }
 }
 
-const SidebarCollapse = ({ isOpen, links }) => {
-  return (
-    <Div p={{ b: "1rem", l: "1rem", t: "0.5rem" }} pos="relative">
-      {links.map(link => (
-        <Text
-          key={link.id}
-          textColor="medium"
-          hoverTextColor="dark"
-          textSize="caption"
-          textWeight="500"
-          onClick={() => scrollTo(`#${link.id}`, 50)}
-          m={{ b: "0.5rem" }}
-          cursor="pointer"
-        >
-          {link.text}
-        </Text>
-      ))}
-      <Div
-        pos="absolute"
-        left="0"
-        w="1px"
-        top="0.75rem"
-        bottom="1.75rem"
-        bg="gray600"
-      >
-        <Div
-          id="sidebarScrollDistance"
-          w="100%"
-          h="100%"
-          bg="black"
-          transformOrigin="top"
-          transform="scaleY(0)"
-        />
-      </Div>
-    </Div>
-  )
-}
+class SidebarCollapse extends React.Component {
+  onLinkClick = id => {
+    const { currentPage, goToPage } = this.props
 
+    if (currentPage) {
+      scrollTo(`#${id}`, 50)
+    } else {
+      navigate(`${goToPage}#${id}`)
+    }
+  }
+  render() {
+    const { links } = this.props
+
+    return (
+      <Div p={{ b: "1rem", l: "1rem", t: "0.5rem" }} pos="relative">
+        {links.map(link => (
+          <Text
+            key={link.id}
+            textColor="medium"
+            hoverTextColor="dark"
+            textSize="caption"
+            textWeight="500"
+            onClick={() => this.onLinkClick(link.id)}
+            m={{ b: "0.5rem" }}
+            cursor="pointer"
+          >
+            {link.text}
+          </Text>
+        ))}
+        <Div
+          pos="absolute"
+          left="0"
+          w="1px"
+          top="0.75rem"
+          bottom="1.75rem"
+          bg="gray600"
+        >
+          <Div
+            id="sidebarScrollDistance"
+            w="100%"
+            h="100%"
+            bg="black"
+            transformOrigin="top"
+            transform="scaleY(0)"
+          />
+        </Div>
+      </Div>
+    )
+  }
+}
 const SidebarMobile = ({
   showMobileHeaderMenu,
   toggleHeaderMenu,
@@ -347,7 +426,9 @@ const SidebarMobile = ({
   >
     <Container d="flex" align="center" justify="space-between">
       <Div>
-        <Image src={logo} h="18px" w="auto" />
+        <Link to="/">
+          <Image src={logo} h="18px" w="auto" />
+        </Link>
       </Div>
 
       {/* Icon For Mobile */}

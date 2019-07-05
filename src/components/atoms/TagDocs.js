@@ -1,8 +1,9 @@
 import React from "react"
-import { Div, Text, Tag, Row, Col, Image, Icon, Anchor } from "react-atomize"
+import { Div, Text, Tag, Icon, Anchor } from "react-atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
+import AvailableProps from "../common/AvailableProps"
 
 const tagDocsCode1 = `// Basic Tags
 import { Div, Tag, Anchor, Icon } from "react-atomize";
@@ -213,6 +214,66 @@ class TagDocs extends React.Component {
               )}
             </Div>
           </Div>
+
+          <AvailableProps
+            defaultProps={{
+              tag: "span",
+              d: "inline-flex",
+              align: "center",
+              textAlign: "center",
+              justify: "center",
+              bg: "gray300",
+              textWeight: "500",
+              rounded: "sm",
+              p: '{ x: "0.5rem", y: "0.125rem" }',
+              textColor: "medium",
+              textSize: "caption",
+            }}
+            available={[
+              "tag",
+              "prefix",
+              "suffix",
+              "p",
+              "m",
+              "d",
+              "align",
+              "justify",
+              "flexDir",
+              "flexGrow",
+              "flexWrap",
+              "rounded",
+              "bg",
+              "hoverBg",
+              "h",
+              "minH",
+              "maxH",
+              "w",
+              "minW",
+              "maxW",
+              "border",
+              "borderColor",
+              "hoverBorderColor",
+              "textSize",
+              "textWeight",
+              "textDecor",
+              "textTransform",
+              "textAlign",
+              "textColor",
+              "hoverTextColor",
+              "fontFamily",
+              "shadow",
+              "hoverShadow",
+              "position",
+              "top",
+              "left",
+              "right",
+              "bottom",
+              "transform",
+              "transition",
+              "overflow",
+              "cursor",
+            ]}
+          />
         </InfoCodeRow>
       </>
     )

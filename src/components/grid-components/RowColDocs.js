@@ -12,6 +12,8 @@ import {
 } from "react-atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
+import ShowCodeButton from "../common/ShowCodeButton"
+import AvailableProps from "../common/AvailableProps"
 
 const theme = {
   ...DefaultTheme,
@@ -95,83 +97,208 @@ ReactDOM.render(
   , mountNode
 );`
 
-const RowColDocs = () => {
-  return (
-    <>
-      <InfoCodeRow id="rowColDocs" code={rowColsCode1} pb={0} border={false}>
-        <Text m={{ b: "0.5rem" }} textSize="heading" textWeight="500">
-          Row & Col
-        </Text>
-        <Text textColor="medium" textSize="body" m={{ b: "2rem" }}>
-          Our Grid system uses <Tag>{"<Row />"}</Tag> and <Tag>{"<Col />"}</Tag>{" "}
-          to layout and align content. It’s built with flexbox and is fully
-          responsive. You can{" "}
-          <Link to="/docs/theme#containerGutterWidth">edit grid variables</Link>{" "}
-          by using theme.
-        </Text>
+class RowColDocs extends React.Component {
+  constructor(props) {
+    super(props)
 
-        <Div>
-          <Row>
-            <Col size={5}>
-              <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
-                This is 5 of 12
-              </Div>
-            </Col>
-            <Col size={7}>
-              <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
-                This is 7 of 12
-              </Div>
-            </Col>
-          </Row>
-        </Div>
-      </InfoCodeRow>
-      <InfoCodeRow code={rowColsCode2} pt={0} pb={0} border={false}>
-        <Text textSize="subheader" textWeight="700" m={{ b: "1rem" }}>
-          Variable width content
-        </Text>
-        <Div>
-          <Row>
-            <Col size={{ xs: 12, lg: 2 }}>
-              <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
-                2 of 12
-              </Div>
-            </Col>
-            <Col size={{ xs: "auto" }}>
-              <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
-                Variable width content
-              </Div>
-            </Col>
-            <Col size={{ xs: 12, lg: 5 }}>
-              <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
-                5 of 12
-              </Div>
-            </Col>
-          </Row>
-        </Div>
-      </InfoCodeRow>
-      <InfoCodeRow code={rowColsCode3} pt={0}>
-        <Text textSize="subheader" textWeight="700" m={{ b: "1rem" }}>
-          Changing Grid Variables
-        </Text>
-        <Div>
-          <ThemeProvider theme={theme}>
+    this.state = {
+      selectedCode: rowColsCode1,
+    }
+
+    this.toggleSelectedCode = this.toggleSelectedCode.bind(this)
+  }
+
+  toggleSelectedCode(value) {
+    this.setState({ selectedCode: value })
+  }
+
+  render() {
+    const { selectedCode } = this.state
+    return (
+      <>
+        <InfoCodeRow id="rowColDocs" code={selectedCode}>
+          <Text m={{ b: "0.5rem" }} textSize="heading" textWeight="500">
+            Row & Col
+          </Text>
+          <Text textColor="medium" textSize="body" m={{ b: "2rem" }}>
+            Our Grid system uses <Tag>{"<Row />"}</Tag> and{" "}
+            <Tag>{"<Col />"}</Tag> to layout and align content. It’s built with
+            flexbox and is fully responsive. You can{" "}
+            <Link to="/docs/theme#containerGutterWidth">
+              edit grid variables
+            </Link>{" "}
+            by using theme.
+          </Text>
+
+          <Div pos="relative" m={{ b: "3rem" }}>
+            <ShowCodeButton
+              onClick={this.toggleSelectedCode}
+              value={rowColsCode1}
+              selectedValue={selectedCode}
+            />
             <Row>
-              <Col size={{ xs: 8, lg: 3 }}>
+              <Col size={5}>
                 <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
-                  3 of 8
+                  This is 5 of 12
                 </Div>
               </Col>
-              <Col size={{ xs: 8, lg: 5 }}>
-                <Div p={{ x: "0.5rem", y: "1rem" }} bg="info500">
-                  5 of 8
+              <Col size={7}>
+                <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
+                  This is 7 of 12
                 </Div>
               </Col>
             </Row>
-          </ThemeProvider>
-        </Div>
-      </InfoCodeRow>
-    </>
-  )
+          </Div>
+          <Text textSize="subheader" textWeight="600" m={{ b: "1rem" }}>
+            Variable width content
+          </Text>
+          <Div pos="relative" m={{ b: "3rem" }}>
+            <ShowCodeButton
+              onClick={this.toggleSelectedCode}
+              value={rowColsCode2}
+              selectedValue={selectedCode}
+            />
+            <Row>
+              <Col size={{ xs: 12, lg: 2 }}>
+                <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
+                  2 of 12
+                </Div>
+              </Col>
+              <Col size={{ xs: "auto" }}>
+                <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
+                  Variable width content
+                </Div>
+              </Col>
+              <Col size={{ xs: 12, lg: 5 }}>
+                <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
+                  5 of 12
+                </Div>
+              </Col>
+            </Row>
+          </Div>
+          <Text textSize="subheader" textWeight="600" m={{ b: "1rem" }}>
+            Changing Grid Variables
+          </Text>
+          <Div pos="relative" m={{ b: "3rem" }}>
+            <ShowCodeButton
+              onClick={this.toggleSelectedCode}
+              value={rowColsCode3}
+              selectedValue={selectedCode}
+            />
+            <ThemeProvider theme={theme}>
+              <Row>
+                <Col size={{ xs: 8, lg: 3 }}>
+                  <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
+                    3 of 8
+                  </Div>
+                </Col>
+                <Col size={{ xs: 8, lg: 5 }}>
+                  <Div p={{ x: "0.5rem", y: "1rem" }} bg="info500">
+                    5 of 8
+                  </Div>
+                </Col>
+              </Row>
+            </ThemeProvider>
+          </Div>
+
+          <Div m={{ b: "5rem" }}>
+            <AvailableProps
+              componentName="Row"
+              defaultProps={{
+                d: "flex",
+                flexWrap: "wrap",
+              }}
+              available={[
+                "align",
+                "justify",
+                "flexDir",
+                "flexGrow",
+                "flexWrap",
+                "rounded",
+                "bg",
+                "hoverBg",
+                "bgImg",
+                "bgPos",
+                "bgSize",
+                "h",
+                "minH",
+                "maxH",
+                "w",
+                "minW",
+                "maxW",
+                "border",
+                "borderColor",
+                "hoverBorderColor",
+                "textSize",
+                "textWeight",
+                "textDecor",
+                "textTransform",
+                "textAlign",
+                "textColor",
+                "hoverTextColor",
+                "fontFamily",
+                "shadow",
+                "hoverShadow",
+                "position",
+                "top",
+                "left",
+                "right",
+                "bottom",
+                "transform",
+                "transition",
+                "overflow",
+                "cursor",
+              ]}
+            />
+          </Div>
+
+          <AvailableProps
+            componentName="Container"
+            defaultProps={{
+              p: '{{ y: "0", x: `calc(${theme.grid.gutterWidth}/2)` }}',
+            }}
+            available={[
+              "align",
+              "justify",
+              "flexDir",
+              "flexWrap",
+              "rounded",
+              "bg",
+              "hoverBg",
+              "bgImg",
+              "bgPos",
+              "bgSize",
+              "h",
+              "minH",
+              "maxH",
+              "border",
+              "borderColor",
+              "hoverBorderColor",
+              "textSize",
+              "textWeight",
+              "textDecor",
+              "textTransform",
+              "textAlign",
+              "textColor",
+              "hoverTextColor",
+              "fontFamily",
+              "shadow",
+              "hoverShadow",
+              "position",
+              "top",
+              "left",
+              "right",
+              "bottom",
+              "transform",
+              "transition",
+              "overflow",
+              "cursor",
+            ]}
+          />
+        </InfoCodeRow>
+      </>
+    )
+  }
 }
 
 export default RowColDocs

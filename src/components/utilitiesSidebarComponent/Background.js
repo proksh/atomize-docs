@@ -12,7 +12,7 @@ hoverBg="warning700"
 bg="info700"
 hoverBg="info700"
 
-// bg red
+// bg danger
 bg="danger700"
 hoverBg="danger700"
 
@@ -22,12 +22,7 @@ hoverBg="success700"`
 
 const Background = () => {
   return (
-    <InfoCodeSidebar
-      id="background"
-      border={false}
-      code={backgroundCode}
-      pb="0"
-    >
+    <InfoCodeSidebar border={false} code={backgroundCode} pb="0">
       <Text textColor="medium" textSize="body" m={{ b: "1rem" }}>
         Background and Hover Background can be given by{" "}
         <Tag>{"bg={value}"}</Tag> and <Tag>{"hoverBg={value}"}</Tag>

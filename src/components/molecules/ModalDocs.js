@@ -1,18 +1,9 @@
 import React from "react"
-import {
-  Div,
-  Text,
-  Tag,
-  Button,
-  Modal,
-  Icon,
-  Dropdown,
-  DropdownMenu,
-  Anchor,
-} from "react-atomize"
+import { Div, Text, Tag, Button, Modal, Icon } from "react-atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
+import AvailableProps from "../common/AvailableProps"
 
 const modalDocsCode1 = `// Basic Modal
 import { Div, Button, Modal, Icon, Text } from "react-atomize";
@@ -703,205 +694,270 @@ class ModalDocs extends React.Component {
     } = this.state
 
     return (
-      <>
-        <InfoCodeRow id="modalDocs" code={selectedCode}>
-          <Text m={{ b: "0.5rem" }} textSize="heading" textWeight="500">
-            Modal
-          </Text>
-          <Text textColor="medium" textSize="body" m={{ b: "4rem" }}>
-            When requiring users to interact with the application, but without
-            jumping to a new page and interrupting the user's workflow, you can
-            use <Tag>Modal</Tag> to create a new floating layer over the current
-            page. You need to pass <Tag>isOpen</Tag> & <Tag>onClose</Tag> to the
-            Modal.
-          </Text>
+      <InfoCodeRow id="modalDocs" code={selectedCode}>
+        <Text m={{ b: "0.5rem" }} textSize="heading" textWeight="500">
+          Modal
+        </Text>
+        <Text textColor="medium" textSize="body" m={{ b: "4rem" }}>
+          When requiring users to interact with the application, but without
+          jumping to a new page and interrupting the user's workflow, you can
+          use <Tag>Modal</Tag> to create a new floating layer over the current
+          page. You need to pass <Tag>isOpen</Tag> & <Tag>onClose</Tag> to the
+          Modal.
+        </Text>
 
-          {/* Modal Alignment */}
-          <Text textColor="black" textSize="subheader" textWeight="500">
-            Alignments
-          </Text>
-          <Text textColor="medium" m={{ b: "1rem" }}>
-            Modal can be aligned centered by passing <Tag>align="center"</Tag>.
-            Additionally <Tag>m</Tag> can be controlled as shown in utilities.
-          </Text>
+        {/* Modal Alignment */}
+        <Text textColor="black" textSize="subheader" textWeight="500">
+          Alignments
+        </Text>
+        <Text textColor="medium" m={{ b: "1rem" }}>
+          Modal can be aligned centered by passing <Tag>align="center"</Tag>.
+          Additionally <Tag>m</Tag> can be controlled as shown in utilities.
+        </Text>
 
-          {/* Basic Modal */}
-          <Div d="flex" pos="relative">
-            <ShowCodeButton
-              onClick={this.toggleSelectedCode}
-              value={modalDocsCode1}
-              selectedValue={selectedCode}
-            />
-            <Button
-              bg="info700"
-              hoverBg="info600"
-              m={{ b: "1rem" }}
-              onClick={() => this.setState({ alignStartModalOpen: true })}
-            >
-              Open Basic Modal (Align Start)
-            </Button>
-            <AlignStartModal
-              isOpen={alignStartModalOpen}
-              onClose={() => this.setState({ alignStartModalOpen: false })}
-            />
-          </Div>
-
-          {/* Align Center */}
-          <Div d="flex" pos="relative">
-            <ShowCodeButton
-              onClick={this.toggleSelectedCode}
-              value={modalDocsCode2}
-              selectedValue={selectedCode}
-            />
-            <Button
-              bg="info700"
-              hoverBg="info600"
-              m={{ b: "1rem" }}
-              onClick={() => this.setState({ alignCenterModalOpen: true })}
-            >
-              Open Aligned Center Modal
-            </Button>
-            <AlignCenterModal
-              isOpen={alignCenterModalOpen}
-              onClose={() => this.setState({ alignCenterModalOpen: false })}
-            />
-          </Div>
-
-          {/* 4 rem to Top */}
-          <Div d="flex" pos="relative" m={{ b: "2rem" }}>
-            <ShowCodeButton
-              onClick={this.toggleSelectedCode}
-              value={modalDocsCode3}
-              selectedValue={selectedCode}
-            />
-            <Button
-              bg="info700"
-              hoverBg="info600"
-              m={{ b: "1rem" }}
-              onClick={() => this.setState({ rem4FromTopModalOpen: true })}
-            >
-              Open Modal with m of 4rem in y
-            </Button>
-            <Rem4FromTopModal
-              isOpen={rem4FromTopModalOpen}
-              onClose={() => this.setState({ rem4FromTopModalOpen: false })}
-            />
-          </Div>
-
-          {/* Modal Size */}
-          <Text
-            textColor="black"
-            textSize="subheader"
-            textWeight="500"
-            m={{ b: "0.5rem" }}
-          >
-            Size
-          </Text>
-          <Div d="flex" pos="relative" m={{ b: "1rem" }}>
-            <ShowCodeButton
-              onClick={this.toggleSelectedCode}
-              value={modalDocsCode4}
-              selectedValue={selectedCode}
-            />
-            <Button
-              bg="info700"
-              hoverBg="info600"
-              m={{ r: "0.5rem" }}
-              onClick={() =>
-                this.setState({ sizeModalOpen: true, selectedSize: "24rem" })
-              }
-            >
-              Open 24rem width modal
-            </Button>
-          </Div>
-          <Div d="flex" pos="relative" m={{ b: "1rem" }}>
-            <ShowCodeButton
-              onClick={this.toggleSelectedCode}
-              value={modalDocsCode5}
-              selectedValue={selectedCode}
-            />
-            <Button
-              bg="info700"
-              hoverBg="info600"
-              m={{ r: "0.5rem" }}
-              onClick={() =>
-                this.setState({ sizeModalOpen: true, selectedSize: "32rem" })
-              }
-            >
-              Open 32rem width modal
-            </Button>
-          </Div>
-          <Div d="flex" pos="relative" m={{ b: "1rem" }}>
-            <ShowCodeButton
-              onClick={this.toggleSelectedCode}
-              value={modalDocsCode6}
-              selectedValue={selectedCode}
-            />
-            <Button
-              bg="info700"
-              hoverBg="info600"
-              m={{ r: "0.5rem" }}
-              onClick={() =>
-                this.setState({ sizeModalOpen: true, selectedSize: "48rem" })
-              }
-            >
-              Open 48rem width modal
-            </Button>
-          </Div>
-          <Div d="flex" pos="relative" m={{ b: "2rem" }}>
-            <ShowCodeButton
-              onClick={this.toggleSelectedCode}
-              value={modalDocsCode7}
-              selectedValue={selectedCode}
-            />
-            <Button
-              bg="info700"
-              hoverBg="info600"
-              m={{ r: "0.5rem" }}
-              onClick={() =>
-                this.setState({ sizeModalOpen: true, selectedSize: "100vw" })
-              }
-            >
-              Open Full Screen modal
-            </Button>
-            <ModalSize
-              maxW={selectedSize}
-              isOpen={sizeModalOpen}
-              onClose={() => this.setState({ sizeModalOpen: false })}
-            />
-          </Div>
-
-          {/* Moadal With Submitting */}
-          <Text
-            textColor="black"
-            textSize="subheader"
-            textWeight="500"
+        {/* Basic Modal */}
+        <Div d="flex" pos="relative">
+          <ShowCodeButton
+            onClick={this.toggleSelectedCode}
+            value={modalDocsCode1}
+            selectedValue={selectedCode}
+          />
+          <Button
+            bg="info700"
+            hoverBg="info600"
             m={{ b: "1rem" }}
+            onClick={() => this.setState({ alignStartModalOpen: true })}
           >
-            Submit Modal
-          </Text>
+            Open Basic Modal (Align Start)
+          </Button>
+          <AlignStartModal
+            isOpen={alignStartModalOpen}
+            onClose={() => this.setState({ alignStartModalOpen: false })}
+          />
+        </Div>
 
-          <Div d="flex" pos="relative" m={{ b: "2rem" }}>
-            <ShowCodeButton
-              onClick={this.toggleSelectedCode}
-              value={modalDocsCode8}
-              selectedValue={selectedCode}
-            />
-            <Button
-              bg="info700"
-              hoverBg="info600"
-              m={{ r: "0.5rem" }}
-              onClick={() => this.setState({ submitModalOpen: true })}
-            >
-              Show Submit Modal
-            </Button>
-            <ModalWithSubmitting
-              isOpen={submitModalOpen}
-              onClose={() => this.setState({ submitModalOpen: false })}
-            />
-          </Div>
-        </InfoCodeRow>
-      </>
+        {/* Align Center */}
+        <Div d="flex" pos="relative">
+          <ShowCodeButton
+            onClick={this.toggleSelectedCode}
+            value={modalDocsCode2}
+            selectedValue={selectedCode}
+          />
+          <Button
+            bg="info700"
+            hoverBg="info600"
+            m={{ b: "1rem" }}
+            onClick={() => this.setState({ alignCenterModalOpen: true })}
+          >
+            Open Aligned Center Modal
+          </Button>
+          <AlignCenterModal
+            isOpen={alignCenterModalOpen}
+            onClose={() => this.setState({ alignCenterModalOpen: false })}
+          />
+        </Div>
+
+        {/* 4 rem to Top */}
+        <Div d="flex" pos="relative" m={{ b: "2rem" }}>
+          <ShowCodeButton
+            onClick={this.toggleSelectedCode}
+            value={modalDocsCode3}
+            selectedValue={selectedCode}
+          />
+          <Button
+            bg="info700"
+            hoverBg="info600"
+            m={{ b: "1rem" }}
+            onClick={() => this.setState({ rem4FromTopModalOpen: true })}
+          >
+            Open Modal with m of 4rem in y
+          </Button>
+          <Rem4FromTopModal
+            isOpen={rem4FromTopModalOpen}
+            onClose={() => this.setState({ rem4FromTopModalOpen: false })}
+          />
+        </Div>
+
+        {/* Modal Size */}
+        <Text
+          textColor="black"
+          textSize="subheader"
+          textWeight="500"
+          m={{ b: "0.5rem" }}
+        >
+          Size
+        </Text>
+        <Div d="flex" pos="relative" m={{ b: "1rem" }}>
+          <ShowCodeButton
+            onClick={this.toggleSelectedCode}
+            value={modalDocsCode4}
+            selectedValue={selectedCode}
+          />
+          <Button
+            bg="info700"
+            hoverBg="info600"
+            m={{ r: "0.5rem" }}
+            onClick={() =>
+              this.setState({ sizeModalOpen: true, selectedSize: "24rem" })
+            }
+          >
+            Open 24rem width modal
+          </Button>
+        </Div>
+        <Div d="flex" pos="relative" m={{ b: "1rem" }}>
+          <ShowCodeButton
+            onClick={this.toggleSelectedCode}
+            value={modalDocsCode5}
+            selectedValue={selectedCode}
+          />
+          <Button
+            bg="info700"
+            hoverBg="info600"
+            m={{ r: "0.5rem" }}
+            onClick={() =>
+              this.setState({ sizeModalOpen: true, selectedSize: "32rem" })
+            }
+          >
+            Open 32rem width modal
+          </Button>
+        </Div>
+        <Div d="flex" pos="relative" m={{ b: "1rem" }}>
+          <ShowCodeButton
+            onClick={this.toggleSelectedCode}
+            value={modalDocsCode6}
+            selectedValue={selectedCode}
+          />
+          <Button
+            bg="info700"
+            hoverBg="info600"
+            m={{ r: "0.5rem" }}
+            onClick={() =>
+              this.setState({ sizeModalOpen: true, selectedSize: "48rem" })
+            }
+          >
+            Open 48rem width modal
+          </Button>
+        </Div>
+        <Div d="flex" pos="relative" m={{ b: "2rem" }}>
+          <ShowCodeButton
+            onClick={this.toggleSelectedCode}
+            value={modalDocsCode7}
+            selectedValue={selectedCode}
+          />
+          <Button
+            bg="info700"
+            hoverBg="info600"
+            m={{ r: "0.5rem" }}
+            onClick={() =>
+              this.setState({ sizeModalOpen: true, selectedSize: "100vw" })
+            }
+          >
+            Open Full Screen modal
+          </Button>
+          <ModalSize
+            maxW={selectedSize}
+            isOpen={sizeModalOpen}
+            onClose={() => this.setState({ sizeModalOpen: false })}
+          />
+        </Div>
+
+        {/* Moadal With Submitting */}
+        <Text
+          textColor="black"
+          textSize="subheader"
+          textWeight="500"
+          m={{ b: "1rem" }}
+        >
+          Submit Modal
+        </Text>
+
+        <Div d="flex" pos="relative" m={{ b: "2rem" }}>
+          <ShowCodeButton
+            onClick={this.toggleSelectedCode}
+            value={modalDocsCode8}
+            selectedValue={selectedCode}
+          />
+          <Button
+            bg="info700"
+            hoverBg="info600"
+            m={{ r: "0.5rem" }}
+            onClick={() => this.setState({ submitModalOpen: true })}
+          >
+            Show Submit Modal
+          </Button>
+          <ModalWithSubmitting
+            isOpen={submitModalOpen}
+            onClose={() => this.setState({ submitModalOpen: false })}
+          />
+        </Div>
+        <AvailableProps
+          defaultProps={{
+            isOpen: "false",
+            m: '{y: { xs: "1rem", lg: "2rem" }, x: { xs: "1rem", lg: "auto" }}',
+            p: "2rem",
+            maxW: "32rem",
+            w: "100%",
+            pos: "relative",
+            shadow: "4",
+            cursor: "default",
+            align: "start",
+          }}
+          available={[
+            "isOpen",
+            "onClose",
+            "onEntering",
+            "onEnter",
+            "onExiting",
+            "onExit",
+            "onExited",
+            "p",
+            "m",
+            "d",
+            "align",
+            "justify",
+            "flexDir",
+            "flexGrow",
+            "flexWrap",
+            "rounded",
+            "bg",
+            "hoverBg",
+            "bgImg",
+            "bgPos",
+            "bgSize",
+            "h",
+            "minH",
+            "maxH",
+            "w",
+            "minW",
+            "maxW",
+            "border",
+            "borderColor",
+            "hoverBorderColor",
+            "focusBg",
+            "focusBorderColor",
+            "focusShadow",
+            "textSize",
+            "textWeight",
+            "textDecor",
+            "textTransform",
+            "textAlign",
+            "textColor",
+            "hoverTextColor",
+            "fontFamily",
+            "shadow",
+            "hoverShadow",
+            "position",
+            "top",
+            "left",
+            "right",
+            "bottom",
+            "transform",
+            "transition",
+            "overflow",
+            "cursor",
+          ]}
+        />
+      </InfoCodeRow>
     )
   }
 }

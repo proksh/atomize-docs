@@ -139,7 +139,7 @@ class IconDocs extends React.Component {
             size: "24px",
           }}
           available={[
-            "iconName",
+            "name",
             "color",
             "hoverColor",
             "size",

@@ -25,17 +25,6 @@ class Responsive extends React.Component {
             of <Tag>xs</Tag>, <Tag>sm</Tag>, <Tag>md</Tag>, <Tag>lg</Tag> &{" "}
             <Tag>xl</Tag> to the end value.
           </Text>
-          {/* <Div d="flex" bg="info200" p="1rem" rounded="md">
-            <Icon
-              name="InfoSolid"
-              size="18px"
-              color="info800"
-              m={{ r: "0.75rem", t: "0.125rem" }}
-            />
-            <Text textColor="dark" textWeight="500">
-              Device size breakpoints can be modified in theme.
-            </Text>
-          </Div> */}
         </Div>
       </InfoCodeRow>
     )

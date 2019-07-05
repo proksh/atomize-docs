@@ -3,7 +3,6 @@ import {
   Div,
   Text,
   Tag,
-  Button,
   Icon,
   Dropdown,
   DropdownMenu,
@@ -12,6 +11,7 @@ import {
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
+import AvailableProps from "../common/AvailableProps"
 
 const dropdownDocsCode1 = `// Basic Dropdown
 import { Dropdown, DropdownMenu, Anchor } from "react-atomize";
@@ -433,7 +433,7 @@ class DropdownDocs extends React.Component {
             options inside a basic dropdown.
           </Text>
 
-          <Div d="flex" pos="relative" m={{ b: "2rem" }}>
+          <Div d="flex" pos="relative" m={{ b: "3rem" }}>
             <ShowCodeButton
               onClick={this.toggleSelectedCode}
               value={dropdownDocsCode1}
@@ -470,12 +470,12 @@ class DropdownDocs extends React.Component {
             </Dropdown>
           </Div>
 
-          <Div d="flex" m={{ b: "2rem" }}>
+          <Div d="flex" m={{ b: "3rem" }}>
             <Icon
               name="InfoSolid"
               color="info700"
               size="16px"
-              m={{ r: "0.5rem" }}
+              m={{ r: "0.5rem", t: "0.25rem" }}
             />
             <Text textColor="info700">
               Note that no focus effects and iconChange work on hover trigger
@@ -492,7 +492,7 @@ class DropdownDocs extends React.Component {
             or <Tag>rem</Tag>.
           </Text>
 
-          <Div d="flex" pos="relative" m={{ b: "2rem" }}>
+          <Div d="flex" pos="relative" m={{ b: "3rem" }}>
             <ShowCodeButton
               onClick={this.toggleSelectedCode}
               value={dropdownDocsCode3}
@@ -517,10 +517,11 @@ class DropdownDocs extends React.Component {
           <Text textColor="medium" m={{ b: "1rem" }}>
             <Tag>isLoading</Tag> can be passed to dropdown to replace the right
             icon with loading. Alternatively, a Loading icon can be passed to
-            the the <Tag>prefix</Tag> or <Tag>suffix</Tag> of the dropdown.
+            the the <Tag>prefix</Tag>, <Tag>activeSuffix</Tag> or{" "}
+            <Tag>inactiveSuffix</Tag> of the dropdown.
           </Text>
 
-          <Div d="flex" pos="relative" m={{ b: "2rem" }}>
+          <Div d="flex" pos="relative" m={{ b: "3rem" }}>
             <ShowCodeButton
               onClick={this.toggleSelectedCode}
               value={dropdownDocsCode4}
@@ -549,7 +550,7 @@ class DropdownDocs extends React.Component {
             for Custom Styling.
           </Text>
 
-          <Div d="flex" pos="relative" m={{ b: "2rem" }}>
+          <Div d="flex" pos="relative" m={{ b: "3rem" }}>
             <ShowCodeButton
               onClick={this.toggleSelectedCode}
               value={dropdownDocsCode5}
@@ -669,7 +670,7 @@ class DropdownDocs extends React.Component {
               </Dropdown>
             </Div>
           </Div>
-          <Div pos="relative" m={{ b: "2rem" }}>
+          <Div pos="relative" m={{ b: "3rem" }}>
             <ShowCodeButton
               onClick={this.toggleSelectedCode}
               value={dropdownDocsCode8}
@@ -695,6 +696,90 @@ class DropdownDocs extends React.Component {
               </Dropdown>
             </Div>
           </Div>
+
+          <AvailableProps
+            defaultProps={{
+              isOpen: "false",
+              isLoading: "false",
+              targethover: "false",
+              direction: "bottomleft",
+              d: "flex",
+              align: "center",
+              textColor: "medium",
+              textWeight: "500",
+              justify: "space-between",
+              p: '{ x: "0.75rem" }',
+              h: "2.5rem",
+              textSize: "body",
+              rounded: "md",
+              border: "1px solid",
+              borderColor: "gray500",
+              w: "100%",
+              bg: "white",
+              focusBg: "gray100",
+              focusBorderColor: "gray800",
+              cursor: "pointer",
+              openSuffix:
+                '<Icon name="UpArrow" size="18px" m={{ l: "1rem" }} color="medium" />',
+              closeSuffix:
+                '<Icon name="DownArrow" size="18px" m={{ l: "1rem" }} color="medium" />',
+            }}
+            available={[
+              "isOpen",
+              "menu",
+              "targethover",
+              "direction",
+              "isLoading",
+              "prefix",
+              "openSuffix",
+              "closeSuffix",
+              "p",
+              "m",
+              "d",
+              "align",
+              "justify",
+              "flexDir",
+              "flexGrow",
+              "flexWrap",
+              "rounded",
+              "bg",
+              "hoverBg",
+              "bgImg",
+              "bgPos",
+              "bgSize",
+              "h",
+              "minH",
+              "maxH",
+              "w",
+              "minW",
+              "maxW",
+              "border",
+              "borderColor",
+              "hoverBorderColor",
+              "focusBg",
+              "focusBorderColor",
+              "focusShadow",
+              "textSize",
+              "textWeight",
+              "textDecor",
+              "textTransform",
+              "textAlign",
+              "textColor",
+              "hoverTextColor",
+              "fontFamily",
+              "shadow",
+              "hoverShadow",
+              "position",
+              "top",
+              "left",
+              "right",
+              "bottom",
+              "transform",
+              "transition",
+              "overflow",
+              "cursor",
+            ]}
+          />
         </InfoCodeRow>
       </>
     )

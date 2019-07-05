@@ -1,17 +1,8 @@
 import React from "react"
-import {
-  Div,
-  Text,
-  Tag,
-  Button,
-  Image,
-  Icon,
-  Anchor,
-  Collapse,
-} from "react-atomize"
+import { Div, Text, Tag, Button, Collapse } from "react-atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
-import ShowCodeButton from "../common/ShowCodeButton"
+import AvailableProps from "../common/AvailableProps"
 
 const collapseDocsCode1 = `// Basic Links
 import { Div, Tag, Anchor, Icon } from "react-atomize";
@@ -119,6 +110,58 @@ class AnchorDocs extends React.Component {
               </Div>
             </Collapse>
           </Div>
+
+          <AvailableProps
+            defaultProps={{
+              isOpen: "false",
+              m: "{ y: 0 }",
+              overflow: "hidden",
+            }}
+            available={[
+              "isOpen",
+              "m",
+              "d",
+              "align",
+              "justify",
+              "flexDir",
+              "flexGrow",
+              "flexWrap",
+              "rounded",
+              "bg",
+              "hoverBg",
+              "bgImg",
+              "bgPos",
+              "bgSize",
+              "h",
+              "minH",
+              "maxH",
+              "w",
+              "minW",
+              "maxW",
+              "border",
+              "borderColor",
+              "hoverBorderColor",
+              "textSize",
+              "textWeight",
+              "textDecor",
+              "textTransform",
+              "textAlign",
+              "textColor",
+              "hoverTextColor",
+              "fontFamily",
+              "shadow",
+              "hoverShadow",
+              "position",
+              "top",
+              "left",
+              "right",
+              "bottom",
+              "transform",
+              "transition",
+              "overflow",
+              "cursor",
+            ]}
+          />
         </InfoCodeRow>
       </>
     )

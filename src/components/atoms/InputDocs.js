@@ -13,11 +13,7 @@ import {
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
-
-const inputDocsCode0 = `/**
-Click on < > to see the code.
-**/
-`
+import AvailableProps from "../common/AvailableProps"
 
 const inputDocsCode1 = `// Basic Input
 import { Input } from "react-atomize";
@@ -461,7 +457,7 @@ class InputDocs extends React.Component {
               }
             />
           </Div>
-          <Div pos="relative" m={{ b: "1rem" }}>
+          <Div pos="relative" m={{ b: "3rem" }}>
             <ShowCodeButton
               onClick={this.toggleSelectedCode}
               value={inputDocsCode9}
@@ -469,6 +465,67 @@ class InputDocs extends React.Component {
             />
             <Textarea placeholder="Basic Textarea" />
           </Div>
+
+          <AvailableProps
+            defaultProps={{
+              d: "flex",
+              p: '{ x: "0.75rem" }',
+              textSize: "body",
+              rounded: "md",
+              border: "1px solid",
+              borderColor: "gray500",
+              h: "2.5rem",
+              w: "100%",
+              bg: "white",
+              textColor: "dark",
+              textWeight: "500",
+              focusBorderColor: "gray700",
+            }}
+            available={[
+              "isLoading",
+              "prefix",
+              "suffix",
+              "p",
+              "m",
+              "d",
+              "flexGrow",
+              "rounded",
+              "bg",
+              "hoverBg",
+              "focusBg",
+              "focusTextColor",
+              "focusBorderColor",
+              "focusShadow",
+              "h",
+              "minH",
+              "maxH",
+              "w",
+              "minW",
+              "maxW",
+              "border",
+              "borderColor",
+              "hoverBorderColor",
+              "textSize",
+              "textWeight",
+              "textDecor",
+              "textTransform",
+              "textAlign",
+              "textColor",
+              "hoverTextColor",
+              "fontFamily",
+              "shadow",
+              "hoverShadow",
+              "position",
+              "top",
+              "left",
+              "right",
+              "bottom",
+              "transform",
+              "transition",
+              "overflow",
+              "cursor",
+            ]}
+          />
         </InfoCodeRow>
       </>
     )

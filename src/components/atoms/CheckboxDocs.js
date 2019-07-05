@@ -3,6 +3,7 @@ import { Div, Text, Tag, Checkbox, Label } from "react-atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
+import AvailableProps from "../common/AvailableProps"
 
 const checkboxDocs1 = `// Basic Checkboxes
 import { Checkbox, Label } from "react-atomize";
@@ -244,6 +245,39 @@ class CheckboxDocs extends React.Component {
               Loading Checkbox
             </Label>
           </Div>
+
+          <AvailableProps
+            defaultProps={{
+              isLoading: "false",
+              disabled: "false",
+              undetermine: "false",
+              cursor: "pointer",
+              m: '{ r: "0.5rem" }',
+              color: "black",
+              size: "20px",
+              inactiveColor: "gray500",
+              activeColor: "info700",
+            }}
+            available={[
+              "isLoading",
+              "disabled",
+              "undetermine",
+              "activeColor",
+              "inactiveColor",
+              "size",
+              "p",
+              "m",
+              "d",
+              "position",
+              "top",
+              "left",
+              "right",
+              "bottom",
+              "transform",
+              "transition",
+              "cursor",
+            ]}
+          />
         </InfoCodeRow>
       </>
     )
