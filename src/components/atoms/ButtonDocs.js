@@ -627,6 +627,7 @@ class ButtonDocs extends React.Component {
               textSize: "body",
               textWeight: "500",
               fontFamily: "primary",
+              transition: "true",
             }}
             available={[
               "isLoading",

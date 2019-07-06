@@ -42,7 +42,12 @@ const list = [
 
 const Craft = () => {
   return (
-    <Div w="100vw" overflow="hidden">
+    <Div
+      w="100vw"
+      overflow="hidden"
+      border={{ b: "1px solid" }}
+      borderColor="gray300"
+    >
       <Container>
         <Div d="flex" flexDir="column" align="center" p={{ t: "10rem" }}>
           <Text
@@ -52,7 +57,7 @@ const Craft = () => {
             maxW="32rem"
             m={{ b: "2rem" }}
           >
-            Craft the perfect designs for each website, by using atomize.
+            Code the perfect designs for each website, by using atomize.
           </Text>
           <Text
             textSize="subheader"
@@ -60,8 +65,8 @@ const Craft = () => {
             textColor="medium"
             maxW="32rem"
           >
-            Plan and publish your content for Instagram, Facebook, Twitter,
-            Pinterest, and LinkedIn, all from one simple dashboard.
+            Atomize provides with easy way to build and maintain responsive,
+            consistent and clean components for your interface.
           </Text>
         </Div>
         <Div d="flex" justify="center" p={{ t: "8rem" }}>
@@ -110,7 +115,7 @@ const Craft = () => {
           </Div>
         </Div>
       </Container>
-      <Div m={{ t: "-20rem" }} bg="brandgray" p={{ t: "30rem", b: "3rem" }}>
+      <Div p={{ y: "5rem" }}>
         <Container>
           <Div d="flex" flexDir="column" align="center">
             <Text

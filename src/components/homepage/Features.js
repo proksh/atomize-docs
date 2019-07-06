@@ -21,34 +21,36 @@ import stroke from "../../images/feature/stroke.svg"
 
 const featuresList = [
   {
-    icon: icon5,
-    heading: "Atomic Structure",
-    subheading: "Build on the smallest of components to the large.",
-  },
-  {
-    icon: icon2,
-    heading: "Styleguide",
-    subheading: "Customizable style guide for quickly getting you started",
-  },
-  {
     icon: icon6,
-    heading: "Easy Responsive",
+    heading: "Responsive",
     subheading: "Build fully responsive structure easily.",
   },
   {
     icon: icon4,
-    heading: "Growing Components",
+    heading: "Components",
     subheading: "A large of components and still increasing with time.",
   },
+
+  {
+    icon: icon2,
+    heading: "Styleguide",
+    subheading: "Customizable style guide and quickly get started.",
+  },
+
   {
     icon: icon1,
-    heading: "Icon System",
-    subheading: "An inbuild Icon system for quicker development",
+    heading: "Icons",
+    subheading: "An inbuild Icon system for quicker development.",
   },
   {
     icon: icon3,
     heading: "Customisation",
-    subheading: "Customize components easily with the utilities props.",
+    subheading: "Customize components easily with the props.",
+  },
+  {
+    icon: icon5,
+    heading: "Structure",
+    subheading: "Build on the smallest of components to the large.",
   },
 ]
 
@@ -79,12 +81,12 @@ class Features extends React.Component {
       <Div tag="section">
         <Container>
           <Div
-            p={{ t: "9.5rem", b: "8rem" }}
+            p={{ t: "9.5rem", b: "5rem" }}
             border={{ b: "1px solid" }}
             borderColor="gray300"
           >
             <Row>
-              <Col size={{ xs: 12, lg: 4 }} d={{ xs: "none", lg: "block" }}>
+              <Col size={{ xs: 12, md: 4 }} d={{ xs: "none", md: "block" }}>
                 <Div
                   p={{ r: "1rem", t: { xs: "4rem", md: "0" } }}
                   pos="relative"
@@ -161,87 +163,97 @@ class Features extends React.Component {
                   </Div>
                 </Div>
               </Col>
-              <Col size={{ xs: 12, lg: 6 }} offset={{ xs: 0, lg: 1 }}>
-                <Div
-                  d="flex"
-                  align="center"
-                  justify={{ xs: "center", md: "flex-start" }}
-                  m={{ b: "2rem" }}
-                >
+              <Col size={{ xs: 12, md: 6 }} offset={{ xs: 0, md: 1 }}>
+                <Div p={{ l: { lg: "1rem" } }}>
                   <Div
-                    d={{ xs: "none", md: "block" }}
-                    bg="black"
-                    h="2px"
-                    w="1.5rem"
-                    m={{ r: "0.5rem" }}
-                  ></Div>
-                  <Text
-                    textSize="caption"
-                    textColor="info700"
-                    textTransform="uppercase"
-                    textWeight="500"
-                    textAlign={{ xs: "center", md: "left" }}
+                    d="flex"
+                    align="center"
+                    justify="flex-start"
+                    m={{ b: "2rem" }}
                   >
-                    Features
+                    <Div
+                      d="block"
+                      bg="black"
+                      h="2px"
+                      w="1.5rem"
+                      m={{ r: "0.5rem" }}
+                    ></Div>
+                    <Text
+                      textSize="caption"
+                      textColor="info700"
+                      textTransform="uppercase"
+                      textWeight="700"
+                      textAlign="left"
+                    >
+                      Features
+                    </Text>
+                  </Div>
+                  <Text
+                    textSize="display2"
+                    maxW={{ md: "29rem" }}
+                    textWeight="500"
+                    textAlign="left"
+                    m={{ b: "3rem" }}
+                  >
+                    Create beautiful & consistant user interface.
                   </Text>
-                </Div>
-                <Text
-                  textSize="display2"
-                  maxW={{ md: "29rem" }}
-                  textWeight="500"
-                  textAlign={{ xs: "center", md: "left" }}
-                  m={{ b: "1rem" }}
-                >
-                  Create beautiful & consistant user interface.
-                </Text>
-                <Text
+                  {/* <Text
                   textColor="medium"
                   textAlign={{ xs: "center", md: "left" }}
                   m={{ b: "3.5rem" }}
                 >
                   Easily manage the theme colors and typography with Atomize
                   React
-                </Text>
-                <Div>
-                  <Row>
-                    {featuresList.map(feature => (
-                      <Col size={{ xs: 12, sm: 6 }}>
-                        <Div
-                          d="flex"
-                          align="center"
-                          flexDir={{ xs: "column", md: "row" }}
-                          m={{ b: "3rem" }}
-                        >
+                </Text> */}
+                  <Div maxW={{ md: "32rem" }}>
+                    <Row>
+                      {featuresList.map(feature => (
+                        <Col size={6}>
                           <Div
                             d="flex"
-                            align="center"
-                            justify="center"
-                            h="2.5rem"
-                            minW="2.5rem"
-                            m={{ r: { md: "2rem" }, t: "0.5rem", b: "1rem" }}
+                            align="flex-start"
+                            flexDir={{ xs: "column", md: "row" }}
+                            m={{ b: "3rem" }}
                           >
-                            <Image src={feature.icon} />
-                          </Div>
-                          <Div p={{ r: { md: "0.5rem" } }} maxW="14rem">
-                            <Text
-                              textSize="subheader"
-                              textAlign={{ xs: "center", md: "left" }}
-                              textWeight="500"
+                            <Div
+                              d="flex"
+                              align="center"
+                              justify="center"
+                              h="2.5rem"
+                              minW="2.5rem"
+                              m={{
+                                r: { md: "1.5rem" },
+                                t: "0.25rem",
+                                b: "1rem",
+                              }}
                             >
-                              {feature.heading}
-                            </Text>
-                            <Text
-                              textSize="body"
-                              textAlign={{ xs: "center", md: "left" }}
-                              textColor="medium"
-                            >
-                              {feature.subheading}
-                            </Text>
+                              <Image
+                                src={feature.icon}
+                                w="2.5rem"
+                                maxW="2.5rem"
+                              />
+                            </Div>
+                            <Div p={{ r: { md: "0.5rem" } }} maxW="14rem">
+                              <Text
+                                textSize="subheader"
+                                textAlign="left"
+                                textWeight="500"
+                              >
+                                {feature.heading}
+                              </Text>
+                              <Text
+                                textSize="body"
+                                textAlign="left"
+                                textColor="medium"
+                              >
+                                {feature.subheading}
+                              </Text>
+                            </Div>
                           </Div>
-                        </Div>
-                      </Col>
-                    ))}
-                  </Row>
+                        </Col>
+                      ))}
+                    </Row>
+                  </Div>
                 </Div>
               </Col>
             </Row>

@@ -9,19 +9,6 @@ import Highlight, { defaultProps } from "prism-react-renderer"
 
 import codeTheme from "../../components/common/codeTheme"
 
-const styleResetCode = `import React from 'react';
-import { StyleReset } from 'react-atomize';
-import App from './src/App';
-
-export default function Main() {
-  return (
-    <>
-      <StyleReset />
-      <App />
-    </>
-  );
-}`
-
 const usageCode = `import React from 'react';
 import { StyleReset } from 'react-atomize';
 import App from './src/App';
@@ -107,11 +94,9 @@ const Setup = () => (
           Usage
         </Text>
         <Text m={{ b: "1rem" }} textColor="medium">
-          Include the StyleReset from atomize to your root component. If you
-          have a vanilla React Native project, it's a good idea to add it in the
-          component which is passed to AppRegistry.registerComponent. This will
-          usually be in the index.js file. If you have an Expo project, you can
-          do this inside the App.js file.
+          Include the StyleReset from atomize to your root component. It's a
+          good idea to add it in the component which is passed to entire app.
+          This will usually be in the index.js file or App.js file.
         </Text>
         <Text m={{ b: "1rem" }} textColor="medium">
           Example:

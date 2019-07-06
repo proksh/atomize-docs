@@ -38,7 +38,7 @@ class Collapse extends React.Component {
                         (name, index) => (
                         <Div
                             p={{ x: "1rem", y: "0.75rem" }}
-                            border={{ b: index != 4 && "1px solid" }}
+                            border={{ b: index !== 4 && "1px solid" }}
                             borderColor="gray400"
                         >
                             {name}
@@ -100,7 +100,7 @@ class AnchorDocs extends React.Component {
                   (name, index) => (
                     <Div
                       p={{ x: "1rem", y: "0.75rem" }}
-                      border={{ b: index != 4 && "1px solid" }}
+                      border={{ b: index !== 4 && "1px solid" }}
                       borderColor="gray400"
                     >
                       {name}

@@ -480,6 +480,7 @@ class InputDocs extends React.Component {
               textColor: "dark",
               textWeight: "500",
               focusBorderColor: "gray700",
+              transition: "true",
             }}
             available={[
               "isLoading",

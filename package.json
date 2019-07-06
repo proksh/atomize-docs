@@ -19,7 +19,7 @@
     "prism-react-renderer": "^0.1.6",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-atomize": "^1.0.21",
+    "react-atomize": "^1.0.26",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-transition-group": "^4.1.1",
