@@ -1,8 +1,9 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { Div, Image, Container, Button, Anchor } from "react-atomize"
+import { Div, Image, Container, Button, Anchor, scrollTo } from "react-atomize"
 import logo from "../../images/logo.png"
+import ReactWOW from "react-wow"
 
 class Header extends React.Component {
   constructor(props) {
@@ -13,10 +14,8 @@ class Header extends React.Component {
     }
   }
 
-  toggleHeaderMenu = () => {
-    const { showMobileHeaderMenu } = this.state
-
-    this.setState({ showMobileHeaderMenu: !showMobileHeaderMenu })
+  toggleHeaderMenu = value => {
+    this.setState({ showMobileHeaderMenu: value })
   }
 
   render() {
@@ -32,18 +31,30 @@ class Header extends React.Component {
         right="0"
         zIndex="100"
         p={{ y: { xs: "1.5rem", md: "1rem" } }}
-        bg="white"
       >
+        <Div
+          pos="absolute"
+          top="0"
+          left="0"
+          right="0"
+          bottom="0"
+          bg="white"
+          opacity="0.8"
+          zIndex="-1"
+          styele={{ WebkitFilter: "blur(2px)", filter: "blur(2px)" }}
+        ></Div>
         <Container d="flex" align="center" justify="space-between">
           <Div>
-            <Image src={logo} h="18px" w="auto" />
+            <ReactWOW animation="fadeInUp">
+              <Image src={logo} h="18px" w="auto" />
+            </ReactWOW>
           </Div>
 
           {/* Icon For Mobile */}
           <Div
             d={{ xs: "flex", md: "none" }}
             flexDir="column"
-            onClick={this.toggleHeaderMenu}
+            onClick={() => this.toggleHeaderMenu(!showMobileHeaderMenu)}
           >
             <Div
               h="2px"
@@ -74,7 +85,8 @@ class Header extends React.Component {
           {/* Links for Desktop */}
           <Div
             d="flex"
-            bg="white"
+            onClick={() => this.toggleHeaderMenu(false)}
+            bg={{ xs: "white", md: "transparent" }}
             align={{ xs: "strech", md: "center" }}
             flexDir={{ xs: "column", md: "row" }}
             pos={{ xs: "absolute", md: "static" }}
@@ -98,36 +110,45 @@ class Header extends React.Component {
             }}
             transition
           >
-            <Anchor
-              m={{ r: "2rem", b: { xs: "1rem", md: "0" } }}
-              textWeight="500"
-              textColor="medium"
-              hoverTextColor="black"
-              transition
-            >
-              Features
-            </Anchor>
-            <Anchor
-              m={{ r: "2.5rem", b: { xs: "4rem", md: "0" } }}
-              textWeight="500"
-              textColor="medium"
-              hoverTextColor="black"
-              transition
-            >
-              Github
-            </Anchor>
-            <Link to="/docs/intro">
-              <Button
-                bg="info200"
-                hoverBg="info300"
-                textColor="info800"
-                w={{ xs: "100%", sm: "8.5rem" }}
-                rounded="lg"
-                style={{ letterSpacing: "-0.5px" }}
+            <ReactWOW animation="fadeInUp" delay="0.1s">
+              <Anchor
+                m={{ r: "2rem", b: { xs: "1rem", md: "0" } }}
+                textWeight="500"
+                textColor="medium"
+                hoverTextColor="black"
+                transition
+                onClick={() => scrollTo("#features")}
               >
-                Documentation
-              </Button>
-            </Link>
+                Features
+              </Anchor>
+            </ReactWOW>
+            <ReactWOW animation="fadeInUp" delay="0.2s">
+              <Anchor
+                href="https://github.com/Proksh/atomize"
+                target="_blanc"
+                m={{ r: "2.5rem", b: { xs: "4rem", md: "0" } }}
+                textWeight="500"
+                textColor="medium"
+                hoverTextColor="black"
+                transition
+              >
+                Github
+              </Anchor>
+            </ReactWOW>
+            <ReactWOW animation="fadeInUp" delay="0.3s">
+              <Link to="/docs/intro">
+                <Button
+                  bg="info200"
+                  hoverBg="info300"
+                  textColor="info800"
+                  w={{ xs: "100%", sm: "8.5rem" }}
+                  rounded="lg"
+                  style={{ letterSpacing: "-0.5px" }}
+                >
+                  Documentation
+                </Button>
+              </Link>
+            </ReactWOW>
           </Div>
         </Container>
       </Div>

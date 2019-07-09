@@ -11,7 +11,7 @@ import DocsWrapper from "../../components/common/DocsWrapper"
 
 const Molecules = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Molecules" />
     <DocsWrapper>
       <DropdownDocs />
       <ModalDocs />

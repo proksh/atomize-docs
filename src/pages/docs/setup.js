@@ -46,7 +46,7 @@ export default function Main() {
 
 const Setup = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Setup" />
     <DocsWrapper>
       <Div p={{ x: { xs: "1.5rem", md: "4rem" }, t: "5rem", b: "10rem" }}>
         <Text textSize="display2" m={{ b: "4rem" }}>

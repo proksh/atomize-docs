@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import "./font.css"
+import "./wow.css"
 
 import { StyleReset, DefaultTheme, ThemeProvider, Div } from "react-atomize"
 
@@ -11,7 +12,7 @@ const theme = {
     ...DefaultTheme.fontFamily,
     primary:
       '"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
-    secondary: '"jubilat", serif',
+    secondary: '"Playfair Display","jubilat", serif',
     code: "'Fira Mono','Roboto Mono', monospace",
   },
   grid: {

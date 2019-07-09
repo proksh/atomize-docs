@@ -26,6 +26,10 @@ const sidebarLinks = {
       text: "Showcase",
       page: "/docs/showcase",
     },
+    contributing: {
+      text: "Contributing",
+      page: "/docs/contributing",
+    },
   },
   lowerLinks: {
     themesetup: {
@@ -472,6 +476,7 @@ const SidebarMobile = ({
         align="strech"
         flexDir="column"
         pos="absolute"
+        onClick={() => toggleHeaderMenu(false)}
         p={{
           t: "6rem",
           b: "2rem",

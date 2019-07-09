@@ -16,7 +16,7 @@ import DocsWrapper from "../../components/common/DocsWrapper"
 
 const Molecules = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Theme Setup" />
     <DocsWrapper>
       <AvailableColors />
       <AddEditColors />

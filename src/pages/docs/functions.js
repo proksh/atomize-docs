@@ -7,7 +7,7 @@ import DocsWrapper from "../../components/common/DocsWrapper"
 
 const Functions = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Function Components" />
     <DocsWrapper>
       <ScrollToDocs />
     </DocsWrapper>

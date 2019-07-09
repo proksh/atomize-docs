@@ -30,12 +30,12 @@ import { Row, Col, Div } from "react-atomize";
 ReactDOM.render(
   <Row>
     <Col size="5">
-      <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
+      <Div p="1rem" bg="warning500">
         This is 5 of 12
       </Div>
     </Col>
     <Col size="7">
-      <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
+      <Div p="1rem" bg="warning500">
         This is 7 of 12
       </Div>
     </Col>
@@ -48,19 +48,19 @@ import { Row, Col, Div } from "react-atomize";
 
 ReactDOM.render(
   <Row>
-    <Col size={{ xs: 12, lg: 2 }}>
-      <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
-        2 of 12
+    <Col size={{ xs: 12, lg: 3 }}>
+      <Div p="1rem" bg="warning500">
+        3 of 12
       </Div>
     </Col>
     <Col size={{ xs: "auto" }}>
-      <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
+      <Div p="1rem" bg="warning500">
         Variable width content
       </Div>
     </Col>
-    <Col size={{ xs: 12, lg: 5 }}>
-      <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
-        5 of 12
+    <Col size={{ xs: 12, lg: 4 }}>
+      <Div p="1rem" bg="warning500">
+        4 of 12
       </Div>
     </Col>
   </Row>
@@ -83,12 +83,12 @@ ReactDOM.render(
   <ThemeProvider theme={theme}>
     <Row>
       <Col size={{ xs: 8, lg: 3 }}>
-        <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
+        <Div p="1rem" bg="warning500">
           3 of 8
         </Div>
       </Col>
       <Col size={{ xs: 8, lg: 5 }}>
-        <Div p={{ x: "0.5rem", y: "1rem" }} bg="info500">
+        <Div p="1rem" textColor="white" bg="info700">
           5 of 8
         </Div>
       </Col>
@@ -138,12 +138,12 @@ class RowColDocs extends React.Component {
             />
             <Row>
               <Col size={5}>
-                <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
+                <Div p="1rem" bg="warning500">
                   This is 5 of 12
                 </Div>
               </Col>
               <Col size={7}>
-                <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
+                <Div p="1rem" bg="warning500">
                   This is 7 of 12
                 </Div>
               </Col>
@@ -159,19 +159,19 @@ class RowColDocs extends React.Component {
               selectedValue={selectedCode}
             />
             <Row>
-              <Col size={{ xs: 12, lg: 2 }}>
-                <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
-                  2 of 12
+              <Col size={{ xs: 12, lg: 3 }}>
+                <Div p="1rem" bg="warning500">
+                  3 of 12
                 </Div>
               </Col>
               <Col size={{ xs: "auto" }}>
-                <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
+                <Div p="1rem" bg="warning500">
                   Variable width content
                 </Div>
               </Col>
-              <Col size={{ xs: 12, lg: 5 }}>
-                <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
-                  5 of 12
+              <Col size={{ xs: 12, lg: 4 }}>
+                <Div p="1rem" bg="warning500">
+                  4 of 12
                 </Div>
               </Col>
             </Row>
@@ -188,12 +188,12 @@ class RowColDocs extends React.Component {
             <ThemeProvider theme={theme}>
               <Row>
                 <Col size={{ xs: 8, lg: 3 }}>
-                  <Div p={{ x: "0.5rem", y: "1rem" }} bg="warning500">
+                  <Div p="1rem" bg="warning500">
                     3 of 8
                   </Div>
                 </Col>
                 <Col size={{ xs: 8, lg: 5 }}>
-                  <Div p={{ x: "0.5rem", y: "1rem" }} bg="info500">
+                  <Div p="1rem" textColor="white" bg="info700">
                     5 of 8
                   </Div>
                 </Col>

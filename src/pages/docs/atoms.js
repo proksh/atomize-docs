@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import DivDocs from "../../components/atoms/DivDocs"
 import TextDocs from "../../components/atoms/TextDocs"
@@ -20,7 +19,7 @@ import DocsWrapper from "../../components/common/DocsWrapper"
 
 const Atoms = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Atoms" />
     <DocsWrapper>
       <DivDocs />
       <TextDocs />

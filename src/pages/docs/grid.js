@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import ContainerDocs from "../../components/grid-components/ContainerDocs"
 import RowColDocs from "../../components/grid-components/RowColDocs"
@@ -10,7 +9,7 @@ import DocsWrapper from "../../components/common/DocsWrapper"
 
 const Grid = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Grid Components" />
     <DocsWrapper>
       <ContainerDocs />
       <RowColDocs />

@@ -9,7 +9,7 @@ import anteelo from "../../images/showcase/anteelo.png"
 
 const IntroDocs = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Showcase" />
     <DocsWrapper>
       <Div p={{ x: { xs: "1.5rem", md: "4rem" }, t: "5rem", b: "10rem" }}>
         <Text textSize="display2" m={{ b: "1rem" }}>
@@ -24,7 +24,7 @@ const IntroDocs = () => (
           <Col size={{ xs: 12, md: 6 }}>
             <Anchor href="https://italic.com/" target="_blanc">
               <Div
-                m={{ b: "2rem" }}
+                m={{ b: "1rem" }}
                 p={{ b: "70%" }}
                 rounded="lg"
                 shadow="2"
@@ -37,11 +37,14 @@ const IntroDocs = () => (
                 transition
               ></Div>
             </Anchor>
+            <Text m={{ b: "2rem" }} textAlign="center">
+              Italic | Luxury without labels
+            </Text>
           </Col>
           <Col size={{ xs: 12, md: 6 }}>
             <Anchor href="https://anteelo.com/" target="_blanc">
               <Div
-                m={{ b: "2rem" }}
+                m={{ b: "1rem" }}
                 p={{ b: "70%" }}
                 rounded="lg"
                 shadow="2"
@@ -54,6 +57,9 @@ const IntroDocs = () => (
                 transition
               ></Div>
             </Anchor>
+            <Text m={{ b: "2rem" }} textAlign="center">
+              Anteelo | Product Design Firm
+            </Text>
           </Col>
         </Row>
       </Div>

@@ -9,8 +9,8 @@ import {
   Anchor,
   Icon,
   Image,
-  Button,
 } from "react-atomize"
+import ReactWOW from "react-wow"
 
 import spiral from "../../images/footer/spiral.svg"
 import line from "../../images/footer/line.svg"
@@ -19,100 +19,96 @@ import circle from "../../images/footer/circle.png"
 const footerLinks = {
   docs: [
     {
-      name: "Introduction",
-      link: "/",
-    },
-    {
       name: "Installation",
-      link: "/",
-    },
-    {
-      name: "Get Started",
-      link: "/",
+      link: "/docs/setup",
     },
     {
       name: "Theme Setup",
-      link: "/",
+      link: "/docs/theme",
+    },
+    {
+      name: "Grid",
+      link: "/docs/grid",
     },
     {
       name: "Atoms",
-      link: "/",
+      link: "/docs/atoms",
     },
     {
       name: "Molecules",
-      link: "/",
+      link: "/docs/molecules",
     },
     {
       name: "Functions",
-      link: "/",
+      link: "/docs/functions",
     },
   ],
   atomize: [
     {
       name: "Features",
-      link: "/",
+      link: "#features",
     },
     {
       name: "Design",
-      link: "/",
+      anchor: true,
+      link: "http://www.atomizedesign.com/",
     },
     {
       name: "Development",
-      link: "/",
+      link: "/docs/intro",
     },
     {
       name: "Github",
-      link: "/",
+      anchor: true,
+      link: "https://github.com/Proksh/atomize",
     },
   ],
   resources: [
     {
       name: "Sketch File",
-      link: "/",
+      anchor: true,
+      link: "https://gumroad.com/l/atomize",
     },
     {
       name: "Github",
-      link: "/",
+      anchor: true,
+      link: "https://github.com/Proksh/atomize",
     },
   ],
   about: [
     {
       name: "Introduction",
-      link: "/",
-    },
-    {
-      name: "Design System",
-      link: "/",
+      link: "/docs/intro",
     },
     {
       name: "Showcase",
-      link: "/",
+      link: "/docs/showcase",
     },
     {
-      name: "Contribution",
-      link: "/",
+      name: "Contributing",
+      link: "/docs/contributing",
     },
   ],
   extras: [
     {
-      name: "Medium Blog",
+      name: "Blog",
+      anchor: true,
       link: "/",
     },
     {
       name: "Product Hunt",
-      link: "/",
-    },
-    {
-      name: "Contact",
+      anchor: true,
       link: "/",
     },
     {
       name: "Need Help?",
-      link: "/",
+      anchor: true,
+      link: "mailto:prokshh@gmail.com",
     },
     {
       name: "Give Feedback",
-      link: "/",
+      anchor: true,
+      link: "mailto:prokshh@gmail.com",
     },
   ],
 }
@@ -120,23 +116,23 @@ const footerLinks = {
 const mediaLinks = [
   {
     icon: "Behance",
-    link: "/",
+    link: "https://www.behance.net/prokshh90d1",
   },
   {
     icon: "Dribbble",
-    link: "/",
+    link: "https://dribbble.com/proksh",
   },
   {
     icon: "Instagram",
-    link: "/",
+    link: "https://www.instagram.com/prokshluthra/",
   },
   {
     icon: "Twitter",
-    link: "/",
+    link: "https://twitter.com/proksh_luthra",
   },
   {
     icon: "Linkedin",
-    link: "/",
+    link: "https://www.linkedin.com/in/prokshluthra/",
   },
 ]
 
@@ -144,7 +140,7 @@ const Footer = () => {
   return (
     <Div
       tag="footer"
-      p={{ t: { xs: "9rem", md: "7.5rem" }, b: { xs: "12rem", md: "5rem" } }}
+      p={{ t: { xs: "12rem", md: "7rem" }, b: { xs: "4rem", md: "5rem" } }}
       pos="relative"
     >
       <Image
@@ -158,21 +154,21 @@ const Footer = () => {
         src={circle}
         pos="absolute"
         right="-5rem"
-        bottom={{ xs: "3rem", md: "6rem" }}
+        bottom={{ xs: "-7rem", md: "6rem" }}
         w={{ xs: "12rem", md: "16.5rem" }}
         zIndex="-1"
       />
       <Image
         src={line}
         pos="absolute"
-        right="-5rem"
-        bottom={{ xs: "1.5rem", md: "2.5rem" }}
+        right="-6rem"
+        bottom={{ xs: "-3rem", md: "2.5rem" }}
         w={{ xs: "11rem", md: "14.25rem" }}
         zIndex="-1"
       />
 
       <Container>
-        <Div m={{ b: "15rem" }} d={{ xs: "none", md: "block" }}>
+        <Div m={{ b: "12rem" }} d={{ xs: "none", md: "block" }}>
           <Row>
             {Object.keys(footerLinks).map((key, index) => {
               return (
@@ -182,25 +178,53 @@ const Footer = () => {
                 >
                   <Div
                     p={{ l: { md: "2.5rem" }, b: { xs: "1.5rem", md: "0" } }}
+                    textColor="medium"
                   >
-                    <Text
-                      m={{ b: "1rem" }}
-                      textTransform="capitalize"
-                      textWeight="500"
-                    >
-                      {key}
-                    </Text>
-                    {footerLinks[key].map(link => (
-                      <Link to={link.link}>
-                        <Text
-                          m={{ b: "0.5rem" }}
-                          textColor="medium"
-                          hoverTextColor="info800"
-                        >
-                          {link.name}
-                        </Text>
-                      </Link>
-                    ))}
+                    <ReactWOW animation="fadeInUp">
+                      <Text
+                        m={{ b: "1rem" }}
+                        textColor="black"
+                        textTransform="capitalize"
+                        textWeight="500"
+                      >
+                        {key}
+                      </Text>
+                    </ReactWOW>
+                    {footerLinks[key].map((link, i) => {
+                      if (link.anchor) {
+                        return (
+                          <ReactWOW
+                            animation="fadeInUp"
+                            delay={`${0.1 * i + 0.2 * index}s`}
+                            key={link.name}
+                          >
+                            <Anchor
+                              m={{ b: "0.5rem" }}
+                              textColor="medium"
+                              hoverTextColor="info800"
+                              d="block"
+                              href={link.link}
+                              target="_blanc"
+                              textWeight="400"
+                            >
+                              {link.name}
+                            </Anchor>
+                          </ReactWOW>
+                        )
+                      } else {
+                        return (
+                          <Link to={link.link}>
+                            <Text
+                              m={{ b: "0.5rem" }}
+                              textColor="medium"
+                              hoverTextColor="info800"
+                            >
+                              {link.name}
+                            </Text>
+                          </Link>
+                        )
+                      }
+                    })}
                   </Div>
                 </Col>
               )
@@ -208,19 +232,23 @@ const Footer = () => {
           </Row>
         </Div>
         <Div d="flex" align="center" justify="center" flexDir="column">
-          <Text textAlign="center" m={{ b: "1rem" }}>
-            Designed & Developed by Proksh Luthra
-          </Text>
+          <ReactWOW animation="fadeInUp">
+            <Text textAlign="center" m={{ b: "1rem" }}>
+              Designed & Developed by Proksh Luthra
+            </Text>
+          </ReactWOW>
           <Div d="flex" align="center" justify="center">
-            {mediaLinks.map(link => (
-              <Anchor href={link.link}>
-                <Icon
-                  name={link.icon}
-                  size="20px"
-                  hoverColor="info800"
-                  m={{ r: "0.5rem" }}
-                  cursor="pointer"
-                />
+            {mediaLinks.map((link, index) => (
+              <Anchor href={link.link} target="_blanc">
+                <ReactWOW animation="fadeInUp" delay={`${index * 0.05}s`}>
+                  <Icon
+                    name={link.icon}
+                    size="20px"
+                    hoverColor="info800"
+                    m={{ r: index !== mediaLinks.length - 1 && "1rem" }}
+                    cursor="pointer"
+                  />
+                </ReactWOW>
               </Anchor>
             ))}
           </Div>

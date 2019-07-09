@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import {
   Div,
   Text,
@@ -19,30 +20,27 @@ const DesignDevelopment = () => {
   return (
     <Div tag="section">
       <Container>
-        <Div
-          p={{ t: "7.5rem", b: "12rem" }}
-          border={{ b: "1px solid" }}
-          borderColor="gray300"
-        >
+        <Div p={{ t: "7.5rem", b: "12rem" }}>
           <Div d="flex" flexDir="column" align="center">
             <Text
               textSize="display1"
               textAlign="center"
               textWeight="500"
-              maxW="26rem"
+              maxW="30rem"
               m={{ b: "2rem" }}
             >
-              Learn more about our full stack of brand building tools
+              Start using atomize and build a consistant brand language for your
+              interface.
             </Text>
             <Text
               textSize="subheader"
               textAlign="center"
               textColor="medium"
-              maxW="26rem"
+              maxW="30rem"
               m={{ b: "3.5rem" }}
             >
-              We’ve built a full stack of social media tools to help modern
-              brands grow their awareness, engagement, and sales.
+              We’ve built a combination of design and development tools to help
+              modern brands grow with consistency.
             </Text>
           </Div>
           <Div>
@@ -72,10 +70,14 @@ const DesignDevelopment = () => {
                     p={{ r: "0.5rem" }}
                     m={{ b: "1.5rem" }}
                   >
-                    We’ve built a full stack of social media tools to help
-                    modern modern modern.
+                    Design your website by using atomize build for Sketch App.
                   </Text>
-                  <Anchor d="flex" align="center">
+                  <Anchor
+                    d="flex"
+                    align="center"
+                    href="http://www.atomizedesign.com/"
+                    target="_blanc"
+                  >
                     Design Resources
                     <Icon
                       name="LongRight"
@@ -121,18 +123,26 @@ const DesignDevelopment = () => {
                     p={{ r: "0.5rem" }}
                     m={{ b: "1.5rem" }}
                   >
-                    We’ve built a full stack of social media tools to help
-                    modern modern modern.
+                    Start developing your designs to reality, with atomize build
+                    for React JS.
                   </Text>
-                  <Anchor d="flex" align="center">
-                    Design Resources
-                    <Icon
-                      name="LongRight"
-                      size="16px"
-                      m={{ l: "1rem" }}
+                  <Link to="/docs/intro">
+                    <Text
+                      textWeight="500"
                       color="info700"
-                    />
-                  </Anchor>
+                      hoverColor="info800"
+                      d="flex"
+                      align="center"
+                    >
+                      Documentation
+                      <Icon
+                        name="LongRight"
+                        size="16px"
+                        m={{ l: "1rem" }}
+                        color="info700"
+                      />
+                    </Text>
+                  </Link>
                 </Div>
               </Col>
             </Row>

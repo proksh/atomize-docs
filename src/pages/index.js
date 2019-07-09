@@ -13,7 +13,7 @@ import Footer from "../components/homepage/Footer"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Atomize Design System" />
     <Header />
     <HeroSection />
     <Features />

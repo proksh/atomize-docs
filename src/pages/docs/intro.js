@@ -8,7 +8,7 @@ import DocsWrapper from "../../components/common/DocsWrapper"
 
 const IntroDocs = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Introduction" />
     <DocsWrapper>
       <Div p={{ x: { xs: "1.5rem", md: "4rem" }, t: "5rem", b: "10rem" }}>
         <Text textSize="display2" m={{ b: "1rem" }}>
