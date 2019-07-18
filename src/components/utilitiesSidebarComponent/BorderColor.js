@@ -25,7 +25,7 @@ const BorderColor = () => {
     <InfoCodeSidebar code={borderCode2}>
       <Text textColor="medium" textSize="body" m={{ b: "1rem" }}>
         Color can be any value of color from the theme. You can{" "}
-        <Link to="/docs/theme#addEditColors">edit or add more colors</Link>{" "}
+        <Link to="/docs/react/theme#addEditColors">edit or add more colors</Link>{" "}
         values by theme. Border Color can also be changed on hover by passing{" "}
         <Tag>{"hoverBorderColor={value}"}</Tag> to the component.
       </Text>

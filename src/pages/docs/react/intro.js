@@ -1,17 +1,20 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../../components/layout"
-import SEO from "../../components/seo"
+import Layout from "../../../components/layout"
+import SEO from "../../../components/seo"
 import { Text, Button, Div, Anchor, Icon } from "react-atomize"
-import DocsWrapper from "../../components/common/DocsWrapper"
+import DocsWrapper from "../../../components/common/DocsWrapper"
 
 const IntroDocs = () => (
   <Layout>
-    <SEO title="Introduction" />
+    <SEO
+      title="Introduction"
+      description="Introduction to Atomize design system - Advance design system for React JS."
+    />
     <DocsWrapper>
       <Div p={{ x: { xs: "1.5rem", md: "4rem" }, t: "5rem", b: "10rem" }}>
-        <Text textSize="display2" m={{ b: "1rem" }}>
+        <Text tag="h2" textWeight="400" textSize="display2" m={{ b: "1rem" }}>
           Advance Design System for React JS.
         </Text>
 
@@ -32,7 +35,7 @@ const IntroDocs = () => (
           Try Demo on Sandbox
         </Anchor>
         <Div d="flex" m={{ b: "2rem" }}>
-          <Link to="/docs/setup">
+          <Link to="/docs/react/setup">
             <Button bg="info700" w="7rem" m={{ r: "1rem" }}>
               Get Started
             </Button>

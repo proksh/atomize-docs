@@ -1,19 +1,22 @@
 import React from "react"
 
-import Layout from "../../components/layout"
-import SEO from "../../components/seo"
+import Layout from "../../../components/layout"
+import SEO from "../../../components/seo"
 import { Text, Div, Anchor } from "react-atomize"
-import DocsWrapper from "../../components/common/DocsWrapper"
+import DocsWrapper from "../../../components/common/DocsWrapper"
 import Highlight, { defaultProps } from "prism-react-renderer"
 
-import codeTheme from "../../components/common/codeTheme"
+import codeTheme from "../../../components/common/codeTheme"
 
 const ContributingPage = () => (
   <Layout>
-    <SEO title="Contributing" />
+    <SEO
+      title="Contribute"
+      description="Detail Guide for how to contribute to open source codebase for atomize design system"
+    />
     <DocsWrapper>
       <Div p={{ x: { xs: "1.5rem", md: "4rem" }, t: "5rem", b: "10rem" }}>
-        <Text textSize="display2" m={{ b: "4rem" }}>
+        <Text tag="h2" textWeight="400" textSize="display2" m={{ b: "4rem" }}>
           Contributing to Atomize React
         </Text>
 

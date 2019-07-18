@@ -240,6 +240,7 @@ class TagDocs extends React.Component {
               "justify",
               "flexDir",
               "flexGrow",
+              "order",
               "flexWrap",
               "rounded",
               "bg",

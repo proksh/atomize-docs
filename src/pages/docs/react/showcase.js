@@ -1,18 +1,21 @@
 import React from "react"
 
-import Layout from "../../components/layout"
-import SEO from "../../components/seo"
+import Layout from "../../../components/layout"
+import SEO from "../../../components/seo"
 import { Text, Div, Row, Col, Anchor } from "react-atomize"
-import DocsWrapper from "../../components/common/DocsWrapper"
-import italic from "../../images/showcase/italic.png"
-import anteelo from "../../images/showcase/anteelo.png"
+import DocsWrapper from "../../../components/common/DocsWrapper"
+import italic from "../../../images/showcase/italic.png"
+import anteelo from "../../../images/showcase/anteelo.png"
 
-const IntroDocs = () => (
+const Showcase = () => (
   <Layout>
-    <SEO title="Showcase" />
+    <SEO
+      title="Showcase"
+      description="List of Website using atomize design system for their ui."
+    />
     <DocsWrapper>
       <Div p={{ x: { xs: "1.5rem", md: "4rem" }, t: "5rem", b: "10rem" }}>
-        <Text textSize="display2" m={{ b: "1rem" }}>
+        <Text tag="h2" textWeight="400" textSize="display2" m={{ b: "1rem" }}>
           Who's using Atomize?
         </Text>
         <Text m={{ b: "4rem" }} textColor="medium">
@@ -67,4 +70,4 @@ const IntroDocs = () => (
   </Layout>
 )
 
-export default IntroDocs
+export default Showcase

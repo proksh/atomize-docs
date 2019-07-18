@@ -28,7 +28,7 @@ const Shadows = () => {
       <Text textColor="medium" textSize="body" m={{ b: "3rem" }}>
         5 shadows are available through <Tag>{"shadow={value}"}</Tag>.Hover
         Shadow can be changed through <Tag>{"hoverShadow={value}"}</Tag>. You
-        can <Link to="/docs/theme#shadows">edit or add shadows</Link> by using
+        can <Link to="/docs/react/theme#shadows">edit or add shadows</Link> by using
         theme.
       </Text>
       <Div p={{ b: "2.5rem" }} w="100%" overflow="hidden">

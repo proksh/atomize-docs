@@ -109,196 +109,92 @@ const Craft = () => {
     >
       <Container>
         <Div d="flex" flexDir="column" align="center" p={{ t: "8rem" }}>
-          <ReactWOW animation="fadeInUp">
-            <Text
-              textSize="display2"
-              textAlign="center"
-              textWeight="500"
-              maxW="32rem"
-              m={{ b: "2rem" }}
-            >
-              Code the perfect designs for each website, by using atomize.
-            </Text>
-          </ReactWOW>
-          <ReactWOW animation="fadeInUp" delay="0.1s">
-            <Text
-              textSize="subheader"
-              textAlign="center"
-              textColor="medium"
-              maxW="32rem"
-            >
-              Atomize provides with easy way to build and maintain responsive,
-              consistent and clean components for your interface.
-            </Text>
-          </ReactWOW>
+          <Text
+            tag="h2"
+            textSize="display2"
+            textAlign="center"
+            textWeight="500"
+            maxW="40rem"
+            m={{ b: "2rem" }}
+          >
+            Code the perfect design for each project using Atomize.
+          </Text>
         </Div>
-        <ReactWOW animation="fadeIn" delay="0.2s">
-          <Div d="flex" justify="center" p={{ t: { xs: "3rem", md: "8rem" } }}>
+        <Div d="flex" justify="center" p={{ t: { xs: "3rem", md: "8rem" } }}>
+          <Div
+            maxW="53rem"
+            w="100%"
+            pos="relative"
+            m={{ b: { xs: "70%", sm: "auto" } }}
+          >
             <Div
-              maxW="53rem"
-              w="100%"
               pos="relative"
-              m={{ b: { xs: "70%", sm: "auto" } }}
+              w="100%"
+              bg="brandgray"
+              p={{ b: "70%" }}
+              rounded="xl"
+              style={{ filter: "invert(1)" }}
             >
-              <Image
-                d={{ xs: "none", md: "block" }}
-                src={circleBrush}
-                pos="absolute"
-                w="11.5rem"
-                top={{ xs: "-9.5", md: "-5.5rem" }}
-                right="-5rem"
-                zIndex="-1"
-              />
-              <Image
-                d={{ xs: "none", md: "block" }}
-                src={strokes}
-                pos="absolute"
-                w="6.5rem"
-                top="-7rem"
-                left="-6rem"
-                zIndex="-1"
-              />
               <Div
-                pos="relative"
-                w="100%"
-                bg="brandgray"
-                p={{ b: "70%" }}
-                rounded="xl"
-                style={{ filter: "invert(1)" }}
+                pos="absolute"
+                top="0.5rem"
+                left="0.5rem"
+                bottom="0"
+                right="0.5rem"
+                overflow="hidden"
               >
-                <Div
-                  pos="absolute"
-                  top="0.5rem"
-                  left="0.5rem"
-                  bottom="0"
-                  right="0.5rem"
-                  overflow="hidden"
+                <Highlight
+                  {...defaultProps}
+                  theme={{
+                    ...codeTheme,
+                    plain: { ...codeTheme.plain, backgroundColor: "#f7f5f4" },
+                  }}
+                  code={code}
+                  language="jsx"
                 >
-                  <Highlight
-                    {...defaultProps}
-                    theme={{
-                      ...codeTheme,
-                      plain: { ...codeTheme.plain, backgroundColor: "#f7f5f4" },
-                    }}
-                    code={code}
-                    language="jsx"
-                  >
-                    {({
-                      className,
-                      style,
-                      tokens,
-                      getLineProps,
-                      getTokenProps,
-                    }) => (
-                      <pre className={className} style={style}>
-                        {tokens.map((line, i) => (
-                          <div {...getLineProps({ line, key: i })}>
-                            {line.map((token, key) => (
-                              <span {...getTokenProps({ token, key })} />
-                            ))}
-                          </div>
-                        ))}
-                      </pre>
-                    )}
-                  </Highlight>
-                </Div>
+                  {({
+                    className,
+                    style,
+                    tokens,
+                    getLineProps,
+                    getTokenProps,
+                  }) => (
+                    <pre className={className} style={style}>
+                      {tokens.map((line, i) => (
+                        <div {...getLineProps({ line, key: i })}>
+                          {line.map((token, key) => (
+                            <span {...getTokenProps({ token, key })} />
+                          ))}
+                        </div>
+                      ))}
+                    </pre>
+                  )}
+                </Highlight>
               </Div>
-              <TranslateContainer>
+            </Div>
+            <TranslateContainer>
+              <Translate>
+                <AnimatingBlock />
+              </Translate>
+              <Div pos="absolute" top="100%" left="0" right="0">
                 <Translate>
                   <AnimatingBlock />
                 </Translate>
-                <Div pos="absolute" top="100%" left="0" right="0">
-                  <Translate>
-                    <AnimatingBlock />
-                  </Translate>
-                </Div>
-                <Div
-                  h="1rem"
-                  pos="absolute"
-                  bottom="0"
-                  height="1rem"
-                  left="0"
-                  bg="white"
-                  zIndex="10"
-                  right="0"
-                ></Div>
-              </TranslateContainer>
-              <Image
-                d={{ xs: "none", md: "block" }}
-                src={spiral}
+              </Div>
+              <Div
+                h="1rem"
                 pos="absolute"
-                w="18rem"
-                bottom={{ xs: "-7.5rem", md: "-1.5rem" }}
-                left={{ xs: "0", md: "-6rem" }}
-              />
-            </Div>
+                bottom="0"
+                height="1rem"
+                left="0"
+                bg="white"
+                zIndex="10"
+                right="0"
+              ></Div>
+            </TranslateContainer>
           </Div>
-        </ReactWOW>
+        </Div>
       </Container>
-      <Div p={{ t: "8rem", b: "5rem" }}>
-        <Container>
-          <ReactWOW animation="fadeInUp">
-            <Div d="flex" flexDir="column" align="center">
-              <Text
-                textSize="heading"
-                textWeight="500"
-                textAlign="center"
-                maxW="36rem"
-                m={{ b: "4rem" }}
-              >
-                Don't let your designs be frustrating to track, you'll waste
-                effort repeating the work done before.
-              </Text>
-            </Div>
-          </ReactWOW>
-
-          <Row>
-            <Col size={{ xs: 12, lg: 10 }} offset={{ xs: 0, lg: 1 }}>
-              <Row>
-                {list.map((item, index) => (
-                  <Col size={{ xs: 12, md: 4 }}>
-                    <Div
-                      d="flex"
-                      align="center"
-                      flexDir="column"
-                      p={{ x: "1rem" }}
-                      m={{ b: "4rem" }}
-                    >
-                      <ReactWOW animation="fadeInUp" delay={`${0.1 * index}s`}>
-                        <Div
-                          h="4rem"
-                          w="4rem"
-                          shadow="2"
-                          rounded="circle"
-                          m={{ b: "2rem" }}
-                          d="flex"
-                          align="center"
-                          justify="center"
-                        >
-                          <Image w="3.5rem" h="3.5rem" src={item.image} />
-                        </Div>
-                      </ReactWOW>
-                      <ReactWOW
-                        animation="fadeInUp"
-                        delay={`${0.1 * index + 0.02}s`}
-                      >
-                        <Text
-                          textSize="subheader"
-                          textColor="medium"
-                          textAlign="center"
-                          maxW="20rem"
-                        >
-                          {item.content}
-                        </Text>
-                      </ReactWOW>
-                    </Div>
-                  </Col>
-                ))}
-              </Row>
-            </Col>
-          </Row>
-        </Container>
-      </Div>
     </Div>
   )
 }

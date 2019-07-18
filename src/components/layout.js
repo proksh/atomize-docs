@@ -11,8 +11,9 @@ const theme = {
   fontFamily: {
     ...DefaultTheme.fontFamily,
     primary:
+      '"SF Pro Text",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
+    secondary:
       '"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
-    secondary: '"Playfair Display","jubilat", serif',
     code: "'Fira Mono','Roboto Mono', monospace",
   },
   grid: {
@@ -26,7 +27,8 @@ const theme = {
     ...DefaultTheme.textSize,
     size: {
       ...DefaultTheme.textSize.size,
-      display3: "52px",
+      body: "13px",
+      display3: "48px",
     },
     height: {
       ...DefaultTheme.textSize.height,
@@ -39,27 +41,34 @@ const theme = {
   },
 }
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+class Layout extends React.Component {
+  render() {
+    const { children } = this.props
+
+    return (
+      <StaticQuery
+        query={graphql`
+          query SiteTitleQuery {
+            site {
+              siteMetadata {
+                title
+              }
+            }
           }
-        }
-      }
-    `}
-    render={data => (
-      <ThemeProvider theme={theme}>
-        <StyleReset />
-        <Div tag="main" w="100vw" overflow="hidden">
-          {children}
-        </Div>
-      </ThemeProvider>
-    )}
-  />
-)
+        `}
+        render={data => (
+          <ThemeProvider theme={theme}>
+            <div class="cursor cursor--small" id="cursor"></div>
+            <StyleReset />
+            <Div tag="main" w="100vw" overflow="hidden">
+              {children}
+            </Div>
+          </ThemeProvider>
+        )}
+      />
+    )
+  }
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

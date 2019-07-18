@@ -28,7 +28,7 @@ class Transition extends React.Component {
         <Text textColor="medium" textSize="body" m={{ b: "1rem" }}>
           You can pass <Tag>transition</Tag> to the element to add a transition
           effect between its css states and the default transition will be
-          applied. You can <Link to="/docs/theme/theme#transition"></Link>edit
+          applied. You can <Link to="/docs/react/theme/theme#transition"></Link>edit
           this default trasition value by changing the in the theme.
         </Text>
 

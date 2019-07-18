@@ -82,6 +82,7 @@ class ImageDocs extends React.Component {
             "m",
             "d",
             "flexGrow",
+            "order",
             "rounded",
             "h",
             "minH",

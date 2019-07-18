@@ -45,6 +45,7 @@ const DivDocs = () => {
           "flexDir",
           "flexGrow",
           "flexWrap",
+          "order",
           "rounded",
           "bg",
           "hoverBg",

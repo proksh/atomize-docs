@@ -53,7 +53,7 @@ const Rounded = () => {
           Border Radius can be defined by <Tag>{"rounded={value}"}</Tag> where
           value can be - '0', 'xs', 'sm', 'md', 'lg' or 'xl'. 'md' is the
           default border radius of buttons and other such elements. You can{" "}
-          <Link to="/docs/theme#rounded">edit or add more rounded</Link> values
+          <Link to="/docs/react/theme#rounded">edit or add more rounded</Link> values
           by theme.
         </Text>
 

@@ -1,17 +1,5 @@
 import React from "react"
-import {
-  Div,
-  Text,
-  Tag,
-  Button,
-  scrollTo,
-  Row,
-  Col,
-  Icon,
-  Container,
-  ThemeProvider,
-  DefaultTheme,
-} from "react-atomize"
+import { Div, Text, Tag, Button, scrollTo } from "react-atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 
@@ -57,7 +45,7 @@ const ScrollToDocs = () => {
         border={false}
       >
         <Text m={{ b: "0.5rem" }} textSize="heading" textWeight="500">
-          Sroll To
+          Scroll To
         </Text>
         <Text textColor="medium" textSize="body" m={{ b: "2rem" }}>
           <Tag>scrollTo</Tag> function can be used to scroll to certain section

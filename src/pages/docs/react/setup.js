@@ -1,13 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../../components/layout"
-import SEO from "../../components/seo"
+import Layout from "../../../components/layout"
+import SEO from "../../../components/seo"
 import { Text, Div } from "react-atomize"
-import DocsWrapper from "../../components/common/DocsWrapper"
+import DocsWrapper from "../../../components/common/DocsWrapper"
 import Highlight, { defaultProps } from "prism-react-renderer"
 
-import codeTheme from "../../components/common/codeTheme"
+import codeTheme from "../../../components/common/codeTheme"
 
 const usageCode = `import React from 'react';
 import { StyleReset } from 'react-atomize';
@@ -46,15 +46,21 @@ export default function Main() {
 
 const Setup = () => (
   <Layout>
-    <SEO title="Setup" />
+    <SEO title="Setup" description="Setup guide for Atomize design system." />
     <DocsWrapper>
       <Div p={{ x: { xs: "1.5rem", md: "4rem" }, t: "5rem", b: "10rem" }}>
-        <Text textSize="display2" m={{ b: "4rem" }}>
+        <Text tag="h2" textWeight="400" textSize="display2" m={{ b: "4rem" }}>
           Getting Started
         </Text>
 
         {/* Installation */}
-        <Text textSize="heading" textWeight="500" m={{ b: "0.5rem" }}>
+        <Text
+          tag="h3"
+          textWeight="400"
+          textSize="heading"
+          textWeight="500"
+          m={{ b: "0.5rem" }}
+        >
           Installation
         </Text>
         <Text m={{ b: "1rem" }} textColor="medium">
@@ -72,7 +78,7 @@ const Setup = () => (
           <Highlight
             {...defaultProps}
             theme={codeTheme}
-            code={`npm install atomize styled-components react-transition-group @callstack/react-theme-provider`}
+            code={`yarn add atomize styled-components react-transition-group @callstack/react-theme-provider`}
             language="bash"
           >
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
@@ -90,7 +96,13 @@ const Setup = () => (
         </Div>
 
         {/* Usage */}
-        <Text textSize="heading" textWeight="500" m={{ b: "0.5rem" }}>
+        <Text
+          tag="h3"
+          textWeight="400"
+          textSize="heading"
+          textWeight="500"
+          m={{ b: "0.5rem" }}
+        >
           Usage
         </Text>
         <Text m={{ b: "1rem" }} textColor="medium">
@@ -131,13 +143,19 @@ const Setup = () => (
         </Div>
 
         {/* Customization */}
-        <Text textSize="heading" textWeight="500" m={{ b: "0.5rem" }}>
+        <Text
+          tag="h3"
+          textWeight="400"
+          textSize="heading"
+          textWeight="500"
+          m={{ b: "0.5rem" }}
+        >
           Customization
         </Text>
         <Text m={{ b: "1rem" }} textColor="medium">
           You can provide a custom theme to customize the colors, fonts etc.
           with the ThemeProvider component. Check the theme customization
-          options in <Link to="/docs/theme">Theme Setup</Link>.
+          options in <Link to="/docs/react/theme">Theme Setup</Link>.
         </Text>
         <Text m={{ b: "1rem" }} textColor="medium">
           Example:

@@ -28,7 +28,7 @@ class IconDocs extends React.Component {
     const filtered = {}
 
     Object.keys(iconPaths).forEach(key => {
-      if (key.indexOf(query) > -1) {
+      if (key.toLowerCase().indexOf(query) > -1) {
         filtered[key] = iconPaths[key]
       }
     })
@@ -100,7 +100,7 @@ class IconDocs extends React.Component {
           placeholder="Filter (Ex: Add)"
           textSize="caption"
           query={query}
-          onChange={e => this.setState({ query: e.target.value })}
+          onChange={e => this.setState({ query: e.target.value.toLowerCase() })}
         />
 
         <Div d="flex" flexWrap="wrap" m={{ b: "3rem" }}>

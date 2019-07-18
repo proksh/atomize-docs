@@ -179,6 +179,7 @@ class AnchorDocs extends React.Component {
             "bg",
             "hoverBg",
             "h",
+            "order",
             "minH",
             "maxH",
             "w",

@@ -27,7 +27,7 @@ const Background = () => {
         Background and Hover Background can be given by{" "}
         <Tag>{"bg={value}"}</Tag> and <Tag>{"hoverBg={value}"}</Tag>
         respectively where value can be any color from the theme. You can{" "}
-        <Link to="/docs/theme#addEditColors">edit or add color</Link> using
+        <Link to="/docs/react/theme#addEditColors">edit or add color</Link> using
         theme.
       </Text>
 

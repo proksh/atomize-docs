@@ -27,7 +27,7 @@ const HoverShadow = () => {
     <InfoCodeSidebar code={shadowCode1}>
       <Text textColor="medium" textSize="body" m={{ b: "3rem" }}>
         Hover Shadow can be changed through <Tag>{"hoverShadow={value}"}</Tag>.
-        You can <Link to="/docs/theme#shadows">edit or add shadows</Link> by
+        You can <Link to="/docs/react/theme#shadows">edit or add shadows</Link> by
         using theme.
       </Text>
       <Div p={{ b: "2.5rem" }} w="100%" overflow="hidden">

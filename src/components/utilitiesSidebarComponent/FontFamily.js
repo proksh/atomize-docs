@@ -23,7 +23,7 @@ const FontFamily = () => {
         There are three types of font family available by deafult -{" "}
         <Tag>primary</Tag>, <Tag>secondary</Tag> & <Tag>code</Tag>. This font
         family can be provided by <Tag>fontFamily</Tag> prop to the component.
-        You can <Link to="/docs/theme#fontfamily">edit or add a new font</Link>{" "}
+        You can <Link to="/docs/react/theme#fontfamily">edit or add a new font</Link>{" "}
         varible by using theme.
       </Text>
 

@@ -27,7 +27,7 @@ const FocusShadow = () => {
     <InfoCodeSidebar code={shadowCode1}>
       <Text textColor="medium" textSize="body" m={{ b: "3rem" }}>
         Focus Shadow can be changed through <Tag>{"focusShadow={value}"}</Tag>.
-        You can <Link to="/docs/theme#shadows">edit or add shadows</Link> by
+        You can <Link to="/docs/react/theme#shadows">edit or add shadows</Link> by
         using theme.
       </Text>
     </InfoCodeSidebar>

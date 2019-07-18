@@ -490,6 +490,7 @@ class InputDocs extends React.Component {
               "m",
               "d",
               "flexGrow",
+              "order",
               "rounded",
               "bg",
               "hoverBg",

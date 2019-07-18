@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import {
   Div,
   Text,
@@ -13,15 +14,16 @@ import logoProducthunt from "../../images/logo-producthunt.svg"
 
 const Features = () => {
   return (
-    <Div bg={{ xs: "gray200", md: "white" }}>
+    <Div bg={{ xs: "gray300", md: "white" }}>
       <Container>
         <Div
           p={{ y: "5rem", x: { xs: "0", md: "1rem" } }}
-          bg="gray200"
-          style={{ borderRadius: "32px" }}
+          bg="gray300"
+          style={{ borderRadius: "40px" }}
         >
           <Div d="flex" flexDir="column" align="center">
             <Text
+              tag="h2"
               textSize="display1"
               textAlign="center"
               textWeight="500"
@@ -54,31 +56,33 @@ const Features = () => {
             justify="center"
             flexDir={{ xs: "column", sm: "row" }}
           >
-            <Button
-              h="3rem"
-              w={{ xs: "100%", sm: "14rem" }}
-              p={{ l: "1rem", r: "2rem" }}
-              bg="info700"
-              hoverBg="info600"
-              justify="left"
-              rounded="lg"
-              m={{ r: "1rem", b: { xs: "1rem", sm: "0" } }}
-              shadow="2"
-              hoverShadow="4"
-              suffix={
-                <Icon
-                  name="LongRight"
-                  pos="absolute"
-                  top="50%"
-                  right="1rem"
-                  color="white"
-                  transform="translateY(-50%)"
-                  size="18px"
-                />
-              }
-            >
-              Learn Atomize
-            </Button>
+            <Link to="/docs/react/intro">
+              <Button
+                h="3rem"
+                w={{ xs: "100%", sm: "14rem" }}
+                p={{ l: "1rem", r: "2rem" }}
+                bg="info700"
+                hoverBg="info600"
+                justify="left"
+                rounded="lg"
+                m={{ r: "1rem", b: { xs: "1rem", sm: "0" } }}
+                shadow="2"
+                hoverShadow="4"
+                suffix={
+                  <Icon
+                    name="LongRight"
+                    pos="absolute"
+                    top="50%"
+                    right="1rem"
+                    color="white"
+                    transform="translateY(-50%)"
+                    size="18px"
+                  />
+                }
+              >
+                Learn Atomize
+              </Button>
+            </Link>
             <Button
               h="3rem"
               w={{ xs: "100%", sm: "14rem" }}

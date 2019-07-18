@@ -36,6 +36,8 @@ const TextDocs = () => {
           "p",
           "m",
           "d",
+          "flexGrow",
+          "order",
           "bg",
           "hoverBg",
           "h",

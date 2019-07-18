@@ -7,7 +7,6 @@ export default function HTML(props) {
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta name="robots" content="noindex, nofollow,noimageindex" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -16,6 +15,21 @@ export default function HTML(props) {
           href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap"
           rel="stylesheet"
         />
+
+        {/* Google Analitics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-143759982-1"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+      
+              gtag('config', 'UA-143759982-1');`,
+          }}
+        ></script>
 
         {props.headComponents}
       </head>

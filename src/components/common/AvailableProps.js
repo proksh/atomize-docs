@@ -76,6 +76,7 @@ import OnEntering from "../utilitiesSidebarComponent/OnEntering"
 import OnExit from "../utilitiesSidebarComponent/OnExit"
 import OnExiting from "../utilitiesSidebarComponent/OnExiting"
 import OnExited from "../utilitiesSidebarComponent/OnExited"
+import Order from "../utilitiesSidebarComponent/Order"
 
 const allProps = {
   tag: {
@@ -252,6 +253,11 @@ const allProps = {
     name: "Flex Wrap",
     tag: "flex wrap",
     component: <FlexWrap />,
+  },
+  order: {
+    name: "Order",
+    tag: "flex order sequence",
+    component: <Order />,
   },
   rounded: {
     name: "Rounded",
@@ -461,7 +467,7 @@ class AvailableProps extends React.Component {
     Object.keys(allProps).forEach(key => {
       // allProps[key].tag
       if (
-        allProps[key].tag.indexOf(query) > -1 &&
+        allProps[key].tag.toLowerCase().indexOf(query) > -1 &&
         available.indexOf(key) > -1
       ) {
         filtered[key] = allProps[key]
@@ -532,7 +538,9 @@ class AvailableProps extends React.Component {
                 placeholder="Filter (Ex: flex)"
                 textSize="caption"
                 query={query}
-                onChange={e => this.setState({ query: e.target.value })}
+                onChange={e =>
+                  this.setState({ query: e.target.value.toLowerCase() })
+                }
               />
             </Col>
           </Row>
@@ -569,7 +577,7 @@ class AvailableProps extends React.Component {
                     {(defaultProps && defaultProps[key]) || "-"}
                   </Col>
                   <Col size={3} d="flex" justify="flex-end">
-                    <Anchor textAlign="right">View Detail</Anchor>
+                    <Anchor textAlign="right">View</Anchor>
                     {/* <Icon name="LongRight" color="info700" size="16px" /> */}
                   </Col>
                 </Row>

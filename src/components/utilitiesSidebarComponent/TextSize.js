@@ -43,7 +43,7 @@ const TextSize = () => {
       <Text textColor="medium" textSize="body" m={{ b: "1rem" }}>
         Size can be given to text by <Tag>{"textSize={value}"}</Tag>. Where
         value is the size defined in theme. You can{" "}
-        <Link to="/docs/theme#fontSize">add or edit sizes</Link> by using theme.
+        <Link to="/docs/react/theme#fontSize">add or edit sizes</Link> by using theme.
       </Text>
 
       <Div m={{ b: "1rem" }}>

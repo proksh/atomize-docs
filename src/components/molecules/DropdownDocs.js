@@ -741,6 +741,7 @@ class DropdownDocs extends React.Component {
               "flexDir",
               "flexGrow",
               "flexWrap",
+              "order",
               "rounded",
               "bg",
               "hoverBg",

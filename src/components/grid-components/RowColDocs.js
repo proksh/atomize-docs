@@ -124,7 +124,7 @@ class RowColDocs extends React.Component {
             Our Grid system uses <Tag>{"<Row />"}</Tag> and{" "}
             <Tag>{"<Col />"}</Tag> to layout and align content. It’s built with
             flexbox and is fully responsive. You can{" "}
-            <Link to="/docs/theme#containerGutterWidth">
+            <Link to="/docs/react/theme#containerGutterWidth">
               edit grid variables
             </Link>{" "}
             by using theme.
@@ -253,7 +253,7 @@ class RowColDocs extends React.Component {
           </Div>
 
           <AvailableProps
-            componentName="Container"
+            componentName="Column"
             defaultProps={{
               p: '{{ y: "0", x: `calc(${theme.grid.gutterWidth}/2)` }}',
             }}
@@ -262,6 +262,7 @@ class RowColDocs extends React.Component {
               "justify",
               "flexDir",
               "flexWrap",
+              "order",
               "rounded",
               "bg",
               "hoverBg",

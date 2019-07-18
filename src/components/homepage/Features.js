@@ -9,8 +9,8 @@ import {
   Checkbox,
   Icon,
   Button,
+  Tag,
 } from "react-atomize"
-import ReactWOW from "react-wow"
 
 import icon1 from "../../images/feature-icons/1.svg"
 import icon2 from "../../images/feature-icons/2.svg"
@@ -18,7 +18,6 @@ import icon3 from "../../images/feature-icons/3.svg"
 import icon4 from "../../images/feature-icons/4.svg"
 import icon5 from "../../images/feature-icons/5.svg"
 import icon6 from "../../images/feature-icons/6.svg"
-import stroke from "../../images/feature/stroke.svg"
 
 const featuresList = [
   {
@@ -92,29 +91,20 @@ class Features extends React.Component {
             borderColor="gray300"
           >
             <Row>
-              <Col size={{ xs: 12, md: 4 }} d={{ xs: "none", md: "block" }}>
+              <Col size={{ xs: 12, md: 3 }} d={{ xs: "none", md: "block" }}>
                 <Div
                   p={{ r: "1rem", t: { xs: "4rem", md: "0" } }}
                   pos="relative"
                 >
-                  <Image
-                    src={stroke}
+                  <Div
                     pos="absolute"
-                    top="2rem"
-                    left="4rem"
-                    w="18rem"
-                  />
-                  <ReactWOW animation="fadeInUp" delay="0.2s">
-                    <Div
-                      pos="absolute"
-                      h="5rem"
-                      w="5rem"
-                      bg="danger200"
-                      rounded="circle"
-                      top="21rem"
-                      left="12rem"
-                    ></Div>
-                  </ReactWOW>
+                    h="5rem"
+                    w="5rem"
+                    bg="danger200"
+                    rounded="circle"
+                    top="21rem"
+                    left="12rem"
+                  ></Div>
 
                   <Div
                     d="flex"
@@ -124,166 +114,110 @@ class Features extends React.Component {
                     flexDir="column"
                     align="flex-end"
                   >
-                    <ReactWOW animation="fadeInUp" delay="0.3s">
-                      <Div
-                        h="3rem"
-                        w="10.5rem"
-                        shadow="5"
-                        bg="white"
-                        d="flex"
-                        justify="space-between"
-                        align="center"
-                        rounded="xl"
-                        p={{ x: "1rem" }}
-                        m={{ b: "2rem" }}
-                      >
-                        <Text textColor="medium">Add User</Text>
-                        <Icon name="Add" size="20px" />
-                      </Div>
-                      <Div
-                        w="10.5rem"
-                        p={{ y: "1rem", l: "1rem", r: "0.5rem" }}
-                        shadow="5"
-                        bg="white"
-                        rounded="xl"
-                        m={{ b: "1.5rem" }}
-                        ref={this.list}
-                      >
-                        {["John Doe", "Neo", "Json Mraz"].map(name => (
-                          <Div
-                            key={name}
-                            d="flex"
-                            justify="space-between"
-                            align="center"
-                          >
-                            <Text textColor="medium">{name}</Text>
-                            <Checkbox
-                              size="16px"
-                              checked={name === "John Doe"}
-                            />
-                          </Div>
-                        ))}
-                      </Div>
-                    </ReactWOW>
-                    <ReactWOW animation="fadeInUp" delay="0.35s">
-                      <Button
-                        h="2.5rem"
-                        w="2.5rem"
-                        bg="info700"
-                        shadow="3"
-                        rounded="circle"
-                      >
-                        <Icon name="Edit" size="20px" color="white" />
-                      </Button>
-                    </ReactWOW>
+                    <Div
+                      h="3rem"
+                      w="10.5rem"
+                      shadow="5"
+                      bg="white"
+                      d="flex"
+                      justify="space-between"
+                      align="center"
+                      rounded="xl"
+                      p={{ x: "1rem" }}
+                      m={{ b: "2rem" }}
+                    >
+                      <Text textColor="medium">Add User</Text>
+                      <Icon name="Add" size="20px" />
+                    </Div>
+                    <Div
+                      w="10.5rem"
+                      p={{ y: "1rem", l: "1rem", r: "0.5rem" }}
+                      shadow="5"
+                      bg="white"
+                      rounded="xl"
+                      m={{ b: "1.5rem" }}
+                      ref={this.list}
+                    >
+                      {["John Doe", "Neo", "Json Mraz"].map(name => (
+                        <Div
+                          key={name}
+                          d="flex"
+                          justify="space-between"
+                          align="center"
+                        >
+                          <Text textColor="medium">{name}</Text>
+                          <Checkbox size="16px" checked={name === "John Doe"} />
+                        </Div>
+                      ))}
+                    </Div>
+
+                    <Button
+                      h="2.5rem"
+                      w="2.5rem"
+                      bg="info700"
+                      shadow="3"
+                      rounded="circle"
+                    >
+                      <Icon name="Edit" size="20px" color="white" />
+                    </Button>
                   </Div>
                 </Div>
               </Col>
-              <Col size={{ xs: 12, md: 6 }} offset={{ xs: 0, md: 1 }}>
+              <Col size={{ xs: 12, md: 7 }} offset={{ xs: 0, md: 1 }}>
                 <Div p={{ l: { lg: "1rem" } }}>
-                  <ReactWOW animation="fadeInUp">
-                    <Div
-                      d="flex"
-                      align="center"
-                      justify="flex-start"
-                      m={{ b: "2rem" }}
-                    >
-                      <Div
-                        d="block"
-                        bg="black"
-                        h="2px"
-                        w="1.5rem"
-                        m={{ r: "0.5rem" }}
-                      ></Div>
-                      <Text
-                        textSize="caption"
-                        textColor="info700"
-                        textTransform="uppercase"
-                        textWeight="700"
-                        textAlign="left"
-                      >
-                        Features
-                      </Text>
-                    </Div>
-                  </ReactWOW>
+                  <Tag
+                    bg="warning700"
+                    textColor="white"
+                    h="2rem"
+                    p={{ x: "1rem" }}
+                    rounded="circle"
+                    m={{ b: "1rem" }}
+                  >
+                    Key features
+                  </Tag>
 
-                  <ReactWOW animation="fadeInUp" delay="0.1s">
-                    <Text
-                      textSize="display2"
-                      maxW={{ md: "29rem" }}
-                      textWeight="500"
-                      textAlign="left"
-                      m={{ b: "3rem" }}
-                    >
-                      Create beautiful & consistant user interface.
-                    </Text>
-                  </ReactWOW>
-                  {/* <Text
-                  textColor="medium"
-                  textAlign={{ xs: "center", md: "left" }}
-                  m={{ b: "3.5rem" }}
-                >
-                  Easily manage the theme colors and typography with Atomize
-                  React
-                </Text> */}
-                  <Div maxW={{ md: "32rem" }}>
+                  <Text
+                    tag="h2"
+                    textSize="display2"
+                    maxW={{ md: "29rem" }}
+                    textWeight="500"
+                    textAlign="left"
+                    m={{ b: "3rem" }}
+                  >
+                    Build beautiful & consistant user interface.
+                  </Text>
+                  <Div>
                     <Row>
                       {featuresList.map((feature, index) => (
-                        <Col size={6}>
-                          <Div
-                            d="flex"
-                            align="flex-start"
-                            flexDir={{ xs: "column", md: "row" }}
-                            m={{ b: "3rem" }}
-                          >
-                            <Div
-                              d="flex"
-                              align="center"
-                              justify="center"
-                              h="2.5rem"
-                              minW="2.5rem"
+                        <Col size={4}>
+                          <Div m={{ b: "3rem" }}>
+                            <Image
+                              src={feature.icon}
+                              w="2.5rem"
+                              maxW="2.5rem"
                               m={{
-                                r: { md: "1.5rem" },
                                 t: "0.25rem",
                                 b: "1rem",
                               }}
-                            >
-                              <ReactWOW
-                                animation="fadeInUp"
-                                delay={`${0.1 + index * 0.1}s`}
-                              >
-                                <Image
-                                  src={feature.icon}
-                                  w="2.5rem"
-                                  maxW="2.5rem"
-                                />
-                              </ReactWOW>
-                            </Div>
+                            />
+
                             <Div p={{ r: { md: "0.5rem" } }} maxW="14rem">
-                              <ReactWOW
-                                animation="fadeInUp"
-                                delay={`${0.13 + index * 0.1}s`}
+                              <Text
+                                tag="h3"
+                                textSize="subheader"
+                                textAlign="left"
+                                textWeight="500"
                               >
-                                <Text
-                                  textSize="subheader"
-                                  textAlign="left"
-                                  textWeight="500"
-                                >
-                                  {feature.heading}
-                                </Text>
-                              </ReactWOW>
-                              <ReactWOW
-                                animation="fadeInUp"
-                                delay={`${0.16 + index * 0.1}s`}
+                                {feature.heading}
+                              </Text>
+
+                              <Text
+                                textSize="body"
+                                textAlign="left"
+                                textColor="medium"
                               >
-                                <Text
-                                  textSize="body"
-                                  textAlign="left"
-                                  textColor="medium"
-                                >
-                                  {feature.subheading}
-                                </Text>
-                              </ReactWOW>
+                                {feature.subheading}
+                              </Text>
                             </Div>
                           </Div>
                         </Col>

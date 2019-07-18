@@ -26,7 +26,7 @@ const ContainerDocs = () => {
         Containers are the most basic element for using our default grid system.
         Container max-width changes at each breakpoint defined in the theme to
         the max-width defined in each breakpoint. You can{" "}
-        <Link to="/docs/theme#containerGutterWidth">edit grid variables</Link>{" "}
+        <Link to="/docs/react/theme#containerGutterWidth">edit grid variables</Link>{" "}
         by using theme.
       </Text>
 

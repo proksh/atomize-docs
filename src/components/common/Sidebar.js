@@ -16,25 +16,25 @@ const sidebarLinks = {
   upperLinks: {
     introduction: {
       text: "Introduction",
-      page: "/docs/intro",
+      page: "/docs/react/intro",
     },
     setup: {
       text: "Getting Started",
-      page: "/docs/setup",
+      page: "/docs/react/setup",
     },
     showcase: {
       text: "Showcase",
-      page: "/docs/showcase",
+      page: "/docs/react/showcase",
     },
     contributing: {
       text: "Contributing",
-      page: "/docs/contributing",
+      page: "/docs/react/contributing",
     },
   },
   lowerLinks: {
     themesetup: {
       text: "Theme Setup",
-      page: "/docs/theme",
+      page: "/docs/react/theme",
       children: [
         { text: "Available Colors", id: "availableColors" },
         { text: "Add or Edit Colors", id: "addEditColors" },
@@ -47,9 +47,13 @@ const sidebarLinks = {
         { text: "Transition", id: "transition" },
       ],
     },
+    responsive: {
+      text: "Responsive",
+      page: "/docs/react/responsive",
+    },
     gridcomponents: {
       text: "Grid Components",
-      page: "/docs/grid",
+      page: "/docs/react/grid",
       children: [
         { text: "Container", id: "containerDocs" },
         { text: "Row & Col", id: "rowColDocs" },
@@ -57,7 +61,7 @@ const sidebarLinks = {
     },
     atoms: {
       text: "Atoms",
-      page: "/docs/atoms",
+      page: "/docs/react/atoms",
       children: [
         { text: "Div", id: "divDocs" },
         { text: "Text", id: "textDocs" },
@@ -75,7 +79,7 @@ const sidebarLinks = {
     },
     molecules: {
       text: "Molecules",
-      page: "/docs/molecules",
+      page: "/docs/react/molecules",
       children: [
         { text: "Dropdown", id: "dropdownDocs" },
         { text: "Modal", id: "modalDocs" },
@@ -85,7 +89,7 @@ const sidebarLinks = {
     },
     functions: {
       text: "Functions",
-      page: "/docs/functions",
+      page: "/docs/react/functions",
       children: [
         { text: "scrollTo", id: "scrollToDocs" },
         { text: "currentDevice", id: "currentDeviceDocs" },
@@ -131,21 +135,22 @@ export default class Sidebar extends Component {
       ) {
         filtered.lowerLinks[key] = sidebarLinks.lowerLinks[key]
       } else {
-        sidebarLinks.lowerLinks[key].children.forEach((item, index) => {
-          if (item.text.toLowerCase().indexOf(query) > -1) {
-            if (!filtered.lowerLinks[key]) {
-              filtered.lowerLinks[key] = {
-                text: sidebarLinks.lowerLinks[key].text,
-                page: sidebarLinks.lowerLinks[key].page,
-                children: [],
+        sidebarLinks.lowerLinks[key].children &&
+          sidebarLinks.lowerLinks[key].children.forEach((item, index) => {
+            if (item.text.toLowerCase().indexOf(query) > -1) {
+              if (!filtered.lowerLinks[key]) {
+                filtered.lowerLinks[key] = {
+                  text: sidebarLinks.lowerLinks[key].text,
+                  page: sidebarLinks.lowerLinks[key].page,
+                  children: [],
+                }
               }
-            }
 
-            filtered.lowerLinks[key].children.push(
-              sidebarLinks.lowerLinks[key].children[index]
-            )
-          }
-        })
+              filtered.lowerLinks[key].children.push(
+                sidebarLinks.lowerLinks[key].children[index]
+              )
+            }
+          })
       }
     })
 
@@ -317,12 +322,12 @@ export default class Sidebar extends Component {
                     </Div>
                   ))}
                   <Div>
-                    <Link to="/coming-soon">
+                    <Link to="/docs/react/ui-templates">
                       <Div
                         d="flex"
                         textColor={
                           locationProps.location.pathname.includes(
-                            "/coming-soon"
+                            "/docs/react/ui-templates"
                           )
                             ? "info700"
                             : "black"
@@ -332,23 +337,16 @@ export default class Sidebar extends Component {
                         textWeight="600"
                         m={{ b: "0.5rem" }}
                         cursor="pointer"
-                        d="flex"
+                        align="center"
                       >
-                        Layout{" "}
-                        <Text
-                          d="flex"
-                          align="center"
-                          tag="span"
-                          m={{ l: "0.5rem" }}
-                          bg="success400"
-                          textSize="tiny"
-                          p={{ x: "0.5rem" }}
-                          h="1.5rem"
-                          rounded="md"
-                          textColor="success800"
-                        >
-                          Coming Soon
-                        </Text>
+                        UI Templates
+                        <Div
+                          h="0.375rem"
+                          w="0.375rem"
+                          m={{ l: "0.75rem" }}
+                          rounded="circle"
+                          bg="success700"
+                        ></Div>
                       </Div>
                     </Link>
                   </Div>
@@ -376,21 +374,22 @@ class SidebarCollapse extends React.Component {
     const { links } = this.props
 
     return (
-      <Div p={{ b: "1rem", l: "1rem", t: "0.5rem" }} pos="relative">
-        {links.map(link => (
-          <Text
-            key={link.id}
-            textColor="medium"
-            hoverTextColor="dark"
-            textSize="caption"
-            textWeight="500"
-            onClick={() => this.onLinkClick(link.id)}
-            m={{ b: "0.5rem" }}
-            cursor="pointer"
-          >
-            {link.text}
-          </Text>
-        ))}
+      <Div p={links && { b: "1rem", l: "1rem", t: "0.5rem" }} pos="relative">
+        {links &&
+          links.map(link => (
+            <Text
+              key={link.id}
+              textColor="medium"
+              hoverTextColor="dark"
+              textSize="caption"
+              textWeight="500"
+              onClick={() => this.onLinkClick(link.id)}
+              m={{ b: "0.5rem" }}
+              cursor="pointer"
+            >
+              {link.text}
+            </Text>
+          ))}
         <Div
           pos="absolute"
           left="0"
