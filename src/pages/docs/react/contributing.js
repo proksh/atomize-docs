@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../../../components/layout"
 import SEO from "../../../components/seo"
-import { Text, Div, Anchor } from "react-atomize"
+import { Text, Div, Anchor } from "atomize"
 import DocsWrapper from "../../../components/common/DocsWrapper"
 import Highlight, { defaultProps } from "prism-react-renderer"
 

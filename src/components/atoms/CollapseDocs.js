@@ -1,11 +1,11 @@
 import React from "react"
-import { Div, Text, Tag, Button, Collapse } from "react-atomize"
+import { Div, Text, Tag, Button, Collapse } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import AvailableProps from "../common/AvailableProps"
 
 const collapseDocsCode1 = `// Basic Links
-import { Div, Tag, Anchor, Icon } from "react-atomize";
+import { Div, Tag, Anchor, Icon } from "atomize";
 
 class Collapse extends React.Component {
     constructor(props) {

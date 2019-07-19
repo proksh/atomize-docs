@@ -1,5 +1,5 @@
 import React from "react"
-import { Div, Text, Tag, Row, Col } from "react-atomize"
+import { Div, Text, Tag, Row, Col } from "atomize"
 
 import InfoCodeSidebar from "../common/InfoCodeSidebar"
 

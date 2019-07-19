@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../../../components/layout"
 import SEO from "../../../components/seo"
-import { Text, Div, Row, Col, Anchor } from "react-atomize"
+import { Text, Div, Row, Col, Anchor } from "atomize"
 import DocsWrapper from "../../../components/common/DocsWrapper"
 import italic from "../../../images/showcase/italic.png"
 import anteelo from "../../../images/showcase/anteelo.png"

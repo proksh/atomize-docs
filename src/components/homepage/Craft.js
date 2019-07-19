@@ -1,28 +1,19 @@
 import React from "react"
 import Highlight, { defaultProps } from "prism-react-renderer"
-import {
-  Div,
-  Text,
-  Row,
-  Col,
-  Container,
-  Image,
-  Icon,
-  Button,
-} from "react-atomize"
+import { Div, Text, Row, Col, Container, Image, Icon, Button } from "atomize"
 import styled, { keyframes } from "styled-components"
 import codeTheme from "../common/codeTheme"
 import ReactWOW from "react-wow"
 
 // import craftImage from "../../images/craft.png"
-import cardImg from "../../images/cardImg.png"
-import strokes from "../../images/craft/strokes.svg"
-import spiral from "../../images/craft/spiral.svg"
-import circleBrush from "../../images/craft/circleBrush.svg"
+import girl from "../../images/avatar/girl.png"
 
-import ill1 from "../../images/ill1.svg"
-import ill2 from "../../images/ill2.svg"
-import ill3 from "../../images/ill3.svg"
+import components from "../../images/icons/components.svg"
+import colors from "../../images/icons/colors.svg"
+import doc from "../../images/icons/doc.svg"
+import open from "../../images/icons/open.svg"
+import FollowCard from "./uicomponents/FollowCard"
+import UserEdit from "./uicomponents/UserEdit"
 
 const translate = keyframes`
   from {
@@ -47,10 +38,10 @@ const TranslateContainer = styled.div`
   zindex: 10;
 
   @media (min-width: 576px) {
-    top: auto;
+    top: 50%;
+    transform: translateY(-50%);
     left: auto;
-    right: 2.5rem;
-    bottom: -3.5rem;
+    right: -6rem;
     width: 18rem;
   }
 
@@ -65,8 +56,16 @@ const TranslateContainer = styled.div`
       rgba(247, 245, 244, 1),
       rgba(247, 245, 244, 0)
     );
-    z-index: 10;
     filter: invert(1);
+    z-index: 10;
+
+    @media (min-width: 576px) {
+      background-image: linear-gradient(
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0)
+      );
+      filter: invert(0);
+    }
   }
 
   &:after {
@@ -86,16 +85,20 @@ const TranslateContainer = styled.div`
 
 const list = [
   {
-    image: ill1,
-    content: "Make any property responsive by just using an array.",
+    image: components,
+    content: "15+ Ready to use React Components",
   },
   {
-    image: ill2,
-    content: "A consistant design language throughout the website.",
+    image: colors,
+    content: "60+ Predefined colors for theme setup",
   },
   {
-    image: ill3,
-    content: "A large number of customisations to build anything.",
+    image: doc,
+    content: "Detailed documentation for each component",
+  },
+  {
+    image: open,
+    content: "Open source with regular updates",
   },
 ]
 
@@ -103,44 +106,77 @@ const Craft = () => {
   return (
     <Div
       w="100vw"
+      p={{ y: "8rem" }}
       overflow="hidden"
       border={{ b: "1px solid" }}
       borderColor="gray300"
     >
       <Container>
-        <Div d="flex" flexDir="column" align="center" p={{ t: "8rem" }}>
-          <Text
-            tag="h2"
-            textSize="display2"
-            textAlign="center"
-            textWeight="500"
-            maxW="40rem"
-            m={{ b: "2rem" }}
-          >
-            Code the perfect design for each project using Atomize.
-          </Text>
-        </Div>
+        <Text
+          tag="h2"
+          textSize="display2"
+          textAlign="center"
+          fontFamily="secondary"
+          textWeight="500"
+          maxW="40rem"
+          m={{ b: "2rem", x: "auto" }}
+        >
+          Code the perfect design for each project using Atomize.
+        </Text>
+        <Row>
+          <Col size={{ xs: 12, md: 10 }} offset={{ md: 1 }}>
+            <Div p={{ y: "2rem" }}>
+              <Row>
+                {list.map((item, index) => (
+                  <Col
+                    key={index}
+                    size={{ xs: 12, sm: 6, lg: 3 }}
+                    d="flex"
+                    align="center"
+                    flexDir="column"
+                  >
+                    <Div
+                      d="flex"
+                      maxW="12rem"
+                      flexDir="column"
+                      align="center"
+                      m={{ b: "2rem" }}
+                    >
+                      <Image src={item.image} w="4.5rem" m={{ b: "1rem" }} />
+                      <Text
+                        textAlign="center"
+                        textSize="subheader"
+                        textColor="medium"
+                      >
+                        {item.content}
+                      </Text>
+                    </Div>
+                  </Col>
+                ))}
+              </Row>
+            </Div>
+          </Col>
+        </Row>
         <Div d="flex" justify="center" p={{ t: { xs: "3rem", md: "8rem" } }}>
           <Div
-            maxW="53rem"
             w="100%"
             pos="relative"
-            m={{ b: { xs: "70%", sm: "auto" } }}
+            m={{ b: { xs: "70%", sm: "auto" }, x: { xs: "0", md: "7rem" } }}
           >
             <Div
               pos="relative"
               w="100%"
               bg="brandgray"
               p={{ b: "70%" }}
-              rounded="xl"
-              style={{ filter: "invert(1)" }}
+              overflow="hidden"
+              style={{ filter: "invert(1)", borderRadius: "24px" }}
             >
               <Div
                 pos="absolute"
-                top="0.5rem"
-                left="0.5rem"
+                top="1rem"
+                left="1rem"
                 bottom="0"
-                right="0.5rem"
+                right="1rem"
                 overflow="hidden"
               >
                 <Highlight
@@ -252,6 +288,8 @@ const AnimatingBlock = () => (
         Use this design system
       </Button>
     </Div>
+    <UserEdit d={{ xs: "none", xl: "flex" }} pos="static" m={{ b: "1rem" }} />
+    <FollowCard maxW="100%" pos="static" m={{ b: "1rem" }} />
     <Div
       p="1rem"
       bg="white"
@@ -263,13 +301,13 @@ const AnimatingBlock = () => (
     >
       <Div d="flex" align="center">
         <Image
-          src={cardImg}
+          src={girl}
           rounded="circle"
           h="2.5rem"
           w="2.5rem"
           m={{ r: "1rem" }}
         />
-        <Text>Jogger Playyer</Text>
+        <Text textWeight="500">Meagan Fisher</Text>
       </Div>
       <Icon name="Add" color="info700" size="20px" />
     </Div>

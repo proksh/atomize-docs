@@ -7,14 +7,14 @@ import {
   Dropdown,
   DropdownMenu,
   Anchor,
-} from "react-atomize"
+} from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
 import AvailableProps from "../common/AvailableProps"
 
 const dropdownDocsCode1 = `// Basic Dropdown
-import { Dropdown, DropdownMenu, Anchor } from "react-atomize";
+import { Dropdown, DropdownMenu, Anchor } from "atomize";
 
 const menuList = (
   <DropdownMenu>
@@ -55,7 +55,7 @@ class BasicDropdown extends React.Component {
 export default BasicDropdown;`
 
 const dropdownDocsCode2 = `// Hover Target Dropdown
-import { Dropdown, DropdownMenu, Anchor } from "react-atomize";
+import { Dropdown, DropdownMenu, Anchor } from "atomize";
 
 const menuList = (
   <DropdownMenu>
@@ -82,7 +82,7 @@ class TargetHoverDropdown extends React.Component {
 export default TargetHoverDropdown;`
 
 const dropdownDocsCode3 = `// Small Size Dropdown
-import { Dropdown, DropdownMenu, Anchor } from "react-atomize";
+import { Dropdown, DropdownMenu, Anchor } from "atomize";
 
 const menuList = (
   <DropdownMenu>
@@ -124,7 +124,7 @@ class SmallSizeDropdown extends React.Component {
 export default SmallSizeDropdown;`
 
 const dropdownDocsCode4 = `// Loading Dropdown
-import { Dropdown, DropdownMenu, Anchor } from "react-atomize";
+import { Dropdown, DropdownMenu, Anchor } from "atomize";
 
 const menuList = (
   <DropdownMenu>
@@ -167,7 +167,7 @@ class SmallSizeDropdown extends React.Component {
 export default SmallSizeDropdown;`
 
 const dropdownDocsCode5 = `// Customized Dropdown
-import { Dropdown, DropdownMenu, Anchor, Icon } from "react-atomize";
+import { Dropdown, DropdownMenu, Anchor, Icon } from "atomize";
 
 const menuList = (
   <DropdownMenu>
@@ -216,7 +216,7 @@ class CustomizedDropdown extends React.Component {
 export default CustomizedDropdown;`
 
 const dropdownDocsCode6 = `// Dropdown Directions
-import { Dropdown, DropdownMenu, Anchor, Icon, Div } from "react-atomize";
+import { Dropdown, DropdownMenu, Anchor, Icon, Div } from "atomize";
 
 const menuList = (
   <DropdownMenu w="max-content">
@@ -275,7 +275,7 @@ class DropdownDirections extends React.Component {
 export default DropdownDirections;`
 
 const dropdownDocsCode7 = `// Dropdown Directions
-import { Dropdown, DropdownMenu, Anchor, Icon, Div } from "react-atomize";
+import { Dropdown, DropdownMenu, Anchor, Icon, Div } from "atomize";
 
 const menuList = (
   <DropdownMenu w="max-content">
@@ -335,7 +335,7 @@ class DropdownDirections extends React.Component {
 export default DropdownDirections;`
 
 const dropdownDocsCode8 = `// Dropdown Directions
-import { Dropdown, DropdownMenu, Anchor, Icon, Div } from "react-atomize";
+import { Dropdown, DropdownMenu, Anchor, Icon, Div } from "atomize";
 
 const menuList = (
   <DropdownMenu w="max-content">

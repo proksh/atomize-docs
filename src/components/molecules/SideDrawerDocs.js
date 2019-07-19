@@ -9,14 +9,14 @@ import {
   SideDrawer,
   DropdownMenu,
   Anchor,
-} from "react-atomize"
+} from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
 import AvailableProps from "../common/AvailableProps"
 
 const sidebarDocsCode1 = `// Basic Sidedrawer
-import { Div, Button, SideDrawer, Icon, Text } from "react-atomize";
+import { Div, Button, SideDrawer, Icon, Text } from "atomize";
 
 const BasicSideDrawer = ({ isOpen, onClose }) => {
   return (
@@ -76,7 +76,7 @@ class Drawer extends React.Component {
 export default Drawer;`
 
 const sidebarDocsCode2 = `// Sized Sidedrawer
-import { Div, Button, SideDrawer, Icon, Text } from "react-atomize";
+import { Div, Button, SideDrawer, Icon, Text } from "atomize";
 
 const SizeSideDrawer = ({ isOpen, onClose }) => {
   return (
@@ -140,7 +140,7 @@ class Drawer extends React.Component {
 export default Drawer;`
 
 const sidebarDocsCode3 = `// Sized Sidedrawer
-import { Div, Button, SideDrawer, Icon, Text } from "react-atomize";
+import { Div, Button, SideDrawer, Icon, Text } from "atomize";
 
 const SizeSideDrawer = ({ isOpen, onClose }) => {
   return (
@@ -204,7 +204,7 @@ class Drawer extends React.Component {
 export default Drawer;`
 
 const sidebarDocsCode4 = `// Sized Sidedrawer
-import { Div, Button, SideDrawer, Icon, Text } from "react-atomize";
+import { Div, Button, SideDrawer, Icon, Text } from "atomize";
 
 const SizeSideDrawer = ({ isOpen, onClose }) => {
   return (

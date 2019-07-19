@@ -1,12 +1,12 @@
 import React from "react"
-import { Div, Text, Tag, Radiobox, Label } from "react-atomize"
+import { Div, Text, Tag, Radiobox, Label } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
 import AvailableProps from "../common/AvailableProps"
 
 const RadioboxDocs1 = `// Basic Radioboxes
-import { Radiobox, Label } from "react-atomize";
+import { Radiobox, Label } from "atomize";
 
 const BasicRadioboxes = () => {
   return (
@@ -23,7 +23,7 @@ const BasicRadioboxes = () => {
 `
 
 const RadioboxDocs2 = `// Managing through Name
-import { Radiobox, Label, Div } from "react-atomize";
+import { Radiobox, Label, Div } from "atomize";
 
 class ManagingRadioboxWithName extends React.Component {
     render() {
@@ -47,7 +47,7 @@ class ManagingRadioboxWithName extends React.Component {
 }`
 
 const RadioboxDocs3 = `// Managing through State
-import { Radiobox, Label, Div } from "react-atomize";
+import { Radiobox, Label, Div } from "atomize";
 
 class ManagingRadioboxWithState extends React.Component {
     constructor(props) {
@@ -119,7 +119,7 @@ class ManagingRadioboxWithState extends React.Component {
 }`
 
 const RadioboxDocs4 = `// Styling Radiobox
-import { Radiobox, Label } from "react-atomize";
+import { Radiobox, Label } from "atomize";
 
 const LoadingRadiobox = () => {
   return (
@@ -147,7 +147,7 @@ const LoadingRadiobox = () => {
 }`
 
 const RadioboxDocs5 = `// Loading Radioboxes
-import { Radiobox, Label } from "react-atomize";
+import { Radiobox, Label } from "atomize";
 
 const LoadingRadiobox = () => {
   return (

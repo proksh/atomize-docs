@@ -1,5 +1,5 @@
 import React from "react"
-import { Text, Tag, ThemeProvider, DefaultTheme } from "react-atomize"
+import { Text, Tag, ThemeProvider, DefaultTheme } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 
@@ -12,7 +12,7 @@ const theme = {
 }
 
 const breakpointsCode1 = `// Changing the secondary font
-import { Text, ThemeProvider, DefaultTheme } from "react-atomize";
+import { Text, ThemeProvider, DefaultTheme } from "atomize";
 
 const theme = {
   ...DefaultTheme,

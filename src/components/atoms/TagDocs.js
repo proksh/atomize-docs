@@ -1,12 +1,12 @@
 import React from "react"
-import { Div, Text, Tag, Icon, Anchor } from "react-atomize"
+import { Div, Text, Tag, Icon, Anchor } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
 import AvailableProps from "../common/AvailableProps"
 
 const tagDocsCode1 = `// Basic Tags
-import { Div, Tag, Anchor, Icon } from "react-atomize";
+import { Div, Tag, Anchor, Icon } from "atomize";
 
 const BasicTags = () => {
   return (
@@ -47,7 +47,7 @@ const BasicTags = () => {
 }`
 
 const tagDocsCode2 = `// Custom Border Tags
-import { Div, Tag } from "react-atomize";
+import { Div, Tag } from "atomize";
 
 const CustomBorderTags = () => {
   return (
@@ -70,7 +70,7 @@ const CustomBorderTags = () => {
 }`
 
 const tagDocsCode3 = `// Custom Border Tags
-import { Div, Tag } from "react-atomize";
+import { Div, Tag } from "atomize";
 
 const CustomBorderTags = () => {
   return (

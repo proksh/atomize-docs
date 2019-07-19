@@ -1,16 +1,8 @@
 import React, { Component } from "react"
 import { Link, navigate } from "gatsby"
-import {
-  Div,
-  Text,
-  scrollTo,
-  Image,
-  Input,
-  Tag,
-  Container,
-} from "react-atomize"
+import { Div, Text, scrollTo, Image, Input, Tag, Container } from "atomize"
 import { Location } from "@reach/router"
-import logo from "../../images/logo.png"
+import logo from "../../images/logo.svg"
 
 const sidebarLinks = {
   upperLinks: {
@@ -276,6 +268,35 @@ export default class Sidebar extends Component {
                     </Text>
                   </Link>
                 ))}
+                <Div>
+                  <Link to="/docs/react/ui-templates">
+                    <Div
+                      d="inline-flex"
+                      textColor={
+                        locationProps.location.pathname.includes(
+                          "/docs/react/ui-templates"
+                        )
+                          ? "info700"
+                          : "black"
+                      }
+                      hoverTextColor="info700"
+                      textSize="body"
+                      textWeight="600"
+                      m={{ b: "0.5rem" }}
+                      cursor="pointer"
+                      align="center"
+                    >
+                      UI Templates
+                      <Div
+                        h="0.375rem"
+                        w="0.375rem"
+                        m={{ l: "0.75rem" }}
+                        rounded="circle"
+                        bg="success700"
+                      ></Div>
+                    </Div>
+                  </Link>
+                </Div>
               </Div>
               {!(Object.entries(lowerLinks).length === 0) && (
                 <Div p="2rem">
@@ -321,35 +342,6 @@ export default class Sidebar extends Component {
                       )}
                     </Div>
                   ))}
-                  <Div>
-                    <Link to="/docs/react/ui-templates">
-                      <Div
-                        d="flex"
-                        textColor={
-                          locationProps.location.pathname.includes(
-                            "/docs/react/ui-templates"
-                          )
-                            ? "info700"
-                            : "black"
-                        }
-                        textSize="body"
-                        hoverTextColor="info700"
-                        textWeight="600"
-                        m={{ b: "0.5rem" }}
-                        cursor="pointer"
-                        align="center"
-                      >
-                        UI Templates
-                        <Div
-                          h="0.375rem"
-                          w="0.375rem"
-                          m={{ l: "0.75rem" }}
-                          rounded="circle"
-                          bg="success700"
-                        ></Div>
-                      </Div>
-                    </Link>
-                  </Div>
                 </Div>
               )}
             </Div>

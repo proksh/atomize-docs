@@ -1,5 +1,5 @@
 import React from "react"
-import { Div } from "react-atomize"
+import { Div } from "atomize"
 
 import ColorDiv from "./ColorDiv.js"
 

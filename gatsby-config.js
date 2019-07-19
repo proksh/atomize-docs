@@ -11,7 +11,7 @@ module.exports = {
       options: {
         RewriteBase: true,
         https: true,
-        www: false,
+        www: true,
         SymLinksIfOwnerMatch: true,
       },
     },

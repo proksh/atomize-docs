@@ -1,5 +1,5 @@
 import React from "react"
-import { Div, Text, Tag, ThemeProvider, DefaultTheme } from "react-atomize"
+import { Div, Text, Tag, ThemeProvider, DefaultTheme } from "atomize"
 import InfoCodeRow from "../common/InfoCodeRow"
 import ColorList from "../common/ColorList"
 import ColorDiv from "../common/ColorDiv"
@@ -29,7 +29,7 @@ const theme2 = {
 }
 
 const addEditColorsCode1 = `// Overwriting an existing color
-import { ThemeProvider, DefaultTheme, Div, Text } from "react-atomize";
+import { ThemeProvider, DefaultTheme, Div, Text } from "atomize";
 
 const theme = {
   ...DefaultTheme,
@@ -86,7 +86,7 @@ const BrandColors = () => (
 ReactDOM.render(<BrandColors />, mountNode);`
 
 const addEditColorsCode2 = `// Creating your own colors
-import { ThemeProvider, DefaultTheme, Div } from "react-atomize";
+import { ThemeProvider, DefaultTheme, Div } from "atomize";
 
 const theme = {
   ...DefaultTheme,

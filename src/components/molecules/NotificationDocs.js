@@ -1,12 +1,12 @@
 import React from "react"
-import { Div, Text, Tag, Button, Icon, Notification } from "react-atomize"
+import { Div, Text, Tag, Button, Icon, Notification } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
 import AvailableProps from "../common/AvailableProps"
 
 const notificationDocsCode1 = `// Auto Closed Notifiation
-import { Div, Button, Notification } from "react-atomize";
+import { Div, Button, Notification } from "atomize";
 
 class MyNotifation extends React.Component {
   constructor(props) {
@@ -44,7 +44,7 @@ class MyNotifation extends React.Component {
 export default MyNotifation;`
 
 const notificationDocsCode2 = `// Closed by icon notification
-import { Div, Button, Notification } from "react-atomize";
+import { Div, Button, Notification } from "atomize";
 
 class MyNotifation extends React.Component {
   constructor(props) {
@@ -94,7 +94,7 @@ class MyNotifation extends React.Component {
 export default MyNotifation;`
 
 const notificationDocsCode3 = `// Dark Notifications
-import { Div, Button, Notification, Icon } from "react-atomize";
+import { Div, Button, Notification, Icon } from "atomize";
 
 class MyNotifation extends React.Component {
   constructor(props) {
@@ -221,7 +221,7 @@ class MyNotifation extends React.Component {
 export default MyNotifation;`
 
 const notificationDocsCode4 = `// Light Notifications
-import { Div, Button, Notification, Icon } from "react-atomize";
+import { Div, Button, Notification, Icon } from "atomize";
 
 class MyNotifation extends React.Component {
   constructor(props) {

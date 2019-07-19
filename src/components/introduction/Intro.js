@@ -1,5 +1,5 @@
 import React from "react"
-import { Div, Text, Tag, Icon } from "react-atomize"
+import { Div, Text, Tag, Icon } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 

@@ -1,5 +1,5 @@
 import React from "react"
-import { Div, Text } from "react-atomize"
+import { Div, Text } from "atomize"
 import Sidebar from "../../components/common/Sidebar"
 
 const DocsWrapper = ({ siteTitle, children }) => (

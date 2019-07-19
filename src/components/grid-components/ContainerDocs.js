@@ -1,13 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { Div, Text, Icon, Container } from "react-atomize"
+import { Div, Text, Icon, Container } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import AvailableProps from "../common/AvailableProps"
 
 const containerDocsCode1 = `// Container
-import { Div, Container } from "react-atomize";
+import { Div, Container } from "atomize";
 
 ReactDOM.render(
   <Container>

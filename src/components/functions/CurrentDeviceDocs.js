@@ -1,10 +1,10 @@
 import React from "react"
-import { Text, Tag } from "react-atomize"
+import { Text, Tag } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 
 const scrollToDocsCode1 = `// perform function only when device is xl
-import { Button, currentDevice } from "react-atomize";
+import { Button, currentDevice } from "atomize";
 
 const CurrentDecieAlert = () => {
 

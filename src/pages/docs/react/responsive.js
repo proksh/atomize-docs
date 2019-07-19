@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../../../components/layout"
 import SEO from "../../../components/seo"
-import { Text, Button, Div, Anchor, Icon } from "react-atomize"
+import { Text, Button, Div, Anchor, Icon } from "atomize"
 import DocsWrapper from "../../../components/common/DocsWrapper"
 import Highlight, { defaultProps } from "prism-react-renderer"
 

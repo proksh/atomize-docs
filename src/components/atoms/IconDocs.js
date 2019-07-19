@@ -1,19 +1,11 @@
 import React from "react"
-import {
-  Div,
-  Text,
-  Tag,
-  Input,
-  Icon,
-  iconPaths,
-  Notification,
-} from "react-atomize"
+import { Div, Text, Tag, Input, Icon, iconPaths, Notification } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import AvailableProps from "../common/AvailableProps"
 
 const addEditColorsCode1 = `// Add Icon
-import { Icon } from "react-atomize";
+import { Icon } from "atomize";
 
 <Icon name="Add" color="black" size="20px" />`
 
@@ -38,7 +30,7 @@ class IconDocs extends React.Component {
 
   copyUrlToClipboard = key => {
     const el = document.createElement("textarea")
-    el.value = `<Icon name="${key}" size="20px" m={{ b: "0.5rem" }} />`
+    el.value = `<Icon name="${key}" size="20px" />`
     el.setAttribute("readonly", "")
     el.style.position = "absolute"
     el.style.left = "-9999px"

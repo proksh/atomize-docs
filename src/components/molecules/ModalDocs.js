@@ -1,12 +1,12 @@
 import React from "react"
-import { Div, Text, Tag, Button, Modal, Icon } from "react-atomize"
+import { Div, Text, Tag, Button, Modal, Icon } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
 import AvailableProps from "../common/AvailableProps"
 
 const modalDocsCode1 = `// Basic Modal
-import { Div, Button, Modal, Icon, Text } from "react-atomize";
+import { Div, Button, Modal, Icon, Text } from "atomize";
 
 const AlignStartModal = ({ isOpen, onClose }) => {
   return (
@@ -81,7 +81,7 @@ class BasicModal extends React.Component {
 export default BasicModal;`
 
 const modalDocsCode2 = `// Aligned Centered
-import { Div, Button, Modal, Icon, Text } from "react-atomize";
+import { Div, Button, Modal, Icon, Text } from "atomize";
 
 const AlignCenterModal = ({ isOpen, onClose }) => {
   return (
@@ -156,7 +156,7 @@ class AlignedModal extends React.Component {
 export default AlignedModal;`
 
 const modalDocsCode3 = `// Custom Margin
-import { Div, Button, Modal, Icon, Text } from "react-atomize";
+import { Div, Button, Modal, Icon, Text } from "atomize";
 
 const Rem4FromTopModal = ({ isOpen, onClose }) => {
   return (
@@ -236,7 +236,7 @@ class CustomMarginModal extends React.Component {
 export default CustomMarginModal;`
 
 const modalDocsCode4 = `// 24rem width Modal
-import { Div, Button, Modal, Icon, Text } from "react-atomize";
+import { Div, Button, Modal, Icon, Text } from "atomize";
 
 const ModalSize = ({ isOpen, onClose }) => {
   return (
@@ -315,7 +315,7 @@ class SmallModal extends React.Component {
 export default SmallModal;`
 
 const modalDocsCode5 = `// 32rem width Modal
-import { Div, Button, Modal, Icon, Text } from "react-atomize";
+import { Div, Button, Modal, Icon, Text } from "atomize";
 
 const ModalSize = ({ isOpen, onClose }) => {
   return (
@@ -394,7 +394,7 @@ class MediumModal extends React.Component {
 export default MediumModal;`
 
 const modalDocsCode6 = `// 48rem width Modal
-import { Div, Button, Modal, Icon, Text } from "react-atomize";
+import { Div, Button, Modal, Icon, Text } from "atomize";
 
 const ModalSize = ({ isOpen, onClose }) => {
   return (
@@ -473,7 +473,7 @@ class LargeModal extends React.Component {
 export default LargeModal;`
 
 const modalDocsCode7 = `// Full Screen Modal
-import { Div, Button, Modal, Icon, Text } from "react-atomize";
+import { Div, Button, Modal, Icon, Text } from "atomize";
 
 const ModalSize = ({ isOpen, onClose }) => {
   return (
@@ -555,7 +555,7 @@ class FullScreenModal extends React.Component {
 export default FullScreenModal;`
 
 const modalDocsCode8 = `// Submitting Modal
-import { Div, Button, Modal, Icon, Text } from "react-atomize";
+import { Div, Button, Modal, Icon, Text } from "atomize";
 
 class ModalWithSubmitting extends React.Component {
   constructor(props) {

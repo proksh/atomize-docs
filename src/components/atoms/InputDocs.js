@@ -9,14 +9,14 @@ import {
   Row,
   Col,
   Textarea,
-} from "react-atomize"
+} from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
 import AvailableProps from "../common/AvailableProps"
 
 const inputDocsCode1 = `// Basic Input
-import { Input } from "react-atomize";
+import { Input } from "atomize";
 
 const BasicInput = () => {
   return (
@@ -26,7 +26,7 @@ const BasicInput = () => {
 `
 
 const inputDocsCode2 = `// Input Size
-import { Input, Row, Col } from "react-atomize";
+import { Input, Row, Col } from "atomize";
 
 const InputSizes = () => {
   return (
@@ -46,7 +46,7 @@ const InputSizes = () => {
 `
 
 const inputDocsCode3 = `// Input With Icon
-import { Input, Icon } from "react-atomize";
+import { Input, Icon } from "atomize";
 
 const InputWithRightIcon = () => {
   return (
@@ -70,7 +70,7 @@ const InputWithRightIcon = () => {
 `
 
 const inputDocsCode4 = `// Input With Right Button
-import { Input, Icon } from "react-atomize";
+import { Input, Icon } from "atomize";
 
 const InputWithRightButton = () => {
   return (
@@ -101,7 +101,7 @@ const InputWithRightButton = () => {
 `
 
 const inputDocsCode5 = `// Input With Right Button
-import { Input, Icon } from "react-atomize";
+import { Input, Icon } from "atomize";
 
 const InputWithRightButton = () => {
   return (
@@ -126,7 +126,7 @@ const InputWithRightButton = () => {
 `
 
 const inputDocsCode6 = `// Input With Right Button
-import { Input, Icon } from "react-atomize";
+import { Input, Icon } from "atomize";
 
 const InputWithRightButton = () => {
   return (
@@ -151,7 +151,7 @@ const InputWithRightButton = () => {
 `
 
 const inputDocsCode7 = `// Show Hide Password
-import { Input, Button, Icon } from "react-atomize";
+import { Input, Button, Icon } from "atomize";
 
 class InputPassword extends React.Component {
   constructor(props) {
@@ -193,7 +193,7 @@ class InputPassword extends React.Component {
 `
 
 const inputDocsCode8 = `// Loading on Search
-import { Input, Button, Icon } from "react-atomize";
+import { Input, Button, Icon } from "atomize";
 
 class SearchLoading extends React.Component {
   constructor(props) {
@@ -234,7 +234,7 @@ class SearchLoading extends React.Component {
 `
 
 const inputDocsCode9 = `// Basic Textarea
-import { Textarea } from "react-atomize";
+import { Textarea } from "atomize";
 
 class SearchLoading extends React.Component {
   render() {

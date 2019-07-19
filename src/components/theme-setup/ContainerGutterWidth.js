@@ -7,7 +7,7 @@ import {
   Col,
   ThemeProvider,
   DefaultTheme,
-} from "react-atomize"
+} from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 
@@ -31,7 +31,7 @@ import {
   DefaultTheme,
   Div,
   Row,
-  Col } from "react-atomize";
+  Col } from "atomize";
 
 const theme = {
   ...DefaultTheme,

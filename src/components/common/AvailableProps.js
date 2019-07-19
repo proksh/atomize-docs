@@ -8,7 +8,7 @@ import {
   Icon,
   Text,
   SideDrawer,
-} from "react-atomize"
+} from "atomize"
 
 import TagUtility from "../utilitiesSidebarComponent/TagUtility"
 import IconName from "../utilitiesSidebarComponent/IconName"

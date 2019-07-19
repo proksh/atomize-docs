@@ -1,11 +1,11 @@
 import React from "react"
-import { Text, Tag } from "react-atomize"
+import { Text, Tag } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import AvailableProps from "../common/AvailableProps"
 
 const addEditColorsCode1 = `// Creating a h1
-import { Text } from "react-atomize";
+import { Text } from "atomize";
 
 <Text tag="h1" textSize="display1" m={{ b: "4rem" }}>
   This is h1 of display1 size

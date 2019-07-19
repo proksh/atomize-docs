@@ -1,10 +1,10 @@
 import React from "react"
-import { Div, Text, Tag, Button, scrollTo } from "react-atomize"
+import { Div, Text, Tag, Button, scrollTo } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 
 const scrollToDocsCode1 = `// scroll to target
-import { Button, scrollTo } from "react-atomize";
+import { Button, scrollTo } from "atomize";
 
 const YellowButton = () => {
     return (
@@ -20,7 +20,7 @@ const YellowButton = () => {
 `
 
 const scrollToDocsCode2 = `// scroll To with offset and transition
-import { Button, scrollTo } from "react-atomize";
+import { Button, scrollTo } from "atomize";
 
 const YellowButton = () => {
     return (

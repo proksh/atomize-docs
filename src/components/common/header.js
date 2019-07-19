@@ -1,9 +1,8 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { Div, Image, Container, Button, Anchor, scrollTo } from "react-atomize"
+import { Div, Image, Container, Button, Anchor, scrollTo } from "atomize"
 import logo from "../../images/logo.svg"
-import ReactWOW from "react-wow"
 
 class Header extends React.Component {
   constructor(props) {
@@ -49,49 +48,46 @@ class Header extends React.Component {
         ></Div>
         <Container d="flex" align="center" justify="space-between">
           <Div cursor="pointer">
-            <ReactWOW animation="fadeInUp">
-              <Image
-                src={logo}
-                alt="atomize design system logo"
-                h="18px"
-                w="auto"
-              />
-            </ReactWOW>
+            <Image
+              src={logo}
+              alt="atomize design system logo"
+              h="18px"
+              w="auto"
+            />
           </Div>
 
           {/* Icon For Mobile */}
-          <ReactWOW animation="fadeInUp" delay="0.1s">
+
+          <Div
+            d={{ xs: "flex", md: "none" }}
+            flexDir="column"
+            onClick={() => this.toggleHeaderMenu(!showMobileHeaderMenu)}
+          >
             <Div
-              d={{ xs: "flex", md: "none" }}
-              flexDir="column"
-              onClick={() => this.toggleHeaderMenu(!showMobileHeaderMenu)}
-            >
-              <Div
-                h="2px"
-                w="1rem"
-                bg="black"
-                rounded="lg"
-                style={{
-                  transform: `translateY(${
-                    showMobileHeaderMenu ? "1" : "-2"
-                  }px)rotate(${showMobileHeaderMenu ? "135" : "0"}deg)`,
-                }}
-                transition
-              ></Div>
-              <Div
-                h="2px"
-                w="1rem"
-                bg="black"
-                rounded="lg"
-                style={{
-                  transform: `translateY(${
-                    showMobileHeaderMenu ? "-1" : "2"
-                  }px)rotate(${showMobileHeaderMenu ? "45" : "0"}deg)`,
-                }}
-                transition
-              ></Div>
-            </Div>
-          </ReactWOW>
+              h="2px"
+              w="1rem"
+              bg="black"
+              rounded="lg"
+              style={{
+                transform: `translateY(${
+                  showMobileHeaderMenu ? "1" : "-2"
+                }px)rotate(${showMobileHeaderMenu ? "135" : "0"}deg)`,
+              }}
+              transition
+            ></Div>
+            <Div
+              h="2px"
+              w="1rem"
+              bg="black"
+              rounded="lg"
+              style={{
+                transform: `translateY(${
+                  showMobileHeaderMenu ? "-1" : "2"
+                }px)rotate(${showMobileHeaderMenu ? "45" : "0"}deg)`,
+              }}
+              transition
+            ></Div>
+          </Div>
 
           {/* Links for Desktop */}
           <Div
@@ -121,45 +117,41 @@ class Header extends React.Component {
             }}
             transition
           >
-            <ReactWOW animation="fadeInUp" delay="0.1s">
-              <Anchor
-                m={{ r: "2rem", b: { xs: "1rem", md: "0" } }}
-                textWeight="500"
+            <Anchor
+              m={{ r: "2rem", b: { xs: "1rem", md: "0" } }}
+              textWeight="500"
+              textColor="medium"
+              hoverTextColor="black"
+              transition
+              onClick={() => scrollTo("#features")}
+            >
+              Features
+            </Anchor>
+
+            <Anchor
+              href="https://github.com/Proksh/atomize"
+              target="_blanc"
+              m={{ r: "2.5rem", b: { xs: "4rem", md: "0" } }}
+              textWeight="500"
+              textColor="medium"
+              hoverTextColor="black"
+              transition
+            >
+              Github
+            </Anchor>
+
+            <Link to="/docs/react/intro">
+              <Button
+                bg="gray300"
+                hoverBg="gray400"
                 textColor="medium"
-                hoverTextColor="black"
-                transition
-                onClick={() => scrollTo("#features")}
+                w={{ xs: "100%", sm: "8.5rem" }}
+                rounded="lg"
+                style={{ letterSpacing: "-0.5px" }}
               >
-                Features
-              </Anchor>
-            </ReactWOW>
-            <ReactWOW animation="fadeInUp" delay="0.2s">
-              <Anchor
-                href="https://github.com/Proksh/atomize"
-                target="_blanc"
-                m={{ r: "2.5rem", b: { xs: "4rem", md: "0" } }}
-                textWeight="500"
-                textColor="medium"
-                hoverTextColor="black"
-                transition
-              >
-                Github
-              </Anchor>
-            </ReactWOW>
-            <ReactWOW animation="fadeInUp" delay="0.3s">
-              <Link to="/docs/react/intro">
-                <Button
-                  bg="gray300"
-                  hoverBg="gray400"
-                  textColor="medium"
-                  w={{ xs: "100%", sm: "8.5rem" }}
-                  rounded="lg"
-                  style={{ letterSpacing: "-0.5px" }}
-                >
-                  Documentation
-                </Button>
-              </Link>
-            </ReactWOW>
+                Documentation
+              </Button>
+            </Link>
           </Div>
         </Container>
       </Div>

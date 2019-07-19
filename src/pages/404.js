@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { Div, Text, Button } from "react-atomize"
+import { Div, Text, Button } from "atomize"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 

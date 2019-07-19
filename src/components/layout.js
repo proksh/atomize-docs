@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from "gatsby"
 import "./font.css"
 import "./wow.css"
 
-import { StyleReset, DefaultTheme, ThemeProvider, Div } from "react-atomize"
+import { StyleReset, DefaultTheme, ThemeProvider, Div } from "atomize"
 
 const theme = {
   ...DefaultTheme,
@@ -27,7 +27,6 @@ const theme = {
     ...DefaultTheme.textSize,
     size: {
       ...DefaultTheme.textSize.size,
-      body: "13px",
       display3: "48px",
     },
     height: {

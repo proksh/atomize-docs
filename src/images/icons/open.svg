@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <circle id="group-15-a" cx="21.943" cy="21" r="21"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <rect width="80" height="80" fill="#FFF"/>
+    <g transform="translate(12.057 20)">
+      <mask id="group-15-b" fill="#fff">
+        <use xlink:href="#group-15-a"/>
+      </mask>
+      <polygon fill="#1CDB9E" points="-37.057 -34 78.943 -34 78.943 51 -37.057 51" mask="url(#group-15-b)" style="mix-blend-mode:multiply"/>
+    </g>
+    <ellipse cx="45.967" cy="42" stroke="#000" stroke-width="2" rx="19.976" ry="20"/>
+  </g>
+</svg>

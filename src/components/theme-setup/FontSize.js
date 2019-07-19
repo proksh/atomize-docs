@@ -7,7 +7,7 @@ import {
   Col,
   ThemeProvider,
   DefaultTheme,
-} from "react-atomize"
+} from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 
@@ -27,7 +27,7 @@ const theme = {
 }
 
 const breakpointsCode1 = `// Providing a custom font size
-import { Text, ThemeProvider, DefaultTheme } from "react-atomize";
+import { Text, ThemeProvider, DefaultTheme } from "atomize";
 
 const theme = {
   ...DefaultTheme,

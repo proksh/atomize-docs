@@ -1,11 +1,11 @@
 import React from "react"
-import { Div, Text, Tag, Row, Col, Image } from "react-atomize"
+import { Div, Text, Tag, Row, Col, Image } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import AvailableProps from "../common/AvailableProps"
 
 const imageDocCode1 = `// Images
-import { Iamge, Div, Row, Col } from "react-atomize";
+import { Iamge, Div, Row, Col } from "atomize";
 
 const BasicImages = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react"
-import { Button } from "react-atomize"
+import { Button } from "atomize"
 
 const ShowCodeButton = ({ selectedValue, onClick, value }) => {
   return (

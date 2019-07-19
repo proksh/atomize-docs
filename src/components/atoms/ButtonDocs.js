@@ -1,12 +1,12 @@
 import React from "react"
-import { Div, Text, Tag, Button, Icon } from "react-atomize"
+import { Div, Text, Tag, Button, Icon } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
 import AvailableProps from "../common/AvailableProps"
 
 const buttonDocsCode1 = `// Icon Buttons
-import { Div, Button } from "react-atomize";
+import { Div, Button } from "atomize";
 
 <Div d="flex">
 
@@ -117,7 +117,7 @@ import { Div, Button } from "react-atomize";
 `
 
 const buttonDocsCode2 = `// Buttons Size
-import { Div, Button } from "react-atomize";
+import { Div, Button } from "atomize";
 
 <Div d="flex">
   <Button
@@ -198,7 +198,7 @@ import { Div, Button } from "react-atomize";
 `
 
 const buttonDocsCode3 = `// Buttons With Icons
-import { Div, Button, Icon } from "react-atomize";
+import { Div, Button, Icon } from "atomize";
 
 <Div d="flex">
   <Button
@@ -238,7 +238,7 @@ import { Div, Button, Icon } from "react-atomize";
 `
 
 const buttonDocsCode4 = `// Buttons Loading
-import { Button, Icon } from "react-atomize";
+import { Button, Icon } from "atomize";
 
 class ButtonDocs extends React.Component {
   constructor(props) {

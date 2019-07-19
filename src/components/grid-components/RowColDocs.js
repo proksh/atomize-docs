@@ -9,7 +9,7 @@ import {
   Col,
   ThemeProvider,
   DefaultTheme,
-} from "react-atomize"
+} from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
@@ -25,7 +25,7 @@ const theme = {
 }
 
 const rowColsCode1 = `// Basic Column Structure
-import { Row, Col, Div } from "react-atomize";
+import { Row, Col, Div } from "atomize";
 
 ReactDOM.render(
   <Row>
@@ -44,7 +44,7 @@ ReactDOM.render(
 );`
 
 const rowColsCode2 = `// Variable Width
-import { Row, Col, Div } from "react-atomize";
+import { Row, Col, Div } from "atomize";
 
 ReactDOM.render(
   <Row>
@@ -68,7 +68,7 @@ ReactDOM.render(
 );`
 
 const rowColsCode3 = `// Changing to 8 column and gutter to 0
-import { Div, Row, Col } from "react-atomize";
+import { Div, Row, Col } from "atomize";
 
 const theme = {
   ...DefaultTheme,

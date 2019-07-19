@@ -1,7 +1,7 @@
 import React from "react"
 
 import Highlight, { defaultProps } from "prism-react-renderer"
-import { Div, Button, Notification, Icon } from "react-atomize"
+import { Div, Button, Notification, Icon } from "atomize"
 import codeTheme from "../../components/common/codeTheme"
 
 class InfoCodeSidebar extends React.Component {

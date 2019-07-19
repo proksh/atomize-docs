@@ -1,12 +1,12 @@
 import React from "react"
-import { Div, Text, Tag, Button, Icon, Anchor } from "react-atomize"
+import { Div, Text, Tag, Button, Icon, Anchor } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
 import AvailableProps from "../common/AvailableProps"
 
 const anchorDocsCode1 = `// Basic Links
-import { Div, Tag, Anchor, Icon } from "react-atomize";
+import { Div, Tag, Anchor, Icon } from "atomize";
 
 const BasicLinks = () => {
   return (
@@ -32,7 +32,7 @@ const BasicLinks = () => {
 }`
 
 const anchorDocsCode2 = `// Link Wrapping Tag and button
-import { Div, Anchor, Tag, Button } from "react-atomize";
+import { Div, Anchor, Tag, Button } from "atomize";
 
 const WrappingLinks = () => {
   return (

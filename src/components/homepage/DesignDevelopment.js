@@ -1,15 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import {
-  Div,
-  Text,
-  Row,
-  Col,
-  Container,
-  Anchor,
-  Icon,
-  Image,
-} from "react-atomize"
+import { Div, Text, Row, Col, Container, Anchor, Icon, Image } from "atomize"
 
 import logoSketch from "../../images/logo-sketch.svg"
 import logoReact from "../../images/logo-react.svg"
@@ -54,10 +45,10 @@ const DesignDevelopment = () => {
                   <Text
                     textSize="subheader"
                     textColor="medium"
-                    p={{ r: "0.5rem" }}
+                    p={{ r: "1rem" }}
                     m={{ b: "1.5rem" }}
                   >
-                    Design your website by using atomize build for Sketch App.
+                    Design your website by using Atomize for Sketch App.
                   </Text>
                   <Anchor
                     d="flex"
@@ -89,11 +80,10 @@ const DesignDevelopment = () => {
                   <Text
                     textSize="subheader"
                     textColor="medium"
-                    p={{ r: "0.5rem" }}
+                    p={{ r: "1rem" }}
                     m={{ b: "1.5rem" }}
                   >
-                    Start developing your designs to reality, with atomize build
-                    for React JS.
+                    Bring your designs to life with Atomize for React JS.
                   </Text>
                   <Link to="/docs/react/intro">
                     <Text

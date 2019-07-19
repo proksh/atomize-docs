@@ -1,12 +1,12 @@
 import React from "react"
-import { Div, Text, Tag, Switch, Label } from "react-atomize"
+import { Div, Text, Tag, Switch, Label } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
 import AvailableProps from "../common/AvailableProps"
 
 const SwitchDocs1 = `// Basic Switches
-import { Switch, Label } from "react-atomize";
+import { Switch, Label } from "atomize";
 
 class Switches extends React.Component {
     constructor(props) {
@@ -47,7 +47,7 @@ class Switches extends React.Component {
 }`
 
 const SwitchDocs2 = `// Styling Switch
-import { Switch, Label } from "react-atomize";
+import { Switch, Label } from "atomize";
 
 class Switches extends React.Component {
     constructor(props) {
@@ -79,7 +79,7 @@ class Switches extends React.Component {
 }`
 
 const SwitchDocs3 = `// Loading Switch
-import { Switch, Label } from "react-atomize";
+import { Switch, Label } from "atomize";
 
 class Switches extends React.Component {
     render() {

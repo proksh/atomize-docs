@@ -1,29 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import {
-  Button,
-  Container,
-  Text,
-  Div,
-  Image,
-  Icon,
-  Input,
-  Anchor,
-} from "react-atomize"
+import { Button, Container, Text, Div, Icon, Input, Anchor } from "atomize"
 
-import girl from "../../images/avatar/girl.png"
 import boy from "../../images/avatar/boy.png"
-import circle from "../../images/hero-illustration/circle.png"
-import circleBrush from "../../images/hero-illustration/circle-brush.svg"
-import lineBrush from "../../images/hero-illustration/line-brush.svg"
-import triangles from "../../images/hero-illustration/triangles.svg"
-import follow from "../../images/hero-illustration/follow.svg"
-import john from "../../images/hero-illustration/john.svg"
-import form from "../../images/hero-illustration/form.svg"
-import notification from "../../images/hero-illustration/notification.svg"
-import card from "../../images/hero-illustration/card.svg"
 import cardImg from "../../images/hero-illustration/card-img.png"
+import FollowCard from "./uicomponents/FollowCard"
+import UserEdit from "./uicomponents/UserEdit"
 
 class HeroSection extends React.Component {
   render() {
@@ -152,100 +135,7 @@ class HeroSection extends React.Component {
                 </Div>
 
                 {/* Follow Component */}
-                <Div
-                  d="flex"
-                  flexDir="column"
-                  h="17rem"
-                  bg="white"
-                  m={{ xs: "1rem", md: "0" }}
-                  pos={{ xs: "static", md: "absolute" }}
-                  left={{ md: "2rem", lg: "-1.5rem" }}
-                  w={{ xs: "100%", md: "18rem" }}
-                  maxW="18.5rem"
-                  top="6rem"
-                  rounded="lg"
-                  shadow="2"
-                  p={{ x: "1.5rem", b: "1.5rem", t: "2.5rem" }}
-                >
-                  <Div
-                    flexGrow="1"
-                    d="flex"
-                    justify="center"
-                    align="center"
-                    flexDir="column"
-                  >
-                    <Div
-                      h="3.5rem"
-                      w="3.5rem"
-                      bg="gray300"
-                      rounded="circle"
-                      pos="relative"
-                      bgImg={girl}
-                      bgSize="cover"
-                      bgPos="center"
-                      m={{ b: "1rem" }}
-                    >
-                      <Div
-                        pos="absolute"
-                        rounded="circle"
-                        right="0.25rem"
-                        bottom="0.25rem"
-                        bg="white"
-                        shadow="2"
-                        h="0.5rem"
-                        w="0.5rem"
-                        p="1px"
-                      >
-                        <Div bg="success800" rounded="circle" h="6px" w="6px" />
-                      </Div>
-                    </Div>
-                    <Text
-                      textSize="subheader"
-                      textWeight="500"
-                      textAlign="center"
-                    >
-                      Meagan Fisher
-                    </Text>
-                    <Text
-                      textSize="caption"
-                      textColor="light"
-                      m={{ b: "2.5rem" }}
-                      textAlign="center"
-                    >
-                      Engineering Manager
-                    </Text>
-                  </Div>
-                  <Div d="flex" w="100%">
-                    <Button
-                      bg="info700"
-                      hoverBg="info800"
-                      justify="space-between"
-                      flexGrow="1"
-                      maxW="calc(50% - 4px)"
-                      rounded="circle"
-                      m={{ r: "0.5rem" }}
-                      suffix={<Icon name="Plus" size="18px" color="white" />}
-                    >
-                      Follow
-                    </Button>
-                    <Button
-                      bg="white"
-                      hoverBg="gray100"
-                      border="1px solid"
-                      borderColor="gray500"
-                      textColor="medium"
-                      justify="space-between"
-                      flexGrow="1"
-                      maxW="calc(50% - 4px)"
-                      rounded="circle"
-                      suffix={
-                        <Icon name="Message" size="18px" color="black400" />
-                      }
-                    >
-                      Message
-                    </Button>
-                  </Div>
-                </Div>
+                <FollowCard />
 
                 {/* Card Component */}
                 <Div
@@ -324,7 +214,7 @@ class HeroSection extends React.Component {
                   d="flex"
                   flexDir="column"
                   w={{ xs: "100%", md: "18.5rem" }}
-                  maxW="18.5rem"
+                  maxW="calc(100% - 2rem)"
                   pos={{ xs: "static", md: "absolute" }}
                   m={{ xs: "1rem", md: "0" }}
                   right={{ md: "2.5rem", lg: "1rem" }}
@@ -333,7 +223,7 @@ class HeroSection extends React.Component {
                   h={{ lg: "20rem" }}
                   bg="white"
                   shadow="2"
-                  p="1.5rem"
+                  p={{ xs: "2rem", sm: "1.5rem" }}
                 >
                   <Div flexGrow="1">
                     <Text
@@ -373,7 +263,7 @@ class HeroSection extends React.Component {
                     />
                     <Input
                       type="password"
-                      m={{ b: "1rem" }}
+                      m={{ b: "2rem" }}
                       placeholder="Password"
                       rounded="lg"
                       borderColor="gray400"
@@ -402,50 +292,7 @@ class HeroSection extends React.Component {
                 </Div>
 
                 {/* User Component */}
-                <Div
-                  d={{ xs: "none", lg: "flex" }}
-                  align="center"
-                  justify="space-between"
-                  w={{
-                    xs: "calc(100% - 2rem)",
-                    md: "18rem",
-                    lg: "18rem",
-                  }}
-                  pos={{ xs: "static", md: "absolute" }}
-                  m={{ xs: "1rem", md: "0" }}
-                  left={{ md: "2rem", lg: "19rem" }}
-                  bottom={{ lg: "-3rem" }}
-                  top={{ md: "5.5rem", lg: "auto" }}
-                  rounded="lg"
-                  bg="white"
-                  shadow="2"
-                  p="1rem"
-                >
-                  <Div d="flex">
-                    <Div
-                      h="2.5rem"
-                      w="2.5rem"
-                      m={{ r: "1rem" }}
-                      bgImg={boy}
-                      bgSize="cover"
-                      bgPos="center"
-                      rounded="circle"
-                    />
-                    <Div>
-                      <Text textWeight="500">John Doe</Text>
-                      <Text textSize="caption" textColor="light">
-                        UI/UX Designer
-                      </Text>
-                    </Div>
-                  </Div>
-                  <Icon
-                    name="Edit"
-                    color="black"
-                    hoverColor="info700"
-                    size="20px"
-                    cursor="pointer"
-                  />
-                </Div>
+                <UserEdit />
               </Div>
             </Div>
           </Container>

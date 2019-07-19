@@ -1,5 +1,5 @@
 import React from "react"
-import { Div, Text, Tag, ThemeProvider, DefaultTheme } from "react-atomize"
+import { Div, Text, Tag, ThemeProvider, DefaultTheme } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 
@@ -9,7 +9,7 @@ const theme = {
 }
 
 const breakpointsCode1 = `// Changing the transition value
-import { Div, Text, Tag, Row, Col, ThemeProvider, DefaultTheme } from "react-atomize";
+import { Div, Text, Tag, Row, Col, ThemeProvider, DefaultTheme } from "atomize";
 
 const theme = {
   ...DefaultTheme,

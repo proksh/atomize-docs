@@ -1,12 +1,12 @@
 import React from "react"
-import { Div, Text, Tag, Checkbox, Label } from "react-atomize"
+import { Div, Text, Tag, Checkbox, Label } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
 import AvailableProps from "../common/AvailableProps"
 
 const checkboxDocs1 = `// Basic Checkboxes
-import { Checkbox, Label } from "react-atomize";
+import { Checkbox, Label } from "atomize";
 
 const BasicCheckboxes = () => {
   return (
@@ -26,7 +26,7 @@ const BasicCheckboxes = () => {
 `
 
 const checkboxDocs2 = `// Managing through State
-import { Checkbox, Label } from "react-atomize";
+import { Checkbox, Label } from "atomize";
 
 class ManagingCheckboxState extends React.Component {
     constructor(props) {
@@ -61,7 +61,7 @@ class ManagingCheckboxState extends React.Component {
 }`
 
 const checkboxDocs3 = `// Changing Checkbox Style
-import { Checkbox, Label } from "react-atomize";
+import { Checkbox, Label } from "atomize";
 
 class StylingCheckbox extends React.Component {
     constructor(props) {
@@ -106,7 +106,7 @@ class StylingCheckbox extends React.Component {
 }`
 
 const checkboxDocs4 = `// Loading Checkboxes
-import { Checkbox, Label } from "react-atomize";
+import { Checkbox, Label } from "atomize";
 
 const LoadingCheckbox = () => {
   return (

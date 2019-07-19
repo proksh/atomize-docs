@@ -1,5 +1,5 @@
 import React from "react";
-import { Div, Text, Tag, Row, Col, ThemeProvider, DefaultTheme } from "react-atomize";
+import { Div, Text, Tag, Row, Col, ThemeProvider, DefaultTheme } from "atomize";
 
 import InfoCodeRow from "../common/InfoCodeRow";
 
@@ -17,7 +17,7 @@ import {
   DefaultTheme,
   Div,
   Row,
-  Col } from "react-atomize";
+  Col } from "atomize";
 
 const theme = {
   ...DefaultTheme,

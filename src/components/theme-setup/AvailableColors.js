@@ -1,5 +1,5 @@
 import React from "react"
-import { Div, Text, Anchor, scrollTo } from "react-atomize"
+import { Div, Text, Anchor, scrollTo } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ColorList from "../common/ColorList"

@@ -10,7 +10,7 @@ import {
   Icon,
   Button,
   Tag,
-} from "react-atomize"
+} from "atomize"
 
 import icon1 from "../../images/feature-icons/1.svg"
 import icon2 from "../../images/feature-icons/2.svg"
@@ -21,36 +21,37 @@ import icon6 from "../../images/feature-icons/6.svg"
 
 const featuresList = [
   {
-    icon: icon6,
-    heading: "Responsive",
-    subheading: "Build fully responsive structure easily.",
+    icon: icon5,
+    heading: "Atomic",
+    subheading: "Based on Atomic Design Methodology.",
   },
+  {
+    icon: icon2,
+    heading: "Theme Setup",
+    subheading: "Auto updating colors and Styleguide.",
+  },
+
   {
     icon: icon4,
     heading: "Components",
-    subheading: "A large of components and still increasing with time.",
+    subheading: "Ever-increasing list of components.",
   },
 
   {
-    icon: icon2,
-    heading: "Styleguide",
-    subheading: "Customizable style guide and quickly get started.",
+    icon: icon6,
+    heading: "Responsive",
+    subheading: "Build fully responsive structures easily.",
   },
 
-  {
-    icon: icon1,
-    heading: "Icons",
-    subheading: "An inbuild Icon system for quicker development.",
-  },
   {
     icon: icon3,
     heading: "Customisation",
-    subheading: "Customize components easily with the props.",
+    subheading: "Multiple customisations to suit your style.",
   },
   {
-    icon: icon5,
-    heading: "Structure",
-    subheading: "Build on the smallest of components to the large.",
+    icon: icon1,
+    heading: "Icon System",
+    subheading: "An inbuilt Icon system for faster development.",
   },
 ]
 
@@ -97,22 +98,12 @@ class Features extends React.Component {
                   pos="relative"
                 >
                   <Div
-                    pos="absolute"
-                    h="5rem"
-                    w="5rem"
-                    bg="danger200"
-                    rounded="circle"
-                    top="21rem"
-                    left="12rem"
-                  ></Div>
-
-                  <Div
                     d="flex"
                     pos="absolute"
-                    top="12rem"
+                    top="4rem"
                     left="0"
                     flexDir="column"
-                    align="flex-end"
+                    align="flex-start"
                   >
                     <Div
                       h="3rem"
@@ -166,20 +157,21 @@ class Features extends React.Component {
               <Col size={{ xs: 12, md: 7 }} offset={{ xs: 0, md: 1 }}>
                 <Div p={{ l: { lg: "1rem" } }}>
                   <Tag
-                    bg="warning700"
+                    bg="info700"
                     textColor="white"
                     h="2rem"
                     p={{ x: "1rem" }}
                     rounded="circle"
-                    m={{ b: "1rem" }}
+                    m={{ b: "2rem" }}
                   >
                     Key features
                   </Tag>
 
                   <Text
                     tag="h2"
+                    maxW="34rem"
+                    fontFamily="secondary"
                     textSize="display2"
-                    maxW={{ md: "29rem" }}
                     textWeight="500"
                     textAlign="left"
                     m={{ b: "3rem" }}
@@ -189,36 +181,29 @@ class Features extends React.Component {
                   <Div>
                     <Row>
                       {featuresList.map((feature, index) => (
-                        <Col size={4}>
-                          <Div m={{ b: "3rem" }}>
+                        <Col size={{ xs: 6, md: 4 }}>
+                          <Div m={{ b: "3rem" }} maxW="11rem">
                             <Image
                               src={feature.icon}
                               w="2.5rem"
                               maxW="2.5rem"
                               m={{
-                                t: "0.25rem",
-                                b: "1rem",
+                                b: "0.25rem",
                               }}
                             />
 
-                            <Div p={{ r: { md: "0.5rem" } }} maxW="14rem">
-                              <Text
-                                tag="h3"
-                                textSize="subheader"
-                                textAlign="left"
-                                textWeight="500"
-                              >
-                                {feature.heading}
-                              </Text>
+                            <Text
+                              tag="h3"
+                              textSize="subheader"
+                              textWeight="500"
+                              m={{ b: "0.25rem" }}
+                            >
+                              {feature.heading}
+                            </Text>
 
-                              <Text
-                                textSize="body"
-                                textAlign="left"
-                                textColor="medium"
-                              >
-                                {feature.subheading}
-                              </Text>
-                            </Div>
+                            <Text textSize="body" textColor="medium">
+                              {feature.subheading}
+                            </Text>
                           </Div>
                         </Col>
                       ))}

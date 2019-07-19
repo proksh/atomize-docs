@@ -7,7 +7,7 @@ import {
   Col,
   ThemeProvider,
   DefaultTheme,
-} from "react-atomize"
+} from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 
@@ -23,7 +23,7 @@ const columnCountCode1 = `// Default Column count of 12
 import {
   Div,
   Row,
-  Col } from "react-atomize";
+  Col } from "atomize";
 
 ReactDOM.render(
   <Div m={{ b: "4rem" }}>
@@ -44,7 +44,7 @@ import {
   DefaultTheme,
   Div,
   Row,
-  Col } from "react-atomize";
+  Col } from "atomize";
 
 const theme = {
   ...DefaultTheme,

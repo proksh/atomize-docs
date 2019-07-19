@@ -1,111 +1,111 @@
 import React from "react"
 import { Link } from "gatsby"
-import {
-  Div,
-  Text,
-  Container,
-  Anchor,
-  Icon,
-  Image,
-  Button,
-} from "react-atomize"
+import { Div, Text, Container, Anchor, Image, Button, Row, Col } from "atomize"
 
-import logoProducthunt from "../../images/logo-producthunt.svg"
+import template from "../../images/template-preview.png"
+import stroke from "../../images/elements/stroke.svg"
+import box from "../../images/elements/box.svg"
 
 const Features = () => {
   return (
-    <Div bg={{ xs: "gray300", md: "white" }}>
+    <Div bg={{ xs: "gray200", md: "white" }}>
       <Container>
         <Div
-          p={{ y: "5rem", x: { xs: "0", md: "1rem" } }}
-          bg="gray300"
+          p={{ y: "3rem", x: { xs: "0", md: "4rem" } }}
+          bg="gray200"
           style={{ borderRadius: "40px" }}
         >
-          <Div d="flex" flexDir="column" align="center">
-            <Text
-              tag="h2"
-              textSize="display1"
-              textAlign="center"
-              textWeight="500"
-              maxW="26rem"
-              m={{ b: "1rem" }}
-            >
-              We are still in beta.
-            </Text>
-            <Text
-              textSize="subheader"
-              textAlign="center"
-              maxW="26rem"
-              m={{ b: "2.5rem" }}
-            >
-              In case of any issue or suggestions, you can contact for support
-              on{" "}
-              <Anchor
-                href="mailto:prokshh@gmail.com"
-                textWeight="400"
-                textColor="black"
-                textDecor="underline"
+          <Row align="center">
+            <Col size={{ xs: 12, md: 6, lg: 5 }}>
+              <Div
+                p={{
+                  x: { md: "1rem", lg: "1.5rem" },
+                  b: { xs: "3rem", md: "0" },
+                }}
               >
-                prokshh@gmail.com
-              </Anchor>
-            </Text>
-          </Div>
-          <Div
-            d="flex"
-            w="100%"
-            justify="center"
-            flexDir={{ xs: "column", sm: "row" }}
-          >
-            <Link to="/docs/react/intro">
-              <Button
-                h="3rem"
-                w={{ xs: "100%", sm: "14rem" }}
-                p={{ l: "1rem", r: "2rem" }}
-                bg="info700"
-                hoverBg="info600"
-                justify="left"
-                rounded="lg"
-                m={{ r: "1rem", b: { xs: "1rem", sm: "0" } }}
-                shadow="2"
-                hoverShadow="4"
-                suffix={
-                  <Icon
-                    name="LongRight"
-                    pos="absolute"
-                    top="50%"
-                    right="1rem"
-                    color="white"
-                    transform="translateY(-50%)"
-                    size="18px"
-                  />
-                }
+                <Div d="flex" flexDir="column">
+                  <Text
+                    tag="h2"
+                    maxW="14rem"
+                    fontFamily="secondary"
+                    textSize="display1"
+                    textWeight="500"
+                    m={{ b: "1rem" }}
+                  >
+                    Blogs Template for you
+                  </Text>
+                  <Text
+                    textSize="subheader"
+                    maxW="19rem"
+                    textColor="medium"
+                    m={{ b: "2rem" }}
+                  >
+                    You can purchase mobile friendly blogs ui template and get
+                    started right away.
+                  </Text>
+                </Div>
+                <Div d="flex" w="100%">
+                  <Anchor>
+                    <Button
+                      h="3rem"
+                      w="10rem"
+                      bg="info700"
+                      hoverBg="info600"
+                      rounded="circle"
+                      m={{ r: "1rem" }}
+                    >
+                      Buy Template
+                    </Button>
+                  </Anchor>
+                  <Anchor
+                    href="https://atomizecode.com/blogpreview/home"
+                    target="_blanc"
+                  >
+                    <Button
+                      h="3rem"
+                      w="8rem"
+                      bg="white"
+                      border="1px solid"
+                      borderColor="gray300"
+                      hoverBorderColor="gray400"
+                      rounded="circle"
+                      textColor="black"
+                    >
+                      Preview
+                    </Button>
+                  </Anchor>
+                </Div>
+              </Div>
+            </Col>
+            <Col size={{ xs: 12, md: 6, lg: 7 }}>
+              <Div
+                pos="relative"
+                bgImg={template}
+                bgSize="cover"
+                bgPos="center"
+                p={{ b: "70%" }}
+                bg="white"
+                h="100%"
+                style={{ borderRadius: "32px" }}
               >
-                Learn Atomize
-              </Button>
-            </Link>
-            <Button
-              h="3rem"
-              w={{ xs: "100%", sm: "14rem" }}
-              p={{ l: "1rem", r: "0rem" }}
-              bg="white"
-              rounded="lg"
-              shadow="2"
-              hoverShadow="4"
-              textColor="danger700"
-              prefix={
                 <Image
-                  src={logoProducthunt}
+                  src={box}
                   pos="absolute"
-                  top="50%"
-                  left="1rem"
-                  transform="translateY(-50%)"
-                  w="1rem"
+                  right="-2rem"
+                  bottom="0"
+                  h="4rem"
+                  w="4rem"
                 />
-              }
-            >
-              Upvote on Producthunt
-            </Button>
-          </Div>
+                <Image
+                  src={stroke}
+                  pos="absolute"
+                  right="-1rem"
+                  top="2.5rem"
+                  w="3.5rem"
+                />
+              </Div>
+            </Col>
+          </Row>
         </Div>
       </Container>
     </Div>

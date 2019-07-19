@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Div, Text, Tag, Col, Row } from "react-atomize"
+import { Div, Text, Tag, Col, Row } from "atomize"
 
 import InfoCodeSidebar from "../common/InfoCodeSidebar"
 

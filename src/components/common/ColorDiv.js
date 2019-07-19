@@ -1,5 +1,5 @@
 import React from "react"
-import { Div, Text } from "react-atomize"
+import { Div, Text } from "atomize"
 
 const ColorDiv = ({ colorName, shade = "" }) => {
   return (

@@ -1,11 +1,11 @@
 import React from "react"
-import { Div, Text, Tag } from "react-atomize"
+import { Div, Text, Tag } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import AvailableProps from "../common/AvailableProps"
 
 const addEditColorsCode1 = `// Creating a div
-import { Div } from "react-atomize";
+import { Div } from "atomize";
 
 <Div
   bg="gray200"

@@ -1,5 +1,5 @@
 import React from "react"
-import { Text } from "react-atomize"
+import { Text } from "atomize"
 
 import InfoCodeSidebar from "../common/InfoCodeSidebar"
 

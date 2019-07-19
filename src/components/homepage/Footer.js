@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Div, Text, Row, Col, Container, Anchor, Icon } from "react-atomize"
+import { Div, Text, Row, Col, Container, Anchor, Icon } from "atomize"
 
 const footerLinks = {
   docs: [
