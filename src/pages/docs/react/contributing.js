@@ -94,23 +94,6 @@ const ContributingPage = () => (
         </Text>
 
         <Text textSize="subheader" textWeight="500" m={{ b: "0.5rem" }}>
-          Linting and tests
-        </Text>
-        <Text m={{ b: "1.5rem" }} textColor="medium">
-          We use flow for type checking, eslint with prettier for linting and
-          formatting the code, and jest for testing. Our pre-commit hooks verify
-          that the linter and tests pass when commiting. You can also run the
-          following commands manually:
-          <br />
-          - yarn flow: run flow on all files.
-          <br />
-          - yarn typescript: run tests for typescript definitions.
-          <br />
-          - yarn lint: lint files with eslint and prettier.
-          <br />- yarn test: run unit tests with jest.
-        </Text>
-
-        <Text textSize="subheader" textWeight="500" m={{ b: "0.5rem" }}>
           Sending a pull request
         </Text>
         <Text m={{ b: "1.5rem" }} textColor="medium">
@@ -139,7 +122,7 @@ const ContributingPage = () => (
           changed an API or added a component.
         </Text>
 
-        <Text textSize="subheader" textWeight="500" m={{ b: "0.5rem" }}>
+        {/* <Text textSize="subheader" textWeight="500" m={{ b: "0.5rem" }}>
           Sending a pull request
         </Text>
         <Text m={{ b: "0.5rem" }} textColor="medium">
@@ -178,7 +161,7 @@ const ContributingPage = () => (
         <Text m={{ b: "3rem" }} textColor="medium">
           NOTE: You must have a GITHUB_TOKEN environment variable available. You
           can create a GitHub access token with the "repo" access here.
-        </Text>
+        </Text> */}
 
         <Text textSize="heading" textWeight="500" m={{ b: "0.5rem" }}>
           Reporting issues

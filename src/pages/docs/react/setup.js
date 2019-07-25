@@ -10,7 +10,7 @@ import Highlight, { defaultProps } from "prism-react-renderer"
 import codeTheme from "../../../components/common/codeTheme"
 
 const usageCode = `import React from 'react';
-import { StyleReset } from 'react-atomize';
+import { StyleReset } from 'atomize';
 import App from './src/App';
 
 export default function Main() {
@@ -23,7 +23,7 @@ export default function Main() {
 }`
 
 const customizationCode = `import React from 'react';
-import { ThemeProvider, DefaultTheme, StyleReset } from 'react-atomize';
+import { ThemeProvider, DefaultTheme, StyleReset } from 'atomize';
 import App from './src/App';
 
 const theme = {

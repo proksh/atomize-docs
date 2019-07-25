@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -14,8 +13,8 @@ import Footer from "../components/homepage/Footer"
 const IndexPage = () => (
   <Layout>
     <SEO
-      title="Atomize Design System"
-      description="Atomize Design System is a UI Framework for React JS, which gives beautiful and consistent UI components for web."
+      title="Design System for React JS"
+      description="Atomize React is a UI framework that helps developers collaborate with designers and build consistent user interfaces effortlessly."
     />
     <Header />
     <HeroSection />

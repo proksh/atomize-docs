@@ -18,6 +18,7 @@ import icon3 from "../../images/feature-icons/3.svg"
 import icon4 from "../../images/feature-icons/4.svg"
 import icon5 from "../../images/feature-icons/5.svg"
 import icon6 from "../../images/feature-icons/6.svg"
+import react from "../../images/react.svg"
 
 const featuresList = [
   {
@@ -93,7 +94,8 @@ class Features extends React.Component {
           >
             <Row>
               <Col size={{ xs: 12, md: 3 }} d={{ xs: "none", md: "block" }}>
-                <Div
+                <Image src={react} maxW="14rem" w="100%" m={{ t: "4rem" }} />
+                {/* <Div
                   p={{ r: "1rem", t: { xs: "4rem", md: "0" } }}
                   pos="relative"
                 >
@@ -152,12 +154,12 @@ class Features extends React.Component {
                       <Icon name="Edit" size="20px" color="white" />
                     </Button>
                   </Div>
-                </Div>
+                </Div> */}
               </Col>
               <Col size={{ xs: 12, md: 7 }} offset={{ xs: 0, md: 1 }}>
                 <Div p={{ l: { lg: "1rem" } }}>
                   <Tag
-                    bg="info700"
+                    bg="black"
                     textColor="white"
                     h="2rem"
                     p={{ x: "1rem" }}
@@ -169,14 +171,15 @@ class Features extends React.Component {
 
                   <Text
                     tag="h2"
-                    maxW="34rem"
+                    maxW="32rem"
                     fontFamily="secondary"
                     textSize="display2"
                     textWeight="500"
                     textAlign="left"
                     m={{ b: "3rem" }}
                   >
-                    Build beautiful & consistant user interface.
+                    Beautiful & consistant UI powered with{" "}
+                    <span style={{ color: "#06d7ff" }}>React</span>.
                   </Text>
                   <Div>
                     <Row>

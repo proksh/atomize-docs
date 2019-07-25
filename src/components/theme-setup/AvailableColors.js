@@ -19,7 +19,7 @@ const AvailableColors = () => {
           <Anchor onClick={() => scrollTo("#addEditColors")}>
             edit or add your own colors
           </Anchor>{" "}
-          to this pallette.
+          to this palette.
         </Text>
 
         <Div d="flex" m={{ b: "2.5rem" }}>

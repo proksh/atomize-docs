@@ -144,7 +144,7 @@ const AvailableColors = () => {
           You can overwrite the existing color or add a new color to the theme
           using <Tag>ThemeProvider</Tag>
           {"  &  "}
-          <Tag>DefaultTheme</Tag>. You can create your own brand color pallette
+          <Tag>DefaultTheme</Tag>. You can create your own brand color palette
           like -
         </Text>
 

@@ -161,7 +161,11 @@ const Craft = () => {
           <Div
             w="100%"
             pos="relative"
-            m={{ b: { xs: "70%", sm: "auto" }, x: { xs: "0", md: "7rem" } }}
+            m={{
+              b: { xs: "70%", sm: "auto" },
+              r: { xs: "0", md: "10rem" },
+              l: { xs: "0", md: "3rem" },
+            }}
           >
             <Div
               pos="relative"

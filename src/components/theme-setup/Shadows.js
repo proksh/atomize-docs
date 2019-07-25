@@ -1,13 +1,5 @@
 import React from "react"
-import {
-  Div,
-  Text,
-  Tag,
-  Row,
-  Col,
-  ThemeProvider,
-  DefaultTheme,
-} from "atomize"
+import { Div, Text, Tag, Row, Col, ThemeProvider, DefaultTheme } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 
@@ -89,7 +81,7 @@ const Shadows = () => {
 
         <Text textColor="medium" textSize="body" m={{ b: "1rem" }}>
           More shadows can be added to the design system by adding them to the{" "}
-          <Tag>shadows</Tag> inside theme.
+          <Tag>shadows</Tag> inside the theme.
         </Text>
 
         <ThemeProvider theme={theme}>

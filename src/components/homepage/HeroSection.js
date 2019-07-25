@@ -56,21 +56,33 @@ class HeroSection extends React.Component {
                   Get Started Now
                 </Button>
               </Link>
-              <Link to="/docs/react/ui-templates">
+              <Anchor
+                href="https://www.youtube.com/watch?v=1uEJT3_M1Y0"
+                target="_blanc"
+              >
                 <Button
                   h="3rem"
                   w={{ xs: "100%", sm: "11rem" }}
                   bg="transparent"
                   hoverBg="gray200"
                   border="1px solid"
-                  borderColor="gray500"
+                  borderColor="gray400"
                   hoverBorderColor="gray600"
                   rounded="lg"
+                  p={{ l: "0.5rem", r: "1rem" }}
                   textColor="medium"
+                  prefix={
+                    <Icon
+                      name="Play"
+                      size="18px"
+                      m={{ r: "0.5rem" }}
+                      color="black400"
+                    />
+                  }
                 >
-                  View Templates
+                  Watch Video
                 </Button>
-              </Link>
+              </Anchor>
             </Div>
           </Container>
         </Div>
@@ -90,7 +102,7 @@ class HeroSection extends React.Component {
             >
               <Div
                 minW={{ xs: "100%", md: "44rem", lg: "59rem" }}
-                bg="brandgray"
+                bg="gray200"
                 d="flex"
                 align="center"
                 flexDir="column"
@@ -240,7 +252,7 @@ class HeroSection extends React.Component {
                       m={{ b: "2rem" }}
                       textAlign="center"
                     >
-                      Dont have an account yet? <Anchor>Create New</Anchor>
+                      Don't have an account yet? <Anchor>Create New</Anchor>
                     </Text>
                     <Input
                       type="email"

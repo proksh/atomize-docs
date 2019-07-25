@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../../../components/layout"
 import SEO from "../../../components/seo"
-import { Text, Div, Row, Col, Anchor, Button } from "atomize"
+import { Text, Div, Row, Col, Icon, Anchor, Button } from "atomize"
 import DocsWrapper from "../../../components/common/DocsWrapper"
 
 import template from "../../../images/template-preview.png"
@@ -16,6 +16,27 @@ const UITemplates = () => (
     <DocsWrapper>
       <Div p={{ x: { xs: "1.5rem", md: "4rem" }, t: "5rem", b: "10rem" }}>
         <Text textSize="display2" m={{ b: "1rem" }}>
+          UI tempalates coming soon
+        </Text>
+        <Text textSize="subheader" m={{ b: "2rem" }} textColor="medium">
+          Official UI templates build on Atomize React will be released very
+          soon.
+        </Text>
+        <Anchor href="https://forms.gle/NfQ3NA4hSittrNNLA" target="_blanc">
+          <Button
+            rounded="circle"
+            shadow="1"
+            hoverShadow="4"
+            w="12rem"
+            h="3rem"
+            p={{ x: "1.5rem" }}
+            justify="space-between"
+            suffix={<Icon name="LongRight" size="20px" color="white" />}
+          >
+            Get notified
+          </Button>
+        </Anchor>
+        {/* <Text textSize="display2" m={{ b: "1rem" }}>
           UI Templates
         </Text>
         <Text m={{ b: "4rem" }} textColor="medium">
@@ -67,7 +88,7 @@ const UITemplates = () => (
               </Div>
             </Div>
           </Col>
-        </Row>
+        </Row> */}
       </Div>
     </DocsWrapper>
   </Layout>

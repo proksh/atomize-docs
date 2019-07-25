@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Div, Text, Container, Anchor, Image, Button, Row, Col } from "atomize"
+import { Div, Text, Container, Anchor, Button, Icon } from "atomize"
 
 import template from "../../images/template-preview.png"
 import stroke from "../../images/elements/stroke.svg"
@@ -10,6 +10,46 @@ const Features = () => {
   return (
     <Div bg={{ xs: "gray200", md: "white" }}>
       <Container>
+        <Div
+          p={{ y: "3.5rem", x: { xs: "0", md: "4rem" } }}
+          bg="gray200"
+          style={{ borderRadius: "40px" }}
+          d="flex"
+          flexDir={{ xs: "column", md: "row" }}
+          justify="space-between"
+        >
+          <Div>
+            <Text textSize="heading" textWeight="600" m={{ b: "0.5rem" }}>
+              UI Templates are on their way 🚀
+            </Text>
+            <Text
+              textSize="subheader"
+              textColor="medium"
+              m={{ b: { xs: "3rem", md: "0" } }}
+            >
+              Official UI templates build on Atomize React will be released very
+              soon.
+            </Text>
+          </Div>
+          <Div d="flex" align="flex-end">
+            <Anchor href="https://forms.gle/NfQ3NA4hSittrNNLA" target="_blanc">
+              <Button
+                rounded="circle"
+                shadow="1"
+                hoverShadow="4"
+                w="12rem"
+                h="3rem"
+                p={{ x: "1.5rem" }}
+                justify="space-between"
+                suffix={<Icon name="LongRight" size="20px" color="white" />}
+              >
+                Get notified
+              </Button>
+            </Anchor>
+          </Div>
+        </Div>
+      </Container>
+      {/* <Container>
         <Div
           p={{ y: "3rem", x: { xs: "0", md: "4rem" } }}
           bg="gray200"
@@ -107,7 +147,7 @@ const Features = () => {
             </Col>
           </Row>
         </Div>
-      </Container>
+      </Container> */}
     </Div>
   )
 }

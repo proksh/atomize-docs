@@ -43,11 +43,11 @@ const footerLinks = {
       name: "Development",
       link: "/docs/react/intro",
     },
-    {
-      name: "Github",
-      anchor: true,
-      link: "https://github.com/Proksh/atomize",
-    },
+    // {
+    //   name: "Github",
+    //   anchor: true,
+    //   link: "https://github.com/Proksh/atomize",
+    // },
   ],
   resources: [
     {
@@ -62,16 +62,16 @@ const footerLinks = {
     },
   ],
   about: [
-    {
-      name: "Introduction",
-      link: "/docs/react/intro",
-    },
+    // {
+    //   name: "Introduction",
+    //   link: "/docs/react/intro",
+    // },
     {
       name: "Showcase",
       link: "/docs/react/showcase",
     },
     {
-      name: "Contributing",
+      name: "Contribute",
       link: "/docs/react/contributing",
     },
   ],
@@ -79,13 +79,14 @@ const footerLinks = {
     {
       name: "Blog",
       anchor: true,
-      link: "/",
+      link:
+        "https://hashnode.com/post/getting-started-with-react-atomize-and-gatsby-cjyfgtj0m001obzs19cobmogi",
     },
-    {
-      name: "Product Hunt",
-      anchor: true,
-      link: "/",
-    },
+    // {
+    //   name: "Product Hunt",
+    //   anchor: true,
+    //   link: "/",
+    // },
     {
       name: "Need Help?",
       anchor: true,
@@ -126,7 +127,7 @@ const Footer = () => {
   return (
     <Div
       tag="footer"
-      p={{ t: { xs: "12rem", md: "7rem" }, b: { xs: "4rem", md: "5rem" } }}
+      p={{ t: { xs: "12rem", md: "12rem" }, b: { xs: "4rem", md: "5rem" } }}
       pos="relative"
     >
       <Container>

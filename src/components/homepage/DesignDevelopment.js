@@ -56,7 +56,7 @@ const DesignDevelopment = () => {
                     href="http://www.atomizedesign.com/"
                     target="_blanc"
                   >
-                    Design Resources
+                    Design Resource
                     <Icon
                       name="LongRight"
                       size="16px"
