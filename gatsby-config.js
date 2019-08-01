@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Atomize Design System`,
+    title: `Atomize React`,
     description: `Atomize is a UI design framework that helps designers and developers design well-structured, scalable and more consistent interfaces for the web. It is based on Atomic design methodology which has atoms and molecules as reusable building blocks.`,
     author: `@proksh`,
     siteUrl: `https://atomizecode.com/`,

@@ -45,7 +45,7 @@ const Showcase = () => (
             </Text>
           </Col>
           <Col size={{ xs: 12, md: 6 }}>
-            <Anchor href="https://anteelo.com/" target="_blanc">
+            {/* <Anchor href="https://anteelo.com/" target="_blanc">
               <Div
                 m={{ b: "1rem" }}
                 p={{ b: "70%" }}
@@ -62,7 +62,7 @@ const Showcase = () => (
             </Anchor>
             <Text m={{ b: "2rem" }} textAlign="center">
               Anteelo | Product Design Firm
-            </Text>
+            </Text> */}
           </Col>
         </Row>
       </Div>

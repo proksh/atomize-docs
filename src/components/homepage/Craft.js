@@ -8,10 +8,6 @@ import ReactWOW from "react-wow"
 // import craftImage from "../../images/craft.png"
 import girl from "../../images/avatar/girl.png"
 
-import components from "../../images/icons/components.svg"
-import colors from "../../images/icons/colors.svg"
-import doc from "../../images/icons/doc.svg"
-import open from "../../images/icons/open.svg"
 import FollowCard from "./uicomponents/FollowCard"
 import UserEdit from "./uicomponents/UserEdit"
 
@@ -31,17 +27,19 @@ const Translate = styled.div`
 
 const TranslateContainer = styled.div`
   position: absolute;
-  top: calc(100% - 3rem);
+  top: 45%;
   left: 1rem;
   right: 1rem;
   overflow: hidden;
   zindex: 10;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 
   @media (min-width: 576px) {
     top: 50%;
     transform: translateY(-50%);
     left: auto;
-    right: -6rem;
+    right: 0;
     width: 18rem;
   }
 
@@ -71,7 +69,7 @@ const TranslateContainer = styled.div`
   &:after {
     content: "";
     position: absolute;
-    bottom: 1rem;
+    bottom: 0;
     left: 0;
     right: 0;
     height: 2rem;
@@ -82,25 +80,6 @@ const TranslateContainer = styled.div`
     z-index: 10;
   }
 `
-
-const list = [
-  {
-    image: components,
-    content: "15+ Ready to use React Components",
-  },
-  {
-    image: colors,
-    content: "60+ Predefined colors for theme setup",
-  },
-  {
-    image: doc,
-    content: "Detailed documentation for each component",
-  },
-  {
-    image: open,
-    content: "Open source with regular updates",
-  },
-]
 
 const Craft = () => {
   return (
@@ -119,11 +98,11 @@ const Craft = () => {
           fontFamily="secondary"
           textWeight="500"
           maxW="40rem"
-          m={{ b: "2rem", x: "auto" }}
+          m={{ b: "6rem", x: "auto" }}
         >
           Code the perfect design for each project using Atomize.
         </Text>
-        <Row>
+        {/* <Row>
           <Col size={{ xs: 12, md: 10 }} offset={{ md: 1 }}>
             <Div p={{ y: "2rem" }}>
               <Row>
@@ -156,22 +135,21 @@ const Craft = () => {
               </Row>
             </Div>
           </Col>
-        </Row>
-        <Div d="flex" justify="center" p={{ t: { xs: "3rem", md: "8rem" } }}>
+        </Row> */}
+        <Div d="flex" pos="relative" justify="center">
           <Div
             w="100%"
-            pos="relative"
             m={{
               b: { xs: "70%", sm: "auto" },
-              r: { xs: "0", md: "10rem" },
-              l: { xs: "0", md: "3rem" },
+              r: { xs: "0", md: "4rem" },
+              l: "0",
             }}
           >
             <Div
               pos="relative"
               w="100%"
               bg="brandgray"
-              p={{ b: "70%" }}
+              p={{ b: { xs: "70%", md: "72%", lg: "53%" } }}
               overflow="hidden"
               style={{ filter: "invert(1)", borderRadius: "24px" }}
             >
@@ -213,24 +191,26 @@ const Craft = () => {
               </Div>
             </Div>
             <TranslateContainer>
-              <Translate>
-                <AnimatingBlock />
-              </Translate>
-              <Div pos="absolute" top="100%" left="0" right="0">
+              <Div pos="relative">
                 <Translate>
                   <AnimatingBlock />
                 </Translate>
+                <Div pos="absolute" top="100%" left="0" right="0">
+                  <Translate>
+                    <AnimatingBlock />
+                  </Translate>
+                </Div>
+                <Div
+                  h="1rem"
+                  pos="absolute"
+                  bottom="0"
+                  height="1rem"
+                  left="0"
+                  bg="white"
+                  zIndex="10"
+                  right="0"
+                ></Div>
               </Div>
-              <Div
-                h="1rem"
-                pos="absolute"
-                bottom="0"
-                height="1rem"
-                left="0"
-                bg="white"
-                zIndex="10"
-                right="0"
-              ></Div>
             </TranslateContainer>
           </Div>
         </Div>
@@ -292,7 +272,7 @@ const AnimatingBlock = () => (
         Use this design system
       </Button>
     </Div>
-    <UserEdit d={{ xs: "none", xl: "flex" }} pos="static" m={{ b: "1rem" }} />
+    {/* <UserEdit d={{ xs: "none", xl: "flex" }} pos="static" m={{ b: "1rem" }} /> */}
     <FollowCard maxW="100%" pos="static" m={{ b: "1rem" }} />
     <Div
       p="1rem"

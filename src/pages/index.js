@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from "../components/common/header"
 import HeroSection from "../components/homepage/HeroSection"
+import Introducing from "../components/homepage/Introducing"
 import Features from "../components/homepage/Features"
 import Craft from "../components/homepage/Craft"
 import DesignDevelopment from "../components/homepage/DesignDevelopment"
@@ -18,6 +19,7 @@ const IndexPage = () => (
     />
     <Header />
     <HeroSection />
+    <Introducing />
     <Features />
     <Craft />
     <DesignDevelopment />

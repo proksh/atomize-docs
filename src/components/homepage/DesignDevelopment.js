@@ -13,6 +13,7 @@ const DesignDevelopment = () => {
           <Div d="flex" flexDir="column" align="center">
             <Text
               tag="h2"
+              fontFamily="secondary"
               textSize="display1"
               textAlign="center"
               textWeight="500"
@@ -25,9 +26,11 @@ const DesignDevelopment = () => {
           </Div>
           <Div>
             <Row>
-              <Col size={{ xs: 12, lg: 4 }} offset={{ xs: 0, lg: 2 }}>
+              <Col size={{ xs: 12, md: 6, lg: 4 }} offset={{ xs: 0, lg: 2 }}>
                 <Div
                   shadow="4"
+                  border="1px solid"
+                  borderColor="gray200"
                   rounded="xl"
                   p="2rem"
                   m={{ b: { xs: "2rem", md: "0" } }}
@@ -66,8 +69,15 @@ const DesignDevelopment = () => {
                   </Anchor>
                 </Div>
               </Col>
-              <Col size={{ xs: 12, lg: 4 }} pos="relative">
-                <Div shadow="4" bg="white" rounded="xl" p="2rem">
+              <Col size={{ xs: 12, md: 6, lg: 4 }} pos="relative">
+                <Div
+                  shadow="4"
+                  border="1px solid"
+                  borderColor="gray200"
+                  bg="white"
+                  rounded="xl"
+                  p="2rem"
+                >
                   <Image
                     src={logoReact}
                     h="2.5rem"

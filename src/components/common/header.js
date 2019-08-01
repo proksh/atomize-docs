@@ -11,7 +11,7 @@ class Header extends React.Component {
 
     this.state = {
       showMobileHeaderMenu: false,
-      showProductHunt: false,
+      showProductHunt: true,
     }
   }
 
@@ -35,7 +35,7 @@ class Header extends React.Component {
         <Div
           tag="header"
           pos="fixed"
-          top={showProductHunt ? { xs: "5.25rem", sm: "3.75rem" } : "0"}
+          top="0"
           transition
           left="0"
           right="0"
@@ -136,9 +136,9 @@ class Header extends React.Component {
               </Anchor>
 
               <Anchor
-                href="https://github.com/Proksh/atomize"
+                href="https://github.com/proksh/atomize"
                 target="_blanc"
-                m={{ r: "2.5rem", b: { xs: "4rem", md: "0" } }}
+                m={{ r: "2rem", b: { xs: "1rem", md: "0" } }}
                 textWeight="500"
                 textColor="medium"
                 hoverTextColor="black"
@@ -191,10 +191,8 @@ export default Header
 
 const ProductHuntBanner = ({ show, close }) => (
   <>
-    <Div h={show ? { xs: "5.25rem", sm: "3.75rem" } : "0"} transition></Div>
     <Div
       d="flex"
-      transition
       h={show ? { xs: "5.25rem", sm: "3.75rem" } : "0"}
       opacity={show ? "1" : "0"}
       overflow="hidden"
@@ -203,7 +201,7 @@ const ProductHuntBanner = ({ show, close }) => (
       align="center"
       textColor="white"
       pos="fixed"
-      top="0"
+      bottom="0"
       left="0"
       right="0"
       zIndex="110"
@@ -212,7 +210,7 @@ const ProductHuntBanner = ({ show, close }) => (
       style={{ background: "#DA552F" }}
     >
       <Anchor
-        href="https://atomizecode.com"
+        href="https://www.producthunt.com/posts/atomize-react"
         target="_blanc"
         d="flex"
         flexWrap="wrap"
@@ -221,7 +219,7 @@ const ProductHuntBanner = ({ show, close }) => (
         textColor="white"
         hoverTextColor="white"
       >
-        We are now on{" "}
+        We are trending on{" "}
         <Image
           src={producthunt}
           h="2.25rem"

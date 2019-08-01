@@ -24,6 +24,14 @@ const sidebarLinks = {
     },
   },
   lowerLinks: {
+    responsive: {
+      text: "Responsive",
+      page: "/docs/react/responsive",
+    },
+    spacing: {
+      text: "Spacing",
+      page: "/docs/react/spacing",
+    },
     themesetup: {
       text: "Theme Setup",
       page: "/docs/react/theme",
@@ -39,12 +47,8 @@ const sidebarLinks = {
         { text: "Transition", id: "transition" },
       ],
     },
-    responsive: {
-      text: "Responsive",
-      page: "/docs/react/responsive",
-    },
     gridcomponents: {
-      text: "Grid Components",
+      text: "Grid",
       page: "/docs/react/grid",
       children: [
         { text: "Container", id: "containerDocs" },

@@ -5,8 +5,6 @@ import SEO from "../../../components/seo"
 import { Text, Div, Row, Col, Icon, Anchor, Button } from "atomize"
 import DocsWrapper from "../../../components/common/DocsWrapper"
 
-import template from "../../../images/template-preview.png"
-
 const UITemplates = () => (
   <Layout>
     <SEO

@@ -7,18 +7,20 @@ import boy from "../../../images/avatar/boy.png"
 const UserEdit = ({ ...rest }) => (
   <Div
     align="center"
+    border="1px solid"
+    borderColor="gray200"
     justify="space-between"
+    h="4.5rem"
     w={{
       xs: "calc(100% - 2rem)",
       md: "18rem",
-      lg: "18rem",
+      lg: "17rem",
     }}
-    left={{ md: "2rem", lg: "19rem" }}
-    bottom={{ lg: "-3rem" }}
-    top={{ md: "5.5rem", lg: "auto" }}
-    rounded="lg"
+    left={{ md: "2rem", lg: "21rem" }}
+    top={{ md: "5.5rem", lg: "19.5rem" }}
+    rounded="xl"
     bg="white"
-    shadow="2"
+    shadow="4"
     p="1rem"
     {...rest}
   >

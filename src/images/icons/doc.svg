@@ -1,15 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
-  <defs>
-    <rect id="group-14-a" width="39" height="41" x="0" y="0" rx="8"/>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
   <g fill="none" fill-rule="evenodd">
-    <rect width="80" height="80" fill="#FFF"/>
-    <g transform="translate(21 20)">
-      <mask id="group-14-b" fill="#fff">
-        <use xlink:href="#group-14-a"/>
-      </mask>
-      <polygon fill="#43A4FF" points="-90 -78 114 -78 114 79 -90 79" mask="url(#group-14-b)"/>
-      <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.7998363 19.2512195L0 19.2512195M17.7998363 10.2512195L0 10.2512195M17.7998363 1.25121946L0 1.25121946" transform="translate(10.917 10)"/>
+    <g transform="translate(23 22)">
+      <rect width="30" height="31" y="5" fill="#43A4FF" rx="5"/>
+      <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.8630028 17.2512195L0 17.2512195M16.8630028 9.25121946L0 9.25121946M16.8630028 1.25121946L0 1.25121946" transform="translate(17.868)"/>
     </g>
   </g>
 </svg>

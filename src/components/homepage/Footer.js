@@ -90,17 +90,21 @@ const footerLinks = {
     {
       name: "Need Help?",
       anchor: true,
-      link: "mailto:prokshh@gmail.com",
+      link: "mailto:proksh@atomizedesign.com",
     },
     {
       name: "Give Feedback",
       anchor: true,
-      link: "mailto:prokshh@gmail.com",
+      link: "mailto:proksh@atomizedesign.com",
     },
   ],
 }
 
 const mediaLinks = [
+  {
+    icon: "Github",
+    link: "https://github.com/proksh",
+  },
   {
     icon: "Behance",
     link: "https://www.behance.net/prokshh90d1",
@@ -108,10 +112,6 @@ const mediaLinks = [
   {
     icon: "Dribbble",
     link: "https://dribbble.com/proksh",
-  },
-  {
-    icon: "Instagram",
-    link: "https://www.instagram.com/prokshluthra/",
   },
   {
     icon: "Twitter",
@@ -127,11 +127,11 @@ const Footer = () => {
   return (
     <Div
       tag="footer"
-      p={{ t: { xs: "12rem", md: "12rem" }, b: { xs: "4rem", md: "5rem" } }}
+      p={{ t: { xs: "12rem", md: "8rem" }, b: { xs: "4rem", md: "5rem" } }}
       pos="relative"
     >
       <Container>
-        <Div m={{ b: "12rem" }} d={{ xs: "none", md: "block" }}>
+        <Div m={{ b: "8rem" }} d={{ xs: "none", md: "block" }}>
           <Row>
             {Object.keys(footerLinks).map((key, index) => {
               return (
