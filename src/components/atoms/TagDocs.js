@@ -32,7 +32,7 @@ const BasicTags = () => {
       >
         Edit
       </Tag>
-      <Anchor href="https://www.google.com" target="_blanc">
+      <Anchor href="https://www.google.com" target="_blank">
         <Tag
           hoverBg="info200"
           m={{ r: "1rem", b: "1rem" }}
@@ -147,7 +147,7 @@ class TagDocs extends React.Component {
               >
                 Edit
               </Tag>
-              <Anchor href="https://www.google.com" target="_blanc">
+              <Anchor href="https://www.google.com" target="_blank">
                 <Tag
                   hoverBg="info200"
                   m={{ r: "1rem", b: "1rem" }}

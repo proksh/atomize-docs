@@ -100,7 +100,7 @@ const GettingStartedBanner = () => {
             <Div d="flex" align="flex-end">
               <Anchor
                 href="https://forms.gle/NfQ3NA4hSittrNNLA"
-                target="_blanc"
+                target="_blank"
               >
                 <Button
                   rounded="circle"
@@ -169,7 +169,7 @@ const GettingStartedBanner = () => {
                   </Anchor>
                   <Anchor
                     href="https://atomizecode.com/blogpreview/home"
-                    target="_blanc"
+                    target="_blank"
                   >
                     <Button
                       h="3rem"

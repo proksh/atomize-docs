@@ -137,7 +137,7 @@ class Header extends React.Component {
 
               <Anchor
                 href="https://github.com/proksh/atomize"
-                target="_blanc"
+                target="_blank"
                 m={{ r: "2rem", b: { xs: "1rem", md: "0" } }}
                 textWeight="500"
                 textColor="medium"
@@ -149,7 +149,7 @@ class Header extends React.Component {
 
               <Anchor
                 href="http://atomizedesign.com"
-                target="_blanc"
+                target="_blank"
                 m={{ r: "2.5rem", b: { xs: "4rem", md: "0" } }}
                 textWeight="500"
                 textColor="medium"
@@ -211,7 +211,7 @@ const ProductHuntBanner = ({ show, close }) => (
     >
       <Anchor
         href="https://www.producthunt.com/posts/atomize-react"
-        target="_blanc"
+        target="_blank"
         d="flex"
         flexWrap="wrap"
         justify="center"

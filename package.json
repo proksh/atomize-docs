@@ -6,7 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@callstack/react-theme-provider": "^3.0.0",
-    "atomize": "^1.0.6",
+    "atomize": "^1.0.9",
     "babel-plugin-styled-components": "^1.10.1",
     "gatsby": "^2.10.0",
     "gatsby-image": "^2.2.1",
@@ -41,7 +41,7 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop --host=0.0.0.0",
-    "deploy": "gatsby clean && gatsby build && firebase deploy",
+    "deploy": "gatsby clean && gatsby build && cd public && now --target production",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",

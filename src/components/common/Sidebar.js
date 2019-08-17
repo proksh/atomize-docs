@@ -224,7 +224,7 @@ export default class Sidebar extends Component {
                   <Link to="/">
                     <Image src={logo} h="18px" w="auto" />
                   </Link>
-                  <Tag m={{ t: "-0.25rem" }}>v1.0.0</Tag>
+                  <Tag m={{ t: "-0.25rem" }}>v1.0.9</Tag>
                 </Div>
                 <Input
                   bg="white"

@@ -13,7 +13,7 @@ const BasicLinks = () => {
     <>
         <Anchor
             href="https://www.google.com"
-            target="_blanc"
+            target="_blank"
             d="block"
             m={{ b: "1rem" }}
         >
@@ -21,7 +21,7 @@ const BasicLinks = () => {
         </Anchor>
         <Anchor
             href="https://www.google.com"
-            target="_blanc"
+            target="_blank"
             textDecor="underline"
             d="block"
         >
@@ -37,7 +37,7 @@ import { Div, Anchor, Tag, Button } from "atomize";
 const WrappingLinks = () => {
   return (
     <Div d="flex" flexWrap="wrap">
-        <Anchor href="https://www.google.com" target="_blanc">
+        <Anchor href="https://www.google.com" target="_blank">
             <Tag
                 hoverBg="info200"
                 m={{ r: "1rem", b: "1rem" }}
@@ -47,7 +47,7 @@ const WrappingLinks = () => {
                 Link
             </Tag>
         </Anchor>
-        <Anchor href="https://www.google.com" target="_blanc">
+        <Anchor href="https://www.google.com" target="_blank">
             <Button
                 bg="info700"
                 hoverBg="info600"
@@ -107,7 +107,7 @@ class AnchorDocs extends React.Component {
           />
           <Anchor
             href="https://www.google.com"
-            target="_blanc"
+            target="_blank"
             d="block"
             m={{ b: "1rem" }}
           >
@@ -115,7 +115,7 @@ class AnchorDocs extends React.Component {
           </Anchor>
           <Anchor
             href="https://www.google.com"
-            target="_blanc"
+            target="_blank"
             textDecor="underline"
             d="block"
           >
@@ -132,7 +132,7 @@ class AnchorDocs extends React.Component {
             You can also wrap any div, tag or button inside an anchor.
           </Text>
           <Div d="flex" flexWrap="wrap">
-            <Anchor href="https://www.google.com" target="_blanc">
+            <Anchor href="https://www.google.com" target="_blank">
               <Tag
                 hoverBg="info200"
                 m={{ r: "1rem", b: "1rem" }}
@@ -142,7 +142,7 @@ class AnchorDocs extends React.Component {
                 Link
               </Tag>
             </Anchor>
-            <Anchor href="https://www.google.com" target="_blanc">
+            <Anchor href="https://www.google.com" target="_blank">
               <Button
                 bg="info700"
                 hoverBg="info600"

@@ -40,14 +40,14 @@ const ContributingPage = () => (
           series:{" "}
           <Anchor
             href="https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github"
-            target="_blanc"
+            target="_blank"
           >
             How to Contribute to an Open Source Project on GitHub.
           </Anchor>
           <br />- Fork the repo and create your branch from master (a guide on{" "}
           <Anchor
             href="https://help.github.com/en/articles/fork-a-repo"
-            target="_blanc"
+            target="_blank"
           >
             how to fork a repository
           </Anchor>
@@ -67,7 +67,7 @@ const ContributingPage = () => (
           We follow the{" "}
           <Anchor
             href="https://www.conventionalcommits.org/en/"
-            target="_blanc"
+            target="_blank"
           >
             conventional commits specification
           </Anchor>{" "}
@@ -170,7 +170,7 @@ const ContributingPage = () => (
           You can report issues on our{" "}
           <Anchor
             href="https://github.com/Proksh/atomize/issues"
-            target="_blanc"
+            target="_blank"
           >
             bug tracker
           </Anchor>

@@ -25,7 +25,7 @@ const Showcase = () => (
         </Text>
         <Row>
           <Col size={{ xs: 12, md: 6 }}>
-            <Anchor href="https://italic.com/" target="_blanc">
+            <Anchor href="https://italic.com/" target="_blank">
               <Div
                 m={{ b: "1rem" }}
                 p={{ b: "70%" }}
@@ -45,7 +45,7 @@ const Showcase = () => (
             </Text>
           </Col>
           <Col size={{ xs: 12, md: 6 }}>
-            {/* <Anchor href="https://anteelo.com/" target="_blanc">
+            {/* <Anchor href="https://anteelo.com/" target="_blank">
               <Div
                 m={{ b: "1rem" }}
                 p={{ b: "70%" }}

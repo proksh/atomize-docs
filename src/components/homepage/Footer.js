@@ -160,7 +160,7 @@ const Footer = () => {
                             hoverTextColor="info800"
                             d="block"
                             href={link.link}
-                            target="_blanc"
+                            target="_blank"
                             textWeight="400"
                           >
                             {link.name}
@@ -199,7 +199,7 @@ const Footer = () => {
           </Text>
           <Div d="flex" align="center" justify="center">
             {mediaLinks.map((link, index) => (
-              <Anchor href={link.link} target="_blanc">
+              <Anchor href={link.link} target="_blank">
                 <Icon
                   name={link.icon}
                   size="20px"

@@ -20,7 +20,7 @@ const UITemplates = () => (
           Official UI templates build on Atomize React will be released very
           soon.
         </Text>
-        <Anchor href="https://forms.gle/NfQ3NA4hSittrNNLA" target="_blanc">
+        <Anchor href="https://forms.gle/NfQ3NA4hSittrNNLA" target="_blank">
           <Button
             rounded="circle"
             shadow="1"
@@ -46,7 +46,7 @@ const UITemplates = () => (
           <Col size={{ xs: 12, md: 6 }}>
             <Anchor
               href="https://atomizecode.com/blogpreview/home"
-              target="_blanc"
+              target="_blank"
             >
               <Div
                 m={{ b: "1rem" }}
@@ -70,7 +70,7 @@ const UITemplates = () => (
               <Div d="flex">
                 <Anchor
                   href="https://atomizecode.com/blogpreview/home"
-                  target="_blanc"
+                  target="_blank"
                 >
                   <Button
                     m={{ r: "1rem" }}

@@ -40,7 +40,7 @@ const IntroDocs = () => (
               Get Started
             </Button>
           </Link>
-          <Anchor href="https://github.com/proksh/atomize" target="_blanc">
+          <Anchor href="https://github.com/proksh/atomize" target="_blank">
             <Button
               bg="transparent"
               border="1px solid"

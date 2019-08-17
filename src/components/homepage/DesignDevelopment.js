@@ -57,7 +57,7 @@ const DesignDevelopment = () => {
                     d="flex"
                     align="center"
                     href="http://www.atomizedesign.com/"
-                    target="_blanc"
+                    target="_blank"
                   >
                     Design Resource
                     <Icon

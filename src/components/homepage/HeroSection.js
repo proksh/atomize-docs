@@ -61,7 +61,7 @@ class HeroSection extends React.Component {
               </Link>
               <Anchor
                 href="https://www.youtube.com/watch?v=1uEJT3_M1Y0"
-                target="_blanc"
+                target="_blank"
               >
                 <Button
                   h="3rem"

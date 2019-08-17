@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import "./font.css"
-import "./wow.css"
+// import "./wow.css"
 
 import { StyleReset, DefaultTheme, ThemeProvider, Div } from "atomize"
 
@@ -59,7 +59,7 @@ class Layout extends React.Component {
           <ThemeProvider theme={theme}>
             <div class="cursor cursor--small" id="cursor"></div>
             <StyleReset />
-            <Div tag="main" w="100vw" overflow="hidden">
+            <Div tag="main" overflow="hidden">
               {children}
             </Div>
           </ThemeProvider>

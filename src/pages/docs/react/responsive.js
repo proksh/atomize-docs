@@ -44,7 +44,7 @@ const ResponsiveDocs = () => (
         </Text>
         <Text m={{ b: "1rem" }} textColor="medium">
           Atomize design system supports responsiveness for most of the props by
-          just passing an array. Examples for a perticular prop will be given in
+          just passing an array. Examples for a particular prop will be given in
           its detail.
         </Text>
         <Text m={{ b: "1rem" }} textColor="medium">
