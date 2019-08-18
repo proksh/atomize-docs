@@ -1,29 +1,21 @@
 import React from "react"
-import {
-  Div,
-  Text,
-  Tag,
-  Icon,
-  Dropdown,
-  DropdownMenu,
-  Anchor,
-} from "atomize"
+import { Div, Text, Tag, Icon, Dropdown, Anchor } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
 import AvailableProps from "../common/AvailableProps"
 
 const dropdownDocsCode1 = `// Basic Dropdown
-import { Dropdown, DropdownMenu, Anchor } from "atomize";
+import { Dropdown, Anchor } from "atomize";
 
 const menuList = (
-  <DropdownMenu>
+  <Div>
     {["Option 1", "Option 2", "Option 3"].map((name, index) => (
       <Anchor d="block" p={{ y: "0.25rem" }}>
         {name}
       </Anchor>
     ))}
-  </DropdownMenu>
+  </Div>
 );
 
 class BasicDropdown extends React.Component {
@@ -55,16 +47,16 @@ class BasicDropdown extends React.Component {
 export default BasicDropdown;`
 
 const dropdownDocsCode2 = `// Hover Target Dropdown
-import { Dropdown, DropdownMenu, Anchor } from "atomize";
+import { Dropdown, Anchor } from "atomize";
 
 const menuList = (
-  <DropdownMenu>
+  <Div p={{ x: "1rem", y: "0.5rem" }}>
     {["Option 1", "Option 2", "Option 3"].map((name, index) => (
       <Anchor d="block" p={{ y: "0.25rem" }}>
         {name}
       </Anchor>
     ))}
-  </DropdownMenu>
+  </Div>
 );
 
 class TargetHoverDropdown extends React.Component {
@@ -82,16 +74,16 @@ class TargetHoverDropdown extends React.Component {
 export default TargetHoverDropdown;`
 
 const dropdownDocsCode3 = `// Small Size Dropdown
-import { Dropdown, DropdownMenu, Anchor } from "atomize";
+import { Dropdown, Anchor } from "atomize";
 
 const menuList = (
-  <DropdownMenu>
+  <Div p={{ x: "1rem", y: "0.5rem" }}>
     {["Option 1", "Option 2", "Option 3"].map((name, index) => (
       <Anchor d="block" p={{ y: "0.25rem" }}>
         {name}
       </Anchor>
     ))}
-  </DropdownMenu>
+  </Div>
 );
 
 class SmallSizeDropdown extends React.Component {
@@ -124,16 +116,16 @@ class SmallSizeDropdown extends React.Component {
 export default SmallSizeDropdown;`
 
 const dropdownDocsCode4 = `// Loading Dropdown
-import { Dropdown, DropdownMenu, Anchor } from "atomize";
+import { Dropdown, Anchor } from "atomize";
 
 const menuList = (
-  <DropdownMenu>
+  <Div p={{ x: "1rem", y: "0.5rem" }}>
     {["Option 1", "Option 2", "Option 3"].map((name, index) => (
       <Anchor d="block" p={{ y: "0.25rem" }}>
         {name}
       </Anchor>
     ))}
-  </DropdownMenu>
+  </Div>
 );
 
 class SmallSizeDropdown extends React.Component {
@@ -167,16 +159,16 @@ class SmallSizeDropdown extends React.Component {
 export default SmallSizeDropdown;`
 
 const dropdownDocsCode5 = `// Customized Dropdown
-import { Dropdown, DropdownMenu, Anchor, Icon } from "atomize";
+import { Dropdown, Anchor, Icon } from "atomize";
 
 const menuList = (
-  <DropdownMenu>
+  <Div p={{ x: "1rem", y: "0.5rem" }}>
     {["Option 1", "Option 2", "Option 3"].map((name, index) => (
       <Anchor d="block" p={{ y: "0.25rem" }}>
         {name}
       </Anchor>
     ))}
-  </DropdownMenu>
+  </Div>
 );
 
 class CustomizedDropdown extends React.Component {
@@ -216,10 +208,10 @@ class CustomizedDropdown extends React.Component {
 export default CustomizedDropdown;`
 
 const dropdownDocsCode6 = `// Dropdown Directions
-import { Dropdown, DropdownMenu, Anchor, Icon, Div } from "atomize";
+import { Dropdown, Anchor, Icon, Div } from "atomize";
 
 const menuList = (
-  <DropdownMenu w="max-content">
+  <Div w="max-content" p={{ x: "1rem", y: "0.5rem" }}>
     {["Dropdown Option 1", "Dropdown Option 2", "Dropdown Option 3"].map(
       (name, index) => (
         <Anchor d="block" p={{ y: "0.25rem" }}>
@@ -227,7 +219,7 @@ const menuList = (
         </Anchor>
       )
     )}
-  </DropdownMenu>
+  </Div>
 );
 
 class DropdownDirections extends React.Component {
@@ -275,10 +267,10 @@ class DropdownDirections extends React.Component {
 export default DropdownDirections;`
 
 const dropdownDocsCode7 = `// Dropdown Directions
-import { Dropdown, DropdownMenu, Anchor, Icon, Div } from "atomize";
+import { Dropdown, Anchor, Icon, Div } from "atomize";
 
 const menuList = (
-  <DropdownMenu w="max-content">
+  <Div w="max-content" p={{ x: "1rem", y: "0.5rem" }}>
     {["Dropdown Option 1", "Dropdown Option 2", "Dropdown Option 3"].map(
       (name, index) => (
         <Anchor d="block" p={{ y: "0.25rem" }}>
@@ -286,7 +278,7 @@ const menuList = (
         </Anchor>
       )
     )}
-  </DropdownMenu>
+  </Div>
 );
 
 class DropdownDirections extends React.Component {
@@ -335,10 +327,10 @@ class DropdownDirections extends React.Component {
 export default DropdownDirections;`
 
 const dropdownDocsCode8 = `// Dropdown Directions
-import { Dropdown, DropdownMenu, Anchor, Icon, Div } from "atomize";
+import { Dropdown, Anchor, Icon, Div } from "atomize";
 
 const menuList = (
-  <DropdownMenu w="max-content">
+  <Div w="max-content" p={{ x: "1rem", y: "0.5rem" }}>
     {["Dropdown Option 1", "Dropdown Option 2", "Dropdown Option 3"].map(
       (name, index) => (
         <Anchor d="block" p={{ y: "0.25rem" }}>
@@ -346,7 +338,7 @@ const menuList = (
         </Anchor>
       )
     )}
-  </DropdownMenu>
+  </Div>
 );
 
 class DropdownDirections extends React.Component {
@@ -414,9 +406,9 @@ class DropdownDocs extends React.Component {
           <Text textColor="medium" textSize="body" m={{ b: "4rem" }}>
             If there are too many operations to display, you can wrap them in a
             Dropdown by using
-            <Tag>Dropdown</Tag> & <Tag>DropdownMenu</Tag>. By clicking/hovering
-            on the trigger, a dropdown menu should appear, which allows you to
-            choose one option and execute relevant actions.
+            <Tag>Dropdown</Tag>. By clicking/hovering on the trigger, a dropdown
+            menu should appear, which allows you to choose one option and
+            execute relevant actions.
           </Text>
 
           {/* Basic Dropdown */}
@@ -790,23 +782,23 @@ class DropdownDocs extends React.Component {
 export default DropdownDocs
 
 const menuList = (
-  <DropdownMenu>
+  <Div p={{ x: "1rem", y: "0.5rem" }}>
     {["Option 1", "Option 2", "Option 3"].map((name, index) => (
-      <Anchor d="block" p={{ y: "0.25rem" }}>
+      <Anchor tabIndex="0" d="block" p={{ y: "0.25rem" }}>
         {name}
       </Anchor>
     ))}
-  </DropdownMenu>
+  </Div>
 )
 
 const menuList2 = (
-  <DropdownMenu w="max-content">
+  <Div w="max-content" p={{ x: "1rem", y: "0.5rem" }}>
     {["Dropdown Option 1", "Dropdown Option 2", "Dropdown Option 3"].map(
       (name, index) => (
-        <Anchor d="block" p={{ y: "0.25rem" }}>
+        <Anchor tabIndex="0" d="block" p={{ y: "0.25rem" }}>
           {name}
         </Anchor>
       )
     )}
-  </DropdownMenu>
+  </Div>
 )

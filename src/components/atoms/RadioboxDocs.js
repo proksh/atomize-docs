@@ -5,46 +5,46 @@ import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
 import AvailableProps from "../common/AvailableProps"
 
-const RadioboxDocs1 = `// Basic Radioboxes
-import { Radiobox, Label } from "atomize";
+// const RadioboxDocs1 = `// Basic Radioboxes
+// import { Radiobox, Label } from "atomize";
 
-const BasicRadioboxes = () => {
-  return (
-    <>
-        <Label align="center" textWeight="600" m={{ b: "0.5rem" }}>
-            <Radiobox /> Normal Radiobox
-        </Label>
-        <Label align="center" textWeight="600" m={{ b: "0.5rem" }}>
-            <Radiobox disabled /> Disabled
-        </Label>
-    </>
-  );
-}
-`
+// const BasicRadioboxes = () => {
+//   return (
+//     <>
+//         <Label align="center" textWeight="600" m={{ b: "0.5rem" }}>
+//             <Radiobox /> Normal Radiobox
+//         </Label>
+//         <Label align="center" textWeight="600" m={{ b: "0.5rem" }}>
+//             <Radiobox disabled /> Disabled
+//         </Label>
+//     </>
+//   );
+// }
+// `
 
-const RadioboxDocs2 = `// Managing through Name
-import { Radiobox, Label, Div } from "atomize";
+// const RadioboxDocs2 = `// Managing through Name
+// import { Radiobox, Label, Div } from "atomize";
 
-class ManagingRadioboxWithName extends React.Component {
-    render() {
-        return (
-            <Div d="flex" m={{ b: "2rem" }}>
-              <Label
-                align="center"
-                textWeight="600"
-                m={{ b: "0.5rem", r: "1rem" }}
-              >
-                <Radiobox name="gender" default />
-                Male
-              </Label>
-              <Label align="center" textWeight="600" m={{ b: "0.5rem" }}>
-                <Radiobox name="gender" />
-                Female
-              </Label>
-            </Div>
-        );
-    }
-}`
+// class ManagingRadioboxWithName extends React.Component {
+//     render() {
+//         return (
+//             <Div d="flex" m={{ b: "2rem" }}>
+//               <Label
+//                 align="center"
+//                 textWeight="600"
+//                 m={{ b: "0.5rem", r: "1rem" }}
+//               >
+//                 <Radiobox name="gender" default />
+//                 Male
+//               </Label>
+//               <Label align="center" textWeight="600" m={{ b: "0.5rem" }}>
+//                 <Radiobox name="gender" />
+//                 Female
+//               </Label>
+//             </Div>
+//         );
+//     }
+// }`
 
 const RadioboxDocs3 = `// Managing through State
 import { Radiobox, Label, Div } from "atomize";
@@ -60,6 +60,12 @@ class ManagingRadioboxWithState extends React.Component {
         this.toggleSelectedCount = this.toggleSelectedCount.bind(this);
     }
 
+    toggleSelectedCount(value) {
+      this.setState({
+        selectedCountValue: value,
+      })
+    }
+
     render() {
         const { selectedCountValue} = this.state;
 
@@ -72,9 +78,8 @@ class ManagingRadioboxWithState extends React.Component {
               >
                 <Radiobox
                   onChange={() => this.toggleSelectedCount(1)}
+                  checked={ selectedCountValue === 1 }
                   name="count"
-                  value={1}
-                  selectedValue={selectedCountValue}
                 />
                 1
               </Label>
@@ -85,9 +90,8 @@ class ManagingRadioboxWithState extends React.Component {
               >
                 <Radiobox
                   onChange={() => this.toggleSelectedCount(2)}
+                  checked={ selectedCountValue === 2 }
                   name="count"
-                  value={2}
-                  selectedValue={selectedCountValue}
                 />
                 2
               </Label>
@@ -98,18 +102,16 @@ class ManagingRadioboxWithState extends React.Component {
               >
                 <Radiobox
                   onChange={() => this.toggleSelectedCount(3)}
+                  checked={ selectedCountValue === 3 }
                   name="count"
-                  value={3}
-                  selectedValue={selectedCountValue}
                 />
                 3
               </Label>
               <Label align="center" textWeight="600" m={{ b: "0.5rem" }}>
                 <Radiobox
                   onChange={() => this.toggleSelectedCount(4)}
+                  checked={ selectedCountValue === 4 }
                   name="count"
-                  value={4}
-                  selectedValue={selectedCountValue}
                 />
                 4
               </Label>
@@ -121,29 +123,51 @@ class ManagingRadioboxWithState extends React.Component {
 const RadioboxDocs4 = `// Styling Radiobox
 import { Radiobox, Label } from "atomize";
 
-const LoadingRadiobox = () => {
-  return (
-    <>
-        <Label align="center" textWeight="600" m={{ b: "0.5rem" }}>
-            <Radiobox
-                name="yes/no"
+class CustomRaios extends React.Component {
+  constructor(props) {
+      super(props);
+  
+      this.state = {
+          selectedCountValue: "yes"
+      };
+
+      this.toggleSelectedCount = this.toggleSelectedCount.bind(this);
+  }
+
+  toggleSelectedCount(value) {
+    this.setState({
+      selectedCountValue: value,
+    })
+  }
+
+  render() {
+      const { selectedCountValue} = this.state;
+
+      return (
+        <>
+          <Label align="center" textWeight="600" m={{ b: "0.5rem" }}>
+              <Radiobox
+                onChange={() => this.toggleSelectedCount("yes")}
+                checked={ selectedCountValue === "yes" }
                 inactiveColor="danger400"
                 activeColor="danger700"
                 size="22px"
-            />
-            Yes
-        </Label>
-        <Label align="center" textWeight="600" m={{ b: "0.5rem" }}>
-            <Radiobox
-                name="yes/no"
+              />
+              Yes
+          </Label>
+          <Label align="center" textWeight="600" m={{ b: "0.5rem" }}>
+              <Radiobox
+                onChange={() => this.toggleSelectedCount("no")}
+                checked={ selectedCountValue === "no" }
                 inactiveColor="danger400"
                 activeColor="danger700"
                 size="22px"
-            />
-            No
-        </Label>
-    </>
-  );
+              />
+              No
+          </Label>
+        </>
+      );
+  }
 }`
 
 const RadioboxDocs5 = `// Loading Radioboxes
@@ -163,8 +187,9 @@ class RadioboxDocs extends React.Component {
     super(props)
 
     this.state = {
-      selectedCode: RadioboxDocs1,
+      selectedCode: RadioboxDocs3,
       selectedCountValue: 1,
+      selectedCountValue2: "yes",
     }
 
     this.toggleSelectedCode = this.toggleSelectedCode.bind(this)
@@ -182,7 +207,7 @@ class RadioboxDocs extends React.Component {
   }
 
   render() {
-    const { selectedCode, selectedCountValue } = this.state
+    const { selectedCode, selectedCountValue, selectedCountValue2 } = this.state
 
     return (
       <>
@@ -195,7 +220,7 @@ class RadioboxDocs extends React.Component {
             the area is wrapped inside
             <Tag>{"<Label />"}</Tag>.
           </Text>
-          <Div pos="relative" m={{ b: "1rem" }} m={{ b: "4rem" }}>
+          {/* <Div pos="relative" m={{ b: "1rem" }} m={{ b: "4rem" }}>
             <ShowCodeButton
               onClick={this.toggleSelectedCode}
               value={RadioboxDocs1}
@@ -207,9 +232,9 @@ class RadioboxDocs extends React.Component {
             <Label align="center" textWeight="600" m={{ b: "0.5rem" }}>
               <Radiobox disabled /> Disabled
             </Label>
-          </Div>
+          </Div> */}
 
-          <Div m={{ b: "3rem" }} pos="relative">
+          {/* <Div m={{ b: "3rem" }} pos="relative">
             <ShowCodeButton
               onClick={this.toggleSelectedCode}
               value={RadioboxDocs2}
@@ -233,7 +258,7 @@ class RadioboxDocs extends React.Component {
                 Female
               </Label>
             </Div>
-          </Div>
+          </Div> */}
           <Div m={{ b: "3rem" }} pos="relative">
             <ShowCodeButton
               onClick={this.toggleSelectedCode}
@@ -241,7 +266,7 @@ class RadioboxDocs extends React.Component {
               selectedValue={selectedCode}
             />
             <Text textColor="medium" textSize="body" m={{ b: "1rem" }}>
-              Or you can manage radios with react States.
+              Manage radios with react States.
             </Text>
             <Div d="flex">
               <Label
@@ -252,8 +277,7 @@ class RadioboxDocs extends React.Component {
                 <Radiobox
                   onChange={() => this.toggleSelectedCount(1)}
                   name="count"
-                  value={1}
-                  selectedValue={selectedCountValue}
+                  checked={selectedCountValue === 1}
                 />
                 1
               </Label>
@@ -265,8 +289,7 @@ class RadioboxDocs extends React.Component {
                 <Radiobox
                   onChange={() => this.toggleSelectedCount(2)}
                   name="count"
-                  value={2}
-                  selectedValue={selectedCountValue}
+                  checked={selectedCountValue === 2}
                 />
                 2
               </Label>
@@ -278,8 +301,7 @@ class RadioboxDocs extends React.Component {
                 <Radiobox
                   onChange={() => this.toggleSelectedCount(3)}
                   name="count"
-                  value={3}
-                  selectedValue={selectedCountValue}
+                  checked={selectedCountValue === 3}
                 />
                 3
               </Label>
@@ -287,8 +309,7 @@ class RadioboxDocs extends React.Component {
                 <Radiobox
                   onChange={() => this.toggleSelectedCount(4)}
                   name="count"
-                  value={4}
-                  selectedValue={selectedCountValue}
+                  checked={selectedCountValue === 4}
                 />
                 4
               </Label>
@@ -308,7 +329,8 @@ class RadioboxDocs extends React.Component {
             </Text>
             <Label align="center" textWeight="600" m={{ b: "0.5rem" }}>
               <Radiobox
-                name="yes/no"
+                onChange={() => this.setState({ selectedCountValue2: "yes" })}
+                checked={selectedCountValue2 === "yes"}
                 inactiveColor="danger400"
                 activeColor="danger700"
                 size="22px"
@@ -317,7 +339,8 @@ class RadioboxDocs extends React.Component {
             </Label>
             <Label align="center" textWeight="600" m={{ b: "0.5rem" }}>
               <Radiobox
-                name="yes/no"
+                onChange={() => this.setState({ selectedCountValue2: "no" })}
+                checked={selectedCountValue2 === "no"}
                 inactiveColor="danger400"
                 activeColor="danger700"
                 size="22px"

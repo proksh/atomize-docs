@@ -1,42 +1,17 @@
 import React from "react"
-import {
-  Div,
-  Text,
-  Tag,
-  Row,
-  Col,
-  ThemeProvider,
-  DefaultTheme,
-} from "atomize"
+import { Div, Text, Tag, Row, Col } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
-
-const theme = {
-  ...DefaultTheme,
-  grid: {
-    ...DefaultTheme.grid,
-    colCount: 9,
-  },
-}
-
-// const containerGutterWidth1 = `// Default Container
-// <Container>
-//     //  Content Wrap inside a fixed width
-// </Container>
-// `;
 
 const containerGutterWidth1 = `// Changing the Column Count through theme provider
 import {
   ThemeProvider,
-  DefaultTheme,
   Div,
   Row,
   Col } from "atomize";
 
 const theme = {
-  ...DefaultTheme,
   grid: {
-    ...DefaultTheme.grid,
     containerWidth: {
         xs: "540px",
         sm: "720px",

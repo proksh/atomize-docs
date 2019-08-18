@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../../../components/layout"
 import SEO from "../../../components/seo"
-import { Text, Div } from "atomize"
+import { Text, Div, Anchor } from "atomize"
 import DocsWrapper from "../../../components/common/DocsWrapper"
 import Highlight, { defaultProps } from "prism-react-renderer"
 
@@ -23,13 +23,11 @@ export default function Main() {
 }`
 
 const customizationCode = `import React from 'react';
-import { ThemeProvider, DefaultTheme, StyleReset } from 'atomize';
+import { ThemeProvider, StyleReset } from 'atomize';
 import App from './src/App';
 
 const theme = {
-  ...DefaultTheme,
   colors: {
-    ...DefaultTheme.colors,
     primary: 'tomato',
     accent: 'yellow',
   },
@@ -78,7 +76,7 @@ const Setup = () => (
           <Highlight
             {...defaultProps}
             theme={codeTheme}
-            code={`yarn add atomize styled-components react-transition-group @callstack/react-theme-provider`}
+            code={`yarn add atomize react-transition-group`}
             language="bash"
           >
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
@@ -95,6 +93,51 @@ const Setup = () => (
           </Highlight>
         </Div>
 
+        {/* Styletron */}
+        <Text
+          tag="h3"
+          textWeight="400"
+          textSize="heading"
+          textWeight="500"
+          m={{ b: "0.5rem" }}
+        >
+          Install Styletron engine
+        </Text>
+        <Text m={{ b: "1rem" }} textColor="medium">
+          Atomize uses styletron engine for generating atomic className for
+          style. Install for -
+        </Text>
+        <Div m={{ b: "4rem" }}>
+          <Anchor
+            href="https://www.styletron.org/getting-started/#with-react"
+            target="_blank"
+            d="block"
+          >
+            React
+          </Anchor>
+          <Anchor
+            href="https://www.styletron.org/getting-started/#with-fusionjs"
+            target="_blank"
+            d="block"
+          >
+            Fusion.js
+          </Anchor>
+          <Anchor
+            href="https://www.styletron.org/getting-started/#with-nextjs"
+            target="_blank"
+            d="block"
+          >
+            Next.js
+          </Anchor>
+          <Anchor
+            href="https://www.styletron.org/getting-started/#with-gatsby"
+            target="_blank"
+            d="block"
+          >
+            Gatsby
+          </Anchor>
+        </Div>
+
         {/* Usage */}
         <Text
           tag="h3"
@@ -106,9 +149,10 @@ const Setup = () => (
           Usage
         </Text>
         <Text m={{ b: "1rem" }} textColor="medium">
-          Include the StyleReset from atomize to your root component. It's a
-          good idea to add it in the component which is passed to entire app.
-          This will usually be in the index.js file or App.js file.
+          Include the StyleReset from atomize to your root component inside
+          styletron wrapper. It's a good idea to add it in the component which
+          is passed to entire app. This will usually be in the index.js file or
+          App.js file.
         </Text>
         <Text m={{ b: "1rem" }} textColor="medium">
           Example:

@@ -5,7 +5,7 @@ import InfoCodeRow from "../common/InfoCodeRow"
 import AvailableProps from "../common/AvailableProps"
 
 const imageDocCode1 = `// Images
-import { Iamge, Div, Row, Col } from "atomize";
+import { Image, Div, Row, Col } from "atomize";
 
 const BasicImages = () => {
   return (
@@ -51,8 +51,8 @@ class ImageDocs extends React.Component {
         </Text>
         <Text textColor="medium" textSize="body" m={{ b: "4rem" }}>
           You can use <Tag>{'<Image src="image/url" />'}</Tag> for rendering an
-          image component, or if you want to maintain a const ratio you can use
-          it in background like
+          image component, or if you want to maintain a constant ratio you can
+          use it in background like
           <Tag textAlign="left">
             {'<Div bgImg="image/url" bgSize="cover" />'}
           </Tag>

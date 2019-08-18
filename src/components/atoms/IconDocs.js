@@ -1,5 +1,13 @@
 import React from "react"
-import { Div, Text, Tag, Input, Icon, iconPaths, Notification } from "atomize"
+import {
+  Div,
+  Text,
+  Tag,
+  Input,
+  Icon,
+  iconPaths,
+  Notification,
+} from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import AvailableProps from "../common/AvailableProps"
@@ -98,6 +106,7 @@ class IconDocs extends React.Component {
         <Div d="flex" flexWrap="wrap" m={{ b: "3rem" }}>
           {Object.keys(filteredIcon).map((key, index) => (
             <Div
+              tabIndex="0"
               onClick={() => this.copyUrlToClipboard(key)}
               key={key}
               d="flex"

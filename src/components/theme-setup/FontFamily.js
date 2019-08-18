@@ -1,23 +1,19 @@
 import React from "react"
-import { Text, Tag, ThemeProvider, DefaultTheme } from "atomize"
+import { Text, Tag, ThemeProvider } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 
 const theme = {
-  ...DefaultTheme,
   fontFamily: {
-    ...DefaultTheme.fontFamily,
     primary: "equity-text, serif",
   },
 }
 
 const breakpointsCode1 = `// Changing the secondary font
-import { Text, ThemeProvider, DefaultTheme } from "atomize";
+import { Text, ThemeProvider } from "atomize";
 
 const theme = {
-  ...DefaultTheme,
   fontFamily: {
-    ...DefaultTheme.fontFamily,
     primary: "equity-text, serif",
   }
 }

@@ -1,28 +1,23 @@
-import React from "react";
-import { Div, Text, Tag, Row, Col, ThemeProvider, DefaultTheme } from "atomize";
+import React from "react"
+import { Div, Text, Tag, Row, Col, ThemeProvider } from "atomize"
 
-import InfoCodeRow from "../common/InfoCodeRow";
+import InfoCodeRow from "../common/InfoCodeRow"
 
 const theme = {
-  ...DefaultTheme,
   grid: {
-    ...DefaultTheme.grid,
-    colCount: 9
-  }
-};
+    colCount: 9,
+  },
+}
 
 const breakpointsCode1 = `// Changing the Column Count through theme provider
 import {
   ThemeProvider,
-  DefaultTheme,
   Div,
   Row,
   Col } from "atomize";
 
 const theme = {
-  ...DefaultTheme,
   grid: {
-    ...DefaultTheme.grid,
     breakpoints: {
       xs: 0,
       sm: 576,
@@ -41,7 +36,7 @@ const theme = {
     </Row>
   </Container>
 </ThemeProvider>
-`;
+`
 
 const Breakpoints = () => {
   return (
@@ -62,7 +57,7 @@ const Breakpoints = () => {
         </Text>
       </InfoCodeRow>
     </>
-  );
-};
+  )
+}
 
-export default Breakpoints;
+export default Breakpoints

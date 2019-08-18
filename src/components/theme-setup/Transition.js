@@ -1,19 +1,21 @@
 import React from "react"
-import { Div, Text, Tag, ThemeProvider, DefaultTheme } from "atomize"
+import { Div, Text, Tag, ThemeProvider } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 
 const theme = {
-  ...DefaultTheme,
-  transition: "transform 0.8s linear",
+  transition: {
+    custom: "transform 0.8s linear",
+  },
 }
 
 const breakpointsCode1 = `// Changing the transition value
-import { Div, Text, Tag, Row, Col, ThemeProvider, DefaultTheme } from "atomize";
+import { Div, Text, Tag, Row, Col, ThemeProvider } from "atomize";
 
 const theme = {
-  ...DefaultTheme,
-  transition: "transform 0.8s linear"
+  transition: {
+    custom: "transform 0.8s linear"
+  },
 };
 
 componentDidMount() {
@@ -52,7 +54,7 @@ class Transition extends React.Component {
               ? "translateX(20rem)"
               : "translateX(0)"
           }}
-          transition
+          transition="custom"
         />
       </ThemeProvider>
     )
@@ -107,7 +109,7 @@ class Transition extends React.Component {
         />
 
         <Text textColor="medium" textSize="body" m={{ b: "1rem" }}>
-          You can edit this default trasition value by changing the{" "}
+          You can edit this default transition value by changing the{" "}
           <Tag>transition</Tag> in the theme as shown.
         </Text>
 
@@ -121,7 +123,7 @@ class Transition extends React.Component {
             style={{
               transform: animate2 ? "translateX(20rem)" : "translateX(0)",
             }}
-            transition
+            transition="custom"
           />
         </ThemeProvider>
       </InfoCodeRow>

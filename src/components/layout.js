@@ -4,12 +4,10 @@ import { StaticQuery, graphql } from "gatsby"
 import "./font.css"
 // import "./wow.css"
 
-import { StyleReset, DefaultTheme, ThemeProvider, Div } from "atomize"
+import { StyleReset, ThemeProvider, Div } from "atomize"
 
 const theme = {
-  ...DefaultTheme,
   fontFamily: {
-    ...DefaultTheme.fontFamily,
     primary:
       '"SF Pro Text",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
     secondary:
@@ -17,25 +15,19 @@ const theme = {
     code: "'Fira Mono','Roboto Mono', monospace",
   },
   grid: {
-    ...DefaultTheme.grid,
     containerMaxWidth: {
-      ...DefaultTheme.grid.containerMaxWidth,
       xl: "1184px",
     },
   },
   textSize: {
-    ...DefaultTheme.textSize,
     size: {
-      ...DefaultTheme.textSize.size,
       display3: "48px",
     },
     height: {
-      ...DefaultTheme.textSize.height,
       display3: "56px",
     },
   },
   colors: {
-    ...DefaultTheme.colors,
     brandgray: "#F7F5F4",
   },
 }
@@ -57,7 +49,6 @@ class Layout extends React.Component {
         `}
         render={data => (
           <ThemeProvider theme={theme}>
-            <div class="cursor cursor--small" id="cursor"></div>
             <StyleReset />
             <Div tag="main" overflow="hidden">
               {children}

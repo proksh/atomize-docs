@@ -1,12 +1,10 @@
 import React from "react"
-import { Div, Text, Tag, Row, Col, ThemeProvider, DefaultTheme } from "atomize"
+import { Div, Text, Tag, Row, Col, ThemeProvider } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 
 const theme = {
-  ...DefaultTheme,
   shadows: {
-    ...DefaultTheme.shadows,
     "new-shadow": "0 16px 24px -2px rgba(0, 0, 0, 0.08)",
   },
 }
@@ -14,15 +12,12 @@ const theme = {
 const breakpointsCode1 = `// Adding Your Shadow
 import {
   ThemeProvider,
-  DefaultTheme,
   Div,
   Row,
   Col } from "atomize";
 
 const theme = {
-  ...DefaultTheme,
   shadows: {
-    ...DefaultTheme.shadows,
     "new-shadow": "0 16px 24px -2px rgba(0, 0, 0, 0.08)"
   }
 };

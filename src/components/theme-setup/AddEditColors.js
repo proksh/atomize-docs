@@ -5,9 +5,7 @@ import ColorList from "../common/ColorList"
 import ColorDiv from "../common/ColorDiv"
 
 const theme1 = {
-  ...DefaultTheme,
   colors: {
-    ...DefaultTheme.colors,
     brand100: "#F9F8FC",
     brand200: "#F3F1FA",
     brand300: "#E9E6F6",
@@ -21,20 +19,16 @@ const theme1 = {
 }
 
 const theme2 = {
-  ...DefaultTheme,
   colors: {
-    ...DefaultTheme.colors,
     myColor: "#234423",
   },
 }
 
 const addEditColorsCode1 = `// Overwriting an existing color
-import { ThemeProvider, DefaultTheme, Div, Text } from "atomize";
+import { ThemeProvider, Div, Text } from "atomize";
 
 const theme = {
-  ...DefaultTheme,
   colors: {
-    ...DefaultTheme.colors,
     brand100: "#F9F8FC",
     brand200: "#F3F1FA",
     brand300: "#E9E6F6",
@@ -86,12 +80,10 @@ const BrandColors = () => (
 ReactDOM.render(<BrandColors />, mountNode);`
 
 const addEditColorsCode2 = `// Creating your own colors
-import { ThemeProvider, DefaultTheme, Div } from "atomize";
+import { ThemeProvider, Div } from "atomize";
 
 const theme = {
-  ...DefaultTheme,
   colors: {
-    ...DefaultTheme.colors,
     myColor: '#234423',
   }
 };
@@ -142,10 +134,8 @@ const AvailableColors = () => {
         </Text>
         <Text textColor="medium" textSize="body" m={{ b: "2rem" }}>
           You can overwrite the existing color or add a new color to the theme
-          using <Tag>ThemeProvider</Tag>
-          {"  &  "}
-          <Tag>DefaultTheme</Tag>. You can create your own brand color palette
-          like -
+          using <Tag>ThemeProvider</Tag>. You can create your own brand color
+          palette like -
         </Text>
 
         <ThemeProvider theme={theme1}>

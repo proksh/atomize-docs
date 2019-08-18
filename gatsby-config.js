@@ -7,6 +7,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-styletron",
+      options: {
+        prefix: "",
+      },
+    },
+    {
       resolve: "gatsby-plugin-htaccess",
       options: {
         RewriteBase: true,
@@ -24,7 +30,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

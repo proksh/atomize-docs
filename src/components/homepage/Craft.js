@@ -1,85 +1,12 @@
 import React from "react"
 import Highlight, { defaultProps } from "prism-react-renderer"
 import { Div, Text, Row, Col, Container, Image, Icon, Button } from "atomize"
-import styled, { keyframes } from "styled-components"
 import codeTheme from "../common/codeTheme"
-import ReactWOW from "react-wow"
+import "./craft.css"
 
 // import craftImage from "../../images/craft.png"
 import girl from "../../images/avatar/girl.png"
-
 import FollowCard from "./uicomponents/FollowCard"
-import UserEdit from "./uicomponents/UserEdit"
-
-const translate = keyframes`
-  from {
-    transform: translateY(0);
-  }
-
-  to {
-    transform: translateY(-100%);
-  }
-`
-
-const Translate = styled.div`
-  animation: ${translate} 6s linear infinite;
-`
-
-const TranslateContainer = styled.div`
-  position: absolute;
-  top: 45%;
-  left: 1rem;
-  right: 1rem;
-  overflow: hidden;
-  zindex: 10;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-
-  @media (min-width: 576px) {
-    top: 50%;
-    transform: translateY(-50%);
-    left: auto;
-    right: 0;
-    width: 18rem;
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2rem;
-    background-image: linear-gradient(
-      rgba(247, 245, 244, 1),
-      rgba(247, 245, 244, 0)
-    );
-    filter: invert(1);
-    z-index: 10;
-
-    @media (min-width: 576px) {
-      background-image: linear-gradient(
-        rgba(255, 255, 255, 1),
-        rgba(255, 255, 255, 0)
-      );
-      filter: invert(0);
-    }
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2rem;
-    background-image: linear-gradient(
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 1)
-    );
-    z-index: 10;
-  }
-`
 
 const Craft = () => {
   return (
@@ -190,15 +117,15 @@ const Craft = () => {
                 </Highlight>
               </Div>
             </Div>
-            <TranslateContainer>
+            <Div className="translate-container">
               <Div pos="relative">
-                <Translate>
+                <div className="translate">
                   <AnimatingBlock />
-                </Translate>
+                </div>
                 <Div pos="absolute" top="100%" left="0" right="0">
-                  <Translate>
+                  <div className="translate">
                     <AnimatingBlock />
-                  </Translate>
+                  </div>
                 </Div>
                 <Div
                   h="1rem"
@@ -211,7 +138,7 @@ const Craft = () => {
                   right="0"
                 ></Div>
               </Div>
-            </TranslateContainer>
+            </Div>
           </Div>
         </Div>
       </Container>

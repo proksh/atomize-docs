@@ -5,9 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "@callstack/react-theme-provider": "^3.0.0",
-    "atomize": "^1.0.9",
-    "babel-plugin-styled-components": "^1.10.1",
+    "atomize": "^1.0.10",
     "gatsby": "^2.10.0",
     "gatsby-image": "^2.2.1",
     "gatsby-plugin-htaccess": "^1.1.1",
@@ -17,7 +15,7 @@
     "gatsby-plugin-robots-txt": "^1.5.0",
     "gatsby-plugin-sharp": "^2.2.1",
     "gatsby-plugin-sitemap": "^2.2.3",
-    "gatsby-plugin-styled-components": "^3.1.0",
+    "gatsby-plugin-styletron": "^4.1.2",
     "gatsby-source-filesystem": "^2.1.0",
     "gatsby-transformer-sharp": "^2.2.0",
     "prism-react-renderer": "^0.1.6",
@@ -27,8 +25,6 @@
     "react-helmet": "^5.2.1",
     "react-id-swiper": "^2.3.1",
     "react-transition-group": "^4.1.1",
-    "react-wow": "^1.0.0",
-    "styled-components": "^4.3.2",
     "swiper": "^4.5.0"
   },
   "devDependencies": {

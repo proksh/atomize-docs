@@ -1,20 +1,10 @@
 import React from "react"
-import {
-  Div,
-  Text,
-  Tag,
-  Row,
-  Col,
-  ThemeProvider,
-  DefaultTheme,
-} from "atomize"
+import { Div, Text, Tag, Row, Col, ThemeProvider } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 
 const theme = {
-  ...DefaultTheme,
   grid: {
-    ...DefaultTheme.grid,
     colCount: 9,
   },
 }
@@ -41,13 +31,11 @@ ReactDOM.render(
 const columnCountCode2 = `// Changing the Column Count through theme provider
 import {
   ThemeProvider,
-  DefaultTheme,
   Div,
   Row,
   Col } from "atomize";
 
 const theme = {
-  ...DefaultTheme,
   colCount: 9
 };
 

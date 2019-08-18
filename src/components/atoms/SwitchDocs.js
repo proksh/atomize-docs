@@ -9,41 +9,33 @@ const SwitchDocs1 = `// Basic Switches
 import { Switch, Label } from "atomize";
 
 class Switches extends React.Component {
-    constructor(props) {
-      super(props);
-  
-      this.state = {
-        selectedSwitchValue1: false,
-        selectedSwitchValue2: false
-      };
-    }
+  constructor(props) {
+    super(props);
 
-    render() {
-        const { selectedSwitchValue1, selectedSwitchValue2 } = this.state;
-        return (
-            <>
-                <Label align="center" textWeight="600" m={{ b: "1rem" }}>
-                    <Switch
-                        onChange={e =>
-                            this.setState({ selectedSwitchValue1: e.target.checked })
-                        }
-                        checked={selectedSwitchValue1}
-                    />
-                    Normal Switch
-                </Label>
-                <Label align="center" textWeight="600">
-                    <Switch
-                        onChange={e =>
-                            this.setState({ selectedSwitchValue2: e.target.checked })
-                        }
-                        checked={selectedSwitchValue2}
-                        disabled
-                    />
-                    Disabled
-                </Label>
-            </>
-        );
-    }
+    this.state = {
+      selectedSwitchValue1: false,
+      selectedSwitchValue2: false
+    };
+  }
+
+  render() {
+    const { selectedSwitchValue1, selectedSwitchValue2 } = this.state;
+    return (
+      <Label
+        onClick={() =>
+          this.setState({ selectedSwitchValue1: !selectedSwitchValue1 })
+        }
+        align="center"
+        textWeight="600"
+        m={{ b: "1rem" }}
+        >
+          <Switch
+            checked={selectedSwitchValue1}
+          />
+          Normal Switch
+      </Label>
+    );
+  }
 }`
 
 const SwitchDocs2 = `// Styling Switch
@@ -62,11 +54,15 @@ class Switches extends React.Component {
         const { selectedSwitchValue } = this.state;
 
         return (
-            <Label align="center" textWeight="600" m={{ b: "1rem" }}>
+            <Label
+              onClick={() =>
+                this.setState({ selectedSwitchValue3: !selectedSwitchValue3 })
+              }
+              align="center"
+              textWeight="600"
+              m={{ b: "1rem" }}
+              >
               <Switch
-                onChange={e =>
-                  this.setState({ selectedSwitchValue: e.target.checked })
-                }
                 checked={selectedSwitchValue}
                 inactiveColor="success400"
                 activeColor="success700"
@@ -134,24 +130,16 @@ class SwitchDocs extends React.Component {
               value={SwitchDocs1}
               selectedValue={selectedCode}
             />
-            <Label align="center" textWeight="600" m={{ b: "1rem" }}>
-              <Switch
-                onChange={e =>
-                  this.setState({ selectedSwitchValue1: e.target.checked })
-                }
-                checked={selectedSwitchValue1}
-              />
+            <Label
+              onClick={() =>
+                this.setState({ selectedSwitchValue1: !selectedSwitchValue1 })
+              }
+              align="center"
+              textWeight="600"
+              m={{ b: "1rem" }}
+            >
+              <Switch checked={selectedSwitchValue1} />
               Normal Switch
-            </Label>
-            <Label align="center" textWeight="600">
-              <Switch
-                onChange={e =>
-                  this.setState({ selectedSwitchValue2: e.target.checked })
-                }
-                checked={selectedSwitchValue2}
-                disabled
-              />
-              Disabled
             </Label>
           </Div>
 
@@ -166,11 +154,15 @@ class SwitchDocs extends React.Component {
               <Tag>{"activeColor"}</Tag>, <Tag>{"inactiveColor"}</Tag>,{" "}
               <Tag>{"activeShadow"}</Tag> & <Tag>{"inactiveShadow"}</Tag>.
             </Text>
-            <Label align="center" textWeight="600" m={{ b: "1rem" }}>
+            <Label
+              onClick={() =>
+                this.setState({ selectedSwitchValue3: !selectedSwitchValue3 })
+              }
+              align="center"
+              textWeight="600"
+              m={{ b: "1rem" }}
+            >
               <Switch
-                onChange={e =>
-                  this.setState({ selectedSwitchValue3: e.target.checked })
-                }
                 checked={selectedSwitchValue3}
                 inactiveColor="success400"
                 activeColor="success700"
@@ -191,7 +183,7 @@ class SwitchDocs extends React.Component {
             </Text>
             <Label align="center" textWeight="600" m={{ b: "1rem" }}>
               <Switch isLoading />
-              Styled Switch
+              Loading Switch
             </Label>
           </Div>
 

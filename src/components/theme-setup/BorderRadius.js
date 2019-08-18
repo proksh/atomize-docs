@@ -1,20 +1,10 @@
 import React from "react"
-import {
-  Div,
-  Text,
-  Tag,
-  Row,
-  Col,
-  ThemeProvider,
-  DefaultTheme,
-} from "atomize"
+import { Div, Text, Tag, Row, Col, ThemeProvider } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 
 const theme = {
-  ...DefaultTheme,
   rounded: {
-    ...DefaultTheme.rounded,
     veryLarge: "18px",
   },
 }
@@ -22,15 +12,12 @@ const theme = {
 const breakpointsCode1 = `// Adding a custom border radius
 import {
   ThemeProvider,
-  DefaultTheme,
   Div,
   Row,
   Col } from "atomize";
 
 const theme = {
-  ...DefaultTheme,
   rounded: {
-    ...DefaultTheme.rounded,
     veryLarge: "18px",
   }
 };
@@ -94,20 +81,22 @@ const BorderRadius = () => {
           providing <Tag>rounded</Tag> variable in the theme.
         </Text>
 
-        <ThemeProvider theme={theme}>
-          <Div
-            rounded="veryLarge"
-            h="3rem"
-            bg="warning700"
-            d="flex"
-            textSize="500"
-            align="center"
-            justify="center"
-            textColor="white"
-          >
-            Custom Radius
-          </Div>
-        </ThemeProvider>
+        <Div h="3rem" overflow="hidden">
+          <ThemeProvider theme={theme}>
+            <Div
+              rounded="veryLarge"
+              h="3rem"
+              bg="warning700"
+              d="flex"
+              textSize="500"
+              align="center"
+              justify="center"
+              textColor="white"
+            >
+              Custom Radius
+            </Div>
+          </ThemeProvider>
+        </Div>
       </InfoCodeRow>
     </>
   )

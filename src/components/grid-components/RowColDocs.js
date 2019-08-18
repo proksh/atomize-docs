@@ -1,24 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import {
-  Div,
-  Text,
-  Tag,
-  Row,
-  Col,
-  ThemeProvider,
-  DefaultTheme,
-} from "atomize"
+import { Div, Text, Tag, Row, Col, ThemeProvider } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 import ShowCodeButton from "../common/ShowCodeButton"
 import AvailableProps from "../common/AvailableProps"
 
 const theme = {
-  ...DefaultTheme,
   grid: {
-    ...DefaultTheme.grid,
     colCount: 8,
     gutterWidth: 0,
   },
@@ -71,9 +61,7 @@ const rowColsCode3 = `// Changing to 8 column and gutter to 0
 import { Div, Row, Col } from "atomize";
 
 const theme = {
-  ...DefaultTheme,
   grid: {
-    ...DefaultTheme.grid,
     colCount: 8,
     gutterWidth: 0
   }

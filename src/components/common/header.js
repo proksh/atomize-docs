@@ -11,7 +11,7 @@ class Header extends React.Component {
 
     this.state = {
       showMobileHeaderMenu: false,
-      showProductHunt: true,
+      showProductHunt: false,
     }
   }
 
@@ -51,7 +51,6 @@ class Header extends React.Component {
             bg="white"
             opacity="1"
             zIndex="-1"
-            styele={{ WebkitFilter: "blur(2px)", filter: "blur(2px)" }}
           ></Div>
           <Container d="flex" align="center" justify="space-between">
             <Div cursor="pointer">

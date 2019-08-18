@@ -1,44 +1,28 @@
 import React from "react"
-import {
-  Div,
-  Text,
-  Tag,
-  Row,
-  Col,
-  ThemeProvider,
-  DefaultTheme,
-} from "atomize"
+import { Div, Text, Tag, Row, Col, ThemeProvider } from "atomize"
 
 import InfoCodeRow from "../common/InfoCodeRow"
 
 const theme = {
-  ...DefaultTheme,
   textSize: {
-    ...DefaultTheme.textSize,
     size: {
-      ...DefaultTheme.textSize.size,
       customSize: "25px",
     },
     height: {
-      ...DefaultTheme.textSize.height,
       customSize: "34px",
     },
   },
 }
 
 const breakpointsCode1 = `// Providing a custom font size
-import { Text, ThemeProvider, DefaultTheme } from "atomize";
+import { Text, ThemeProvider } from "atomize";
 
 const theme = {
-  ...DefaultTheme,
   textSize: {
-    ...DefaultTheme.textSize,
     size: {
-      ...DefaultTheme.textSize.size,
       customSize: "25px"
     },
     height: {
-      ...DefaultTheme.textSize.height,
       customSize: "34px"
     }
   }

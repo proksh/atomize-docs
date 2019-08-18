@@ -1,6 +1,15 @@
 import React, { Component } from "react"
 import { Link, navigate } from "gatsby"
-import { Div, Text, scrollTo, Image, Input, Tag, Container } from "atomize"
+import {
+  Div,
+  Text,
+  scrollTo,
+  Image,
+  Input,
+  Tag,
+  Container,
+  Anchor,
+} from "atomize"
 import { Location } from "@reach/router"
 import logo from "../../images/logo.svg"
 
@@ -373,7 +382,8 @@ class SidebarCollapse extends React.Component {
       <Div p={links && { b: "1rem", l: "1rem", t: "0.5rem" }} pos="relative">
         {links &&
           links.map(link => (
-            <Text
+            <Anchor
+              d="block"
               key={link.id}
               textColor="medium"
               hoverTextColor="dark"
@@ -384,7 +394,7 @@ class SidebarCollapse extends React.Component {
               cursor="pointer"
             >
               {link.text}
-            </Text>
+            </Anchor>
           ))}
         <Div
           pos="absolute"
