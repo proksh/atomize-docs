@@ -270,9 +270,12 @@ class TagDocs extends React.Component {
               "right",
               "bottom",
               "transform",
+              "transformOrigin",
               "transition",
               "overflow",
               "cursor",
+              "zIndex",
+              "opacity",
             ]}
           />
         </InfoCodeRow>

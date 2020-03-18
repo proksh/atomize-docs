@@ -52,6 +52,7 @@ const DivDocs = () => {
           "bgImg",
           "bgPos",
           "bgSize",
+          "bgRepeat",
           "h",
           "minH",
           "maxH",
@@ -77,9 +78,12 @@ const DivDocs = () => {
           "right",
           "bottom",
           "transform",
+          "transformOrigin",
           "transition",
           "overflow",
           "cursor",
+          "zIndex",
+          "opacity",
         ]}
       />
     </InfoCodeRow>

@@ -198,8 +198,12 @@ class AnchorDocs extends React.Component {
             "left",
             "right",
             "bottom",
+            "transform",
+            "transformOrigin",
             "transition",
             "cursor",
+            "zIndex",
+            "opacity",
           ]}
         />
       </InfoCodeRow>

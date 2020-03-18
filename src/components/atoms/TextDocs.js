@@ -59,8 +59,12 @@ const TextDocs = () => {
           "left",
           "right",
           "bottom",
+          "transform",
+          "transformOrigin",
           "transition",
           "cursor",
+          "zIndex",
+          "opacity",
         ]}
       />
     </InfoCodeRow>

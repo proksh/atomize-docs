@@ -153,7 +153,11 @@ class IconDocs extends React.Component {
             "left",
             "right",
             "bottom",
+            "transform",
+            "transformOrigin",
             "cursor",
+            "zIndex",
+            "opacity",
           ]}
         />
       </InfoCodeRow>

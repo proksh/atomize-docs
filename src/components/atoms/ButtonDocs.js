@@ -645,6 +645,9 @@ class ButtonDocs extends React.Component {
               "order",
               "rounded",
               "bg",
+              "bgSize",
+              "bgPos",
+              "bgRepeat",
               "hoverBg",
               "h",
               "minH",
@@ -671,9 +674,12 @@ class ButtonDocs extends React.Component {
               "right",
               "bottom",
               "transform",
+              "transformOrigin",
               "transition",
               "overflow",
               "cursor",
+              "zIndex",
+              "opacity",
             ]}
           />
         </InfoCodeRow>
