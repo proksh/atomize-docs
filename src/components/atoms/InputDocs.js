@@ -493,6 +493,9 @@ class InputDocs extends React.Component {
               "order",
               "rounded",
               "bg",
+              "bgSize",
+              "bgPos",
+              "bgRepeat",
               "hoverBg",
               "focusBg",
               "focusTextColor",
@@ -523,9 +526,12 @@ class InputDocs extends React.Component {
               "right",
               "bottom",
               "transform",
+              "transformOrigin",
               "transition",
               "overflow",
               "cursor",
+              "zIndex",
+              "opacity",
             ]}
           />
         </InfoCodeRow>

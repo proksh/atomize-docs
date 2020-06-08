@@ -101,8 +101,11 @@ class ImageDocs extends React.Component {
             "right",
             "bottom",
             "transform",
+            "transformOrigin",
             "transition",
             "cursor",
+            "zIndex",
+            "opacity",
           ]}
         />
       </InfoCodeRow>
