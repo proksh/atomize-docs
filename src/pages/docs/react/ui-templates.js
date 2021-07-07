@@ -20,7 +20,7 @@ const UITemplates = () => (
           Official UI templates build on Atomize React will be released very
           soon.
         </Text>
-        <Anchor href="https://forms.gle/NfQ3NA4hSittrNNLA" target="_blank">
+        <Anchor href="https://forms.gle/MdjR9MV1Tq1BekvRA" target="_blank">
           <Button
             rounded="circle"
             shadow="1"

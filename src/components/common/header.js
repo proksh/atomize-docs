@@ -28,10 +28,10 @@ class Header extends React.Component {
 
     return (
       <>
-        <ProductHuntBanner
+        {/* <ProductHuntBanner
           show={showProductHunt}
           close={() => this.setState({ showProductHunt: false })}
-        />
+        /> */}
         <Div
           tag="header"
           pos="fixed"
@@ -75,9 +75,8 @@ class Header extends React.Component {
                 bg="black"
                 rounded="lg"
                 style={{
-                  transform: `translateY(${
-                    showMobileHeaderMenu ? "1" : "-2"
-                  }px)rotate(${showMobileHeaderMenu ? "135" : "0"}deg)`,
+                  transform: `translateY(${showMobileHeaderMenu ? "1" : "-2"
+                    }px)rotate(${showMobileHeaderMenu ? "135" : "0"}deg)`,
                 }}
                 transition
               ></Div>
@@ -87,9 +86,8 @@ class Header extends React.Component {
                 bg="black"
                 rounded="lg"
                 style={{
-                  transform: `translateY(${
-                    showMobileHeaderMenu ? "-1" : "2"
-                  }px)rotate(${showMobileHeaderMenu ? "45" : "0"}deg)`,
+                  transform: `translateY(${showMobileHeaderMenu ? "-1" : "2"
+                    }px)rotate(${showMobileHeaderMenu ? "45" : "0"}deg)`,
                 }}
                 transition
               ></Div>

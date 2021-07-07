@@ -99,7 +99,7 @@ const GettingStartedBanner = () => {
             </Div>
             <Div d="flex" align="flex-end">
               <Anchor
-                href="https://forms.gle/NfQ3NA4hSittrNNLA"
+                href="https://forms.gle/MdjR9MV1Tq1BekvRA"
                 target="_blank"
               >
                 <Button
