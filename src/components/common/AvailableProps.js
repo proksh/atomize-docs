@@ -20,7 +20,7 @@ import Margin from "../utilitiesSidebarComponent/Margin"
 import Display from "../utilitiesSidebarComponent/Display"
 import Align from "../utilitiesSidebarComponent/Align"
 import Justify from "../utilitiesSidebarComponent/Justify"
-import FlexDir from "../utilitiesSidebarComponent/FlexDir"
+// import FlexDir from "../utilitiesSidebarComponent/FlexDir"
 import FlexGrow from "../utilitiesSidebarComponent/FlexGrow"
 import FlexWrap from "../utilitiesSidebarComponent/FlexWrap"
 import Rounded from "../utilitiesSidebarComponent/Rounded"
@@ -73,9 +73,9 @@ import Direction from "../utilitiesSidebarComponent/Direction"
 import OnClose from "../utilitiesSidebarComponent/OnClose"
 import OnEnter from "../utilitiesSidebarComponent/OnEnter"
 import OnEntering from "../utilitiesSidebarComponent/OnEntering"
-import OnExit from "../utilitiesSidebarComponent/OnExit"
-import OnExiting from "../utilitiesSidebarComponent/OnExiting"
-import OnExited from "../utilitiesSidebarComponent/OnExited"
+// import OnExit from "../utilitiesSidebarComponent/OnExit"
+// import OnExiting from "../utilitiesSidebarComponent/OnExiting"
+// import OnExited from "../utilitiesSidebarComponent/OnExited"
 import Order from "../utilitiesSidebarComponent/Order"
 
 const allProps = {
@@ -119,21 +119,21 @@ const allProps = {
     tag: "on enter function",
     component: <OnEnter />,
   },
-  onExit: {
-    name: "On Exit",
-    tag: "on exit",
-    component: <OnExit />,
-  },
-  onExiting: {
-    name: "On Exiting",
-    tag: "on exit",
-    component: <OnExiting />,
-  },
-  onExited: {
-    name: "On Exited",
-    tag: "on exited",
-    component: <OnExited />,
-  },
+  // onExit: {
+  //   name: "On Exit",
+  //   tag: "on exit",
+  //   component: <OnExit />,
+  // },
+  // onExiting: {
+  //   name: "On Exiting",
+  //   tag: "on exit",
+  //   component: <OnExiting />,
+  // },
+  // onExited: {
+  //   name: "On Exited",
+  //   tag: "on exited",
+  //   component: <OnExited />,
+  // },
   isLoading: {
     name: "Loading",
     tag: "loading",
@@ -239,11 +239,11 @@ const allProps = {
     tag: "flex justify content",
     component: <Justify />,
   },
-  flexDir: {
-    name: "Flex Direction",
-    tag: "flex direction",
-    component: <FlexDir />,
-  },
+  // flexDir: {
+  //   name: "Flex Direction",
+  //   tag: "flex direction",
+  //   component: <FlexDir />,
+  // },
   flexGrow: {
     name: "Flex Grow",
     tag: "flex grow",

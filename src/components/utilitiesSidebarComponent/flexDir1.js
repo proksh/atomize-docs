@@ -36,4 +36,4 @@ const FlexDir = () => {
   )
 }
 
-export default FlexDir
+export default FlexDir;
