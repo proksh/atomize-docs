@@ -12,7 +12,7 @@ import {
 
 const theme = {
   grid: {
-    containerWidth: {
+    containerMaxWidth: {
         xs: "540px",
         sm: "720px",
         md: "960px",
