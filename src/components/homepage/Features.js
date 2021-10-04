@@ -220,7 +220,7 @@ class Features extends React.Component {
                     textAlign="left"
                     m={{ b: "3rem" }}
                   >
-                    Beautiful & consistant UI powered with{" "}
+                    Beautiful & consistent UI powered with{" "}
                     <span style={{ color: "#06d7ff" }}>React</span>.
                   </Text>
                   <Div>
